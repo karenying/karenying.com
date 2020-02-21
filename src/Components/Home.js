@@ -11,7 +11,7 @@ class Home extends React.Component {
                 <div className="home-container">
                     <Header page="home"/>
                     <div className="home-text">
-                        <h1>hi, i'm karen <span class="wave">👋</span></h1>
+                        <h1>hi, i'm karen <span className="wave">👋</span></h1>
                         { /*<h3>hehe</h3>*/ }
                     </div>
                 </div>

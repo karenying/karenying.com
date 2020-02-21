@@ -3,8 +3,20 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import './App.css';
 import Home from './Components/Home';
 import FooterIcon from './Components/FooterIcon';
+import Footer from './Components/Footer';
 
 class App extends React.Component {
+    state = {
+        footerActive: false,
+    }
+
+    handleFooterIconClick = () => {
+        this.setState({ footerActive: true });
+    };
+
+    handleFooterCloseClick = () => {
+        this.setState({ footerActive: false });
+    };
 
     render() {
 
@@ -15,7 +27,11 @@ class App extends React.Component {
                     <Switch>
                         <Route exact={true} path='/' component={Home} />
                     </Switch>
-                    <FooterIcon />
+                    {
+                        this.state.footerActive ? 
+                            <Footer clickFunction={ this.handleFooterCloseClick }/> : 
+                            <FooterIcon clickFunction={ this.handleFooterIconClick }/>
+                    }
                 </div>
             </Router>
         );

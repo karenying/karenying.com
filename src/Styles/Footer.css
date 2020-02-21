@@ -1,0 +1,47 @@
+.footer-container {
+    position: fixed;
+    bottom: 20px;
+    display: flex;
+    height: auto;
+    min-width: 100%;
+    padding: 10px;
+}
+
+.footer-copyright {
+    position: fixed;
+    left: 20px;
+}
+
+.footer-copyright p {
+    padding: 0px;
+    margin: 0px;
+    color: #8DEAFF;
+    font-size: small;
+    animation-name: fadeIn;
+    animation-duration: 0.5s;
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+
+.footer-links-container {
+    position: fixed;
+    right: 20px;
+    display: flex;
+}
+
+.footer-link {
+    margin: 0px 7px 0px;
+}
+
+.footer-link svg {
+    transition: transform .15s;
+    cursor: pointer;
+    animation-name: fadeIn;
+    animation-duration: 0.3s;
+    opacity: 0;
+    animation-fill-mode: forwards; 
+}
+
+.footer-link:hover svg {
+    transform: scale(1.3);
+} 
