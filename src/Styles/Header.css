@@ -31,10 +31,15 @@
 }
 
 .header-dot {
-    display: none;
     margin-top: -5px;
+    display: none;
 }
     
 .header-link:hover .header-dot {
+    display: block;
+}
+
+.header-dot-active {
+    margin-top: -5px;
     display: block;
 }
