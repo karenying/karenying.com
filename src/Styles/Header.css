@@ -27,7 +27,7 @@
 }
 
 .header-link {
-    cursor: pointer;
+    
 }
 
 .header-dot {
@@ -42,4 +42,9 @@
 .header-dot-active {
     margin-top: -5px;
     display: block;
+}
+
+.header-no-link {
+    pointer-events: none;
+    cursor: none;
 }

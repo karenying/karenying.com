@@ -1,15 +1,25 @@
 import React from 'react';
 import '../Styles/Header.css';
 import { DARK_PINK, LIGHT_PINK, BLUE, YELLOW, LIGHT_GRAY } from '../constants';
+import { Link } from 'react-router-dom';
 
 const HeaderLink = ({ title, color, edge, selected }) => {
     const padding = edge ? '0px' : '5px';
+    let link = (title === "karenying.com") ? "home" : title;
 
     return (
         <div className="header-link">
-            <h3 style={{color, paddingRight: padding}}>{title}</h3>
+            <Link 
+                to={`/${link}`} 
+                style={{textDecoration: 'none'}}
+                className={selected ? "header-no-link" : null}
+            >
+                <h3 style={{color, paddingRight: padding}}>{title}</h3>
+            </Link>
             <div className={selected ? "header-dot-active" : "header-dot"} >
-                <h3 style={{color}}>•</h3>
+                {
+                    title === "karenying.com" ? null : <h3 style={{color}}>•</h3>
+                }
             </div>
         </div>
     )
@@ -25,7 +35,12 @@ class Header extends React.Component {
             <>
                 <div className="header-container">
                     <div className="header-logo">
-                        <h3 style={{color: LIGHT_GRAY}}>karenying.com</h3>
+                        <HeaderLink 
+                            title="karenying.com" 
+                            color={ LIGHT_GRAY } 
+                            edge={ false } 
+                            selected={ page === "home" ? true : false }
+                        />
                     </div>
                     <div className="header-content">
                         <HeaderLink 

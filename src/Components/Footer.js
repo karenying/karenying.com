@@ -10,7 +10,6 @@ import { LIGHT_GRAY, BLUE, YELLOW, LIGHT_PINK, DARK_PINK} from '../constants';
 class Footer extends React.Component {
 
     render() {
-        const { clickFunction } = this.props;
 
         return (
             <>
@@ -54,9 +53,7 @@ class Footer extends React.Component {
                                 <AiFillInstagram color={ LIGHT_PINK } size="18px" style={{ marginTop: '-1px', animationDelay: '700ms' }}/>
                             </a>
                         </div>
-                        <div className="footer-link" onClick={ clickFunction }> 
-                            <FaChevronDown color={ BLUE } size="20px" style={{ marginTop: '-2px' }}/>
-                        </div>
+                        
                     </div>
                 </div>
             </>
