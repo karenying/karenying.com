@@ -12,9 +12,28 @@
     border-right: .15em solid transparent;
     white-space: nowrap;
     margin: 0 auto;
+    padding: 0px;
+    margin: 0px;
     animation: 
         animated-text 3s steps(15,end) 1s 1 normal both,
         animated-cursor 700ms steps(15,end) 1s 5;
+        
+}
+
+.home-text h3 {
+    color: #D9D9D9;
+    padding: 0px;
+    margin: 0px;
+    animation-name: fadeIn;
+    animation-delay: 5s;
+    animation-duration: 3s;
+    opacity: 0;
+    animation-fill-mode: forwards;  
+}
+
+@keyframes fadeIn {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
 }
 
 @keyframes animated-text {

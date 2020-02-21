@@ -1,7 +1,7 @@
 import React from 'react';
 import '../Styles/FooterIcon.css';
 import { TiInfoLargeOutline } from 'react-icons/ti';
-import { LIGHT_GRAY } from '../constants';
+import { BLUE } from '../constants';
 
 class FooterIcon extends React.Component {
 
@@ -11,7 +11,7 @@ class FooterIcon extends React.Component {
             <>
                 <div className="footer-icon-container">
                     <div className="footer-icon-content">
-                        <TiInfoLargeOutline color={ LIGHT_GRAY } size='20px'/>
+                        <TiInfoLargeOutline color={ BLUE } size='20px'/>
                     </div>
                 </div>
             </>
