@@ -1,0 +1,9 @@
+.home-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-text h1{
+    color: #FFB6B9
+}
