@@ -9,7 +9,7 @@ class Home extends React.Component {
             <>
                 <div className="home-container">
                     <div className="home-text">
-                        <h1>HI, I'M KAREN!</h1>
+                        {/*<h1>HI, I'M KAREN!</h1>*/}
                     </div>
                 </div>
             </>
