@@ -1,8 +1,20 @@
 .header-container {
     position: fixed;
     top: 0px;
-    width: 100px;
+    width: 100%;
     display: flex;
+}
+
+.header-container h3 {
+    padding: 0px;
+    margin: 0px;
+}
+
+.header-logo {
+    position: fixed;
+    left: 0px;
+    padding-top: 30px;
+    padding-left: 50px;
 }
 
 .header-content {
@@ -14,7 +26,15 @@
     flex-direction: row;
 }
 
-.header-content h3 {
-    padding: 0px;
-    margin: 0px;
+.header-link {
+    cursor: pointer;
+}
+
+.header-dot {
+    display: none;
+    margin-top: -5px;
+}
+    
+.header-link:hover .header-dot {
+    display: block;
 }
