@@ -10,16 +10,14 @@ const HeaderLink = ({ title, color, edge, selected }) => {
     return (
         <div className="header-link">
             <Link 
-                to={`/${link}`} 
-                style={{textDecoration: 'none'}}
-                className={selected ? "header-no-link" : null}
+                to={ `/${ link }` } 
+                style={{ textDecoration: 'none' }}
+                className={ selected ? "header-no-link" : null }
             >
-                <h3 style={{color, paddingRight: padding}}>{title}</h3>
+                <h3 style={{ color, paddingRight: padding }}>{ title }</h3>
             </Link>
-            <div className={selected ? "header-dot-active" : "header-dot"} >
-                {
-                    title === "karenying.com" ? null : <h3 style={{color}}>•</h3>
-                }
+            <div className={ selected ? "header-dot-active" : "header-dot" } >
+                { title === "karenying.com" ? null : <h3 style={{color}}>•</h3> }
             </div>
         </div>
     )
@@ -49,21 +47,21 @@ class Header extends React.Component {
                             edge={ false } 
                             selected={ page === "home" ? true : false }
                         />
-                        <h3 style={{color: LIGHT_GRAY, paddingRight: '5px'}}>/</h3>
+                        <h3 style={{ color: LIGHT_GRAY, paddingRight: '5px' }}>/</h3>
                         <HeaderLink 
                             title="about" 
                             color={ LIGHT_PINK } 
                             edge={ false } 
                             selected={ page === "about" ? true : false }
                         />
-                        <h3 style={{color: LIGHT_GRAY, paddingRight: '5px'}} >/</h3>
+                        <h3 style={{ color: LIGHT_GRAY, paddingRight: '5px' }} >/</h3>
                         <HeaderLink 
                             title="projects" 
                             color={ BLUE } 
                             edge={ false } 
                             selected={ page === "projects" ? true : false }
                         />
-                        <h3 style={{color: LIGHT_GRAY, paddingRight: '5px'}}>/</h3>
+                        <h3 style={{ color: LIGHT_GRAY, paddingRight: '5px' }}>/</h3>
                         <HeaderLink 
                             title="contact" 
                             color={ YELLOW } 

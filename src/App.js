@@ -13,8 +13,11 @@ class App extends React.Component {
     }
 
     handleFooterIconClick = () => {
-        let footerActive = !this.state.footerActive;
-        this.setState({ footerActive });
+        this.setState({ footerActive: true });
+    };
+
+    handleFooterCloseClick = () => {
+        this.setState({ footerActive: false });
     };
 
     render() {
@@ -28,11 +31,10 @@ class App extends React.Component {
                         <Route exact={ true } path='/about' component={About} />
                         <Route path='*' component={Error} />
                     </Switch>
-                    <FooterIcon clickFunction={ this.handleFooterIconClick }/>
                     {
                         this.state.footerActive ? 
-                            <Footer/> : 
-                            null
+                        <Footer clickFunction={ this.handleFooterCloseClick }/> : 
+                        <FooterIcon clickFunction={ this.handleFooterIconClick }/>
                     }
                 </div>
             </Router>

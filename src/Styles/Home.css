@@ -52,7 +52,17 @@ span.wave {
     transform-origin: 70% 70%;
     display: inline-block;
 }
-  
+
+/*
+.home-text:hover span.wave {
+    animation-name: wave-animation;
+    animation-duration: 2.5s;
+    animation-iteration-count: 3;
+    transform-origin: 70% 70%;
+    display: inline-block;
+} 
+*/
+
 @keyframes wave-animation {
     0% { transform: rotate(  0.0deg) }
     10% { transform: rotate(-10.0deg) }

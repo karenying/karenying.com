@@ -46,5 +46,5 @@
 
 .header-no-link {
     pointer-events: none;
-    cursor: none;
+    cursor: default;
 }
