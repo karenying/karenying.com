@@ -11,7 +11,7 @@ class Error extends React.Component {
                 <div className="error-container">
                     <Header page="error"/>
                     <div className="error-text">
-                        <h1>oops, something went wrong 😨</h1>
+                        <h1>oops, something went wrong <span role="img" aria-label="confused">😨</span></h1>
                     </div>
                 </div>
             </>

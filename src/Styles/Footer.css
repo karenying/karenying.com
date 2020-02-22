@@ -11,6 +11,8 @@
 .footer-copyright {
     position: fixed;
     left: 20px;
+    display: flex;
+    align-items: center;
 }
 
 .footer-copyright p {
@@ -18,6 +20,16 @@
     margin: 0px;
     color: #8DEAFF;
     font-size: small;
+    animation-name: fadeIn;
+    animation-duration: 0.5s;
+    opacity: 0;
+    animation-fill-mode: forwards;
+    cursor: default;
+}
+
+.footer-copyright h3 {
+    padding: 0px;
+    margin: 0px;
     animation-name: fadeIn;
     animation-duration: 0.5s;
     opacity: 0;

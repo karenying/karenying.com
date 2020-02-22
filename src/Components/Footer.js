@@ -16,7 +16,9 @@ class Footer extends React.Component {
             <>
                 <div className="footer-container">
                     <div className="footer-copyright">
-                        <p>© karen ying 2020</p>
+                        <p style={{ marginRight: '10px', color: LIGHT_PINK }}>© karen ying 2020</p>
+                        <h3 style={{color: LIGHT_GRAY}}>•</h3>
+                        <p style={{ marginLeft: '10px', color: BLUE }}>all rights reserved</p>
                     </div>
                     <div className="footer-links-container">
                         <div className="footer-link">

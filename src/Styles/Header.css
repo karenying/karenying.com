@@ -33,6 +33,7 @@
 .header-dot {
     margin-top: -5px;
     display: none;
+    cursor: default;
 }
     
 .header-link:hover .header-dot {
@@ -42,6 +43,7 @@
 .header-dot-active {
     margin-top: -5px;
     display: block;
+    cursor: default;
 }
 
 .header-no-link {
