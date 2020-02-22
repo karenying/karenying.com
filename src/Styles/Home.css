@@ -13,6 +13,7 @@
     white-space: nowrap;
     padding: 0px;
     margin: 0px;
+    cursor: default;
     animation: 
         animated-text 3s steps(15,end) 1s 1 normal both,
         animated-cursor 700ms steps(15,end) 1s 5;

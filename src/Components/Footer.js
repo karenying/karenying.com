@@ -27,6 +27,7 @@ class Footer extends React.Component {
                                 <FaCode 
                                     color={ YELLOW } 
                                     style={{ animationDelay: '100ms' }}
+                                    title="View site source code"
                                 />
                             </a>
                         </div>
@@ -35,6 +36,7 @@ class Footer extends React.Component {
                                 <GoMarkGithub 
                                     color={ DARK_PINK } 
                                     style={{ animationDelay: '200ms' }}
+                                    title="Github"
                                 />
                             </a>
                         </div>
@@ -43,6 +45,7 @@ class Footer extends React.Component {
                                 <IoMdMail 
                                     color={ LIGHT_PINK } 
                                     style={{ animationDelay: '300ms' }}
+                                    title="Email"
                                 />
                             </a>
                         </div>
@@ -51,6 +54,7 @@ class Footer extends React.Component {
                                 <FaLinkedin 
                                     color={ BLUE } 
                                     style={{ animationDelay: '400ms' }}
+                                    title="LinkedIn"
                                 />
                             </a>
                         </div>
@@ -59,6 +63,7 @@ class Footer extends React.Component {
                                 <FaFacebook 
                                     color={ YELLOW } 
                                     style={{ animationDelay: '500ms' }}
+                                    title="Facebook"
                                 />
                             </a>
                         </div>
@@ -67,10 +72,8 @@ class Footer extends React.Component {
                                 <AiFillTwitterCircle 
                                     color={ DARK_PINK } 
                                     size="18px" 
-                                    style={{ 
-                                        
-                                        animationDelay: '600ms' 
-                                    }}
+                                    style={{ animationDelay: '600ms' }}
+                                    title="Twitter"
                                 />
                             </a>
                         </div>
@@ -80,6 +83,7 @@ class Footer extends React.Component {
                                     color={ LIGHT_PINK } 
                                     size="18px" 
                                     style={{ animationDelay: '700ms' }}
+                                    title="Instagram"
                                 />
                             </a>
                         </div>
@@ -87,7 +91,7 @@ class Footer extends React.Component {
                             <h3 style={{ color: LIGHT_GRAY, animationDelay: '800ms' }}>•</h3>
                         </div>
                         <div className="footer-link" onClick={ clickFunction }> 
-                            <FaChevronDown color={ BLUE } size="20px" title="Show footer"/>
+                            <FaChevronDown color={ BLUE } size="20px" title="Hide footer"/>
                         </div>
                     </div>
                 </div>
