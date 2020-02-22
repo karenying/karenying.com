@@ -12,7 +12,7 @@ class FooterIcon extends React.Component {
             <>
                 <div className="footer-icon-container">
                     <div className="footer-icon-content" onClick={ clickFunction }>
-                        <FaChevronUp color={ BLUE } size="20px" style={{ marginTop: '-2px' }}/>
+                        <FaChevronUp color={ BLUE } size="20px" title="Show footer"/>
                     </div>
                 </div>
             </>

@@ -1,7 +1,11 @@
 .footer-icon-container {
     position: fixed;
-    bottom: 30px;
+    bottom: 0px;
     width: 100%;
+    display: flex;
+    align-items: center;
+    height: 25px;
+    padding: 10px;
 }
 
 .footer-icon-content {

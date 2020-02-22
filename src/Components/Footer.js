@@ -4,7 +4,7 @@ import { FaFacebook, FaLinkedin, FaCode, FaChevronDown } from 'react-icons/fa';
 import { AiFillInstagram, AiFillTwitterCircle } from 'react-icons/ai';
 import { GoMarkGithub } from 'react-icons/go';
 import { IoMdMail } from 'react-icons/io';
-import { BLUE, YELLOW, LIGHT_PINK, DARK_PINK } from '../constants';
+import { LIGHT_GRAY, BLUE, YELLOW, LIGHT_PINK, DARK_PINK } from '../constants';
 
 
 class Footer extends React.Component {
@@ -19,6 +19,9 @@ class Footer extends React.Component {
                         <p>© karen ying 2020</p>
                     </div>
                     <div className="footer-links-container">
+                        <div className="footer-link">
+                            <h3 style={{color: LIGHT_GRAY}}>•</h3>
+                        </div>
                         <div className="footer-link"> 
                             <a href="https://github.com/karenying/karenying.com">
                                 <FaCode 
@@ -65,29 +68,26 @@ class Footer extends React.Component {
                                     color={ DARK_PINK } 
                                     size="18px" 
                                     style={{ 
-                                        marginTop: '-1px', 
+                                        
                                         animationDelay: '600ms' 
                                     }}
                                 />
                             </a>
                         </div>
-                        <div className="footer-link" style={{ marginRight: '20px'}}> 
+                        <div className="footer-link" style={{ marginRight: '5px'}}> 
                             <a href="https://www.instagram.com/karenyingstagram/">
                                 <AiFillInstagram 
                                     color={ LIGHT_PINK } 
                                     size="18px" 
-                                    style={{ 
-                                        marginTop: '-1px', 
-                                        animationDelay: '700ms' 
-                                    }}
+                                    style={{ animationDelay: '700ms' }}
                                 />
                             </a>
                         </div>
+                        <div className="footer-link">
+                            <h3 style={{ color: LIGHT_GRAY, animationDelay: '800ms' }}>•</h3>
+                        </div>
                         <div className="footer-link" onClick={ clickFunction }> 
-                            <FaChevronDown 
-                                color={ BLUE } size="20px" 
-                                style={{ marginTop: '-2px' }}
-                            />
+                            <FaChevronDown color={ BLUE } size="20px" title="Show footer"/>
                         </div>
                     </div>
                 </div>
