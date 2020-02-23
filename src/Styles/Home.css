@@ -54,15 +54,14 @@ span.wave {
     display: inline-block;
 }
 
-/*
+
 .home-text:hover span.wave {
     animation-name: wave-animation;
     animation-duration: 2.5s;
-    animation-iteration-count: 3;
+    animation-iteration-count: infinite;
     transform-origin: 70% 70%;
-    display: inline-block;
+    animation-fill-mode: forwards;
 } 
-*/
 
 @keyframes wave-animation {
     0% { transform: rotate(  0.0deg) }
