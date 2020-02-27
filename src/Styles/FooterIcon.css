@@ -17,7 +17,6 @@
 .footer-icon-content svg {
     transition: transform .15s;
     cursor: pointer;
-    cursor: pointer;
     animation-name: fadeIn;
     animation-duration: 0.3s;
     opacity: 0;

@@ -1,3 +1,37 @@
 .about-container {
     height: 100vh;
 }
+
+.about-content-container {
+    display: flex;
+    padding-top: 150px;
+}
+
+.about-content-left {
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
+}
+
+.about-content-left img {
+    height: 200px;
+    width: 200px;
+}
+
+.about-content-right {
+    display: flex;
+    flex-grow: 2;
+    padding: 20px;
+}
+
+.about-content-right h1 {
+    color: #FFB6B9;
+    font-family: monospace !important;
+    text-align: left;
+    padding: 0px;
+    margin: 0px;
+}
+
+.about-content-right p { 
+    color: #D9D9D9;
+}
