@@ -1,27 +1,38 @@
 .about-container {
     height: 100vh;
+    padding: 150px;
+    box-sizing: border-box;
+
+}
+
+.about-container p {
+    text-align: left;
 }
 
 .about-content-container {
     display: flex;
     padding-top: 150px;
+    flex-basis: 100%;
 }
 
 .about-content-left {
     display: flex;
-    flex-grow: 1;
+    flex-grow: 1 1 auto;
+    padding: 20px;
     justify-content: center;
 }
 
 .about-content-left img {
     height: 200px;
     width: 200px;
+    padding-right: 100px;
+    padding-left: 150px;
 }
 
 .about-content-right {
     display: flex;
-    flex-grow: 2;
-    padding: 20px;
+    flex-grow: 2 2 auto;
+    padding-left: 100px;
 }
 
 .about-content-right h1 {
