@@ -33,6 +33,7 @@
     display: flex;
     flex-grow: 2 2 auto;
     padding-left: 100px;
+    flex-direction: column;
 }
 
 .about-content-right h1 {
@@ -45,4 +46,8 @@
 
 .about-content-right p { 
     color: #D9D9D9;
+}
+
+.about-content-timeline {
+    margin-top: 50px;
 }

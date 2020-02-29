@@ -16,12 +16,18 @@ class About extends React.Component {
                             <img src={Karen}></img>
                         </div>
                         <div className="about-content-right">
-                            <div>
+                            <div className="about-content-intro">
                                 <h1>hello!</h1>
                                 <p>
                                     I'm a junior studying Computer Science at Princeton University.
-                                    Welcome to my own little space on the web 🙂. 
-                                    
+                                    Welcome to my little space on the web 🙂. 
+                                </p>
+                            </div>
+                            <div className="about-content-timeline">
+                                <h1>timeline</h1>
+                                <p>
+                                    👶 8/9/1999 Born in Boston, MA<br/>
+                                    🇨🇳 1999 - 2001 Lived to China
 
                                 </p>
                             </div>
