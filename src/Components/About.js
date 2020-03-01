@@ -23,14 +23,16 @@ class About extends React.Component {
                                     Welcome to my little space on the web 🙂. 
                                 </p>
                             </div>
+                            {/*
                             <div className="about-content-timeline">
                                 <h1>timeline</h1>
                                 <p>
                                     👶 8/9/1999 Born in Boston, MA<br/>
                                     🇨🇳 1999 - 2001 Lived to China
-
+                                    
                                 </p>
-                            </div>
+                            </div> 
+                            */}
                         </div>
                     </div>
                 </div>
