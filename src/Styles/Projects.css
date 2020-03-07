@@ -1,7 +1,8 @@
 .projects-container {
-    height: 100vh;
+    min-height: 100vh;
     padding: 150px;
     box-sizing: border-box;
+    overflow: hidden;
 }
 
 .projects-container a {
@@ -37,8 +38,7 @@
 }
 
 .projects-expresso-image img {
-    height: 150px;
-    width: 150px;
+    height: 200px;
     padding: 0px 100px;
 }
 
