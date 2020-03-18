@@ -1,7 +1,7 @@
 import React from 'react';
 import '../Styles/About.css';
 import Header from './Header';
-import Karen from '../Assets/karen.png'
+import Karen from '../Assets/karen.png';
 
 class About extends React.Component {
 
