@@ -1,8 +1,9 @@
 .projects-container {
     min-height: 100vh;
-    padding-top: 140px;
+    padding-top: 100px;
     box-sizing: border-box;
     overflow: hidden;
+    box-sizing: border-box;
 }
 
 .projects-container a {
@@ -49,18 +50,9 @@
 .projectcard-container h3 {
     font-family: monospace !important;
     color: #333333;
-    margin: 0px;
     display: inline;
     font-weight: bold;
-}
-
-.projectcard-content {
-    display: grid;
-    grid-template-columns: 32% 68%;
-    /*grid-template-rows: 25% 25% 25%;*/
-    text-align: left;
-    grid-gap: 15px 0px;
-    position: relative;
+    margin: 0px;
 }
 
 .projectcard-container p {
@@ -73,6 +65,7 @@
     display: flex;
     position: absolute;
     bottom: 30px;
+    margin-top: 30px;
 }
 
 .projectcard-buttons p {
@@ -107,4 +100,8 @@
 .arrow-container {
     display: flex;
     cursor: pointer;
+}
+
+.MuiGrid-item {
+    margin-bottom: 15px !important;
 }

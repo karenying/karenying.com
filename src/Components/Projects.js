@@ -1,20 +1,14 @@
 import React from 'react';
 import '../Styles/Projects.css';
 import Header from './Header';
-import {
-    DARK_PINK,
-    LIGHT_PINK,
-    BLUE,
-    YELLOW,
-    LIGHT_GRAY,
-    projectInfo,
-} from '../constants';
-import { withStyles } from '@material-ui/core/styles';
+import { projectInfo } from '../constants';
+import { withStyles, makeStyles } from '@material-ui/core/styles';
 import { Card } from '@material-ui/core';
 import { FiExternalLink } from 'react-icons/fi';
 import { FaCode, FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 import Slide from '@material-ui/core/Slide';
 import Hidden from '@material-ui/core/Hidden';
+import Grid from '@material-ui/core/Grid';
 
 function LeftArrow(props) {
     const { clickFunction } = props;
@@ -128,15 +122,15 @@ class Projects extends React.Component {
                 borderRadius: 5,
                 alignItems: 'center',
                 justifyContent: 'space-evenly',
-                margin: '100px 25px',
+                margin: '0px 25px',
                 padding: '75px 50px',
             },
         })(Card);
 
         const InfoCard = withStyles({
             root: {
-                height: 400,
-                width: 400,
+                minHeight: 400,
+                maxWidth: 400,
                 backgroundColor: '#f5f5f5',
                 display: 'flex',
                 borderRadius: 5,
@@ -147,6 +141,12 @@ class Projects extends React.Component {
                 position: 'relative',
             },
         })(Card);
+
+        const InfoGrid = withStyles({
+            root: {
+                textAlign: 'left',
+            },
+        })(Grid);
 
         return (
             <div className='projects-container'>
@@ -166,14 +166,28 @@ class Projects extends React.Component {
                                 </Hidden>
                                 <InfoCard>
                                     <h2 style={{ marginBottom: 30 }}>{name}</h2>
-                                    <div className='projectcard-content'>
-                                        <h3 style={{ color }}>type: </h3>
-                                        <p>{type}</p>
-                                        <h3 style={{ color }}>stack:</h3>
-                                        <p>{stack}</p>
-                                        <h3 style={{ color }}>description:</h3>
-                                        <p>{description}</p>
-                                    </div>
+                                    <InfoGrid container>
+                                        <InfoGrid item xs={12} sm={4} mb={15}>
+                                            <h3 style={{ color }}>type:</h3>
+                                        </InfoGrid>
+                                        <InfoGrid item xs={12} sm={8}>
+                                            <p>{type}</p>
+                                        </InfoGrid>
+                                        <InfoGrid item xs={12} sm={4}>
+                                            <h3 style={{ color }}>stack:</h3>
+                                        </InfoGrid>
+                                        <InfoGrid item xs={12} sm={8}>
+                                            <p>{stack}</p>
+                                        </InfoGrid>
+                                        <InfoGrid item xs={12} sm={4}>
+                                            <h3 style={{ color }}>
+                                                description:
+                                            </h3>
+                                        </InfoGrid>
+                                        <InfoGrid item xs={12} sm={8}>
+                                            <p>{description}</p>
+                                        </InfoGrid>
+                                    </InfoGrid>
                                     <div className='projectcard-buttons'>
                                         {siteButton}
                                         {codeButton}
