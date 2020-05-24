@@ -45,8 +45,12 @@ class Projects extends React.Component {
     onRightClick = () => {
         const { index } = this.state;
         let newIndex = (index + 1) % projectInfo.length;
-        this.setState({ index: newIndex, in: false, direction: 'right' });
-        setTimeout(() => this.setState({ in: true, direction: 'left' }), 500);
+        this.setState({ in: false, direction: 'right' });
+        setTimeout(
+            () =>
+                this.setState({ in: true, direction: 'left', index: newIndex }),
+            500
+        );
     };
 
     onLeftClick = () => {
@@ -55,8 +59,16 @@ class Projects extends React.Component {
         if (newIndex === -1) {
             newIndex = projectInfo.length - 1;
         }
-        this.setState({ index: newIndex, in: false, direction: 'left' });
-        setTimeout(() => this.setState({ in: true, direction: 'right' }), 500);
+        this.setState({ in: false, direction: 'left' });
+        setTimeout(
+            () =>
+                this.setState({
+                    in: true,
+                    direction: 'right',
+                    index: newIndex,
+                }),
+            500
+        );
     };
 
     render() {
