@@ -34,10 +34,10 @@
 }
 
 .projectcard-image img {
-    height: 175px;
+    width: 350px;
     border-radius: 5px;
     box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.5);
-    margin-bottom: 10px;
+    margin-right: 40px;
 }
 
 .projectcard-image {

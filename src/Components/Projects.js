@@ -14,6 +14,7 @@ import { Card } from '@material-ui/core';
 import { FiExternalLink } from 'react-icons/fi';
 import { FaCode, FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 import Slide from '@material-ui/core/Slide';
+import Hidden from '@material-ui/core/Hidden';
 
 function LeftArrow(props) {
     const { clickFunction } = props;
@@ -121,8 +122,6 @@ class Projects extends React.Component {
 
         const ProjectCard = withStyles({
             root: {
-                height: 550,
-                width: 1000,
                 backgroundColor,
                 boxShadow: '20px 20px 20px black',
                 display: 'flex',
@@ -130,6 +129,7 @@ class Projects extends React.Component {
                 alignItems: 'center',
                 justifyContent: 'space-evenly',
                 margin: '100px 25px',
+                padding: '75px 50px',
             },
         })(Card);
 
@@ -140,7 +140,6 @@ class Projects extends React.Component {
                 backgroundColor: '#f5f5f5',
                 display: 'flex',
                 borderRadius: 5,
-                marginRight: 10,
                 boxShadow: '20px 20px 20px rgba(0,0,0,0.5)',
                 flexDirection: 'column',
                 alignItems: 'center',
@@ -160,9 +159,11 @@ class Projects extends React.Component {
                             direction={this.state.direction}
                         >
                             <ProjectCard>
-                                <div className='projectcard-image'>
-                                    <img src={image} />
-                                </div>
+                                <Hidden mdDown>
+                                    <div className='projectcard-image'>
+                                        <img src={image} />
+                                    </div>
+                                </Hidden>
                                 <InfoCard>
                                     <h2 style={{ marginBottom: 30 }}>{name}</h2>
                                     <div className='projectcard-content'>
