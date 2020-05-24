@@ -116,9 +116,9 @@
     margin: 0px;
 }
 
-.projectcard-demo,
+.projectcard-site,
 .projectcard-code {
-    width: 100px;
+    width: 80px;
     padding: 10px;
     border-radius: 100px;
     cursor: pointer;
@@ -126,4 +126,14 @@
     justify-content: center;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
     align-items: center;
+}
+
+.projectcard-site:hover svg,
+.projectcard-code:hover svg {
+    transform: scale(1.15);
+}
+
+.projectcard-site svg,
+.projectcard-code svg {
+    transition: transform 0.1s;
 }
