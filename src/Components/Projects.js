@@ -11,13 +11,52 @@ import {
 } from '../constants';
 import { withStyles } from '@material-ui/core/styles';
 import { Card } from '@material-ui/core';
-
 import { FiExternalLink } from 'react-icons/fi';
-import { FaCode } from 'react-icons/fa';
+import { FaCode, FaChevronLeft, FaChevronRight } from 'react-icons/fa';
+import Slide from '@material-ui/core/Slide';
+
+function LeftArrow(props) {
+    const { clickFunction } = props;
+
+    return (
+        <div className='arrow-container' onClick={clickFunction}>
+            <FaChevronLeft color='#f5f5f5' size='40px' />
+        </div>
+    );
+}
+
+function RightArrow(props) {
+    const { clickFunction } = props;
+
+    return (
+        <div className='arrow-container' onClick={clickFunction}>
+            <FaChevronRight color='#f5f5f5' size='40px' />
+        </div>
+    );
+}
 
 class Projects extends React.Component {
     state = {
         index: 0,
+        in: true,
+        direction: 'left',
+    };
+
+    onRightClick = () => {
+        const { index } = this.state;
+        let newIndex = (index + 1) % projectInfo.length;
+        this.setState({ index: newIndex, in: false, direction: 'right' });
+        setTimeout(() => this.setState({ in: true, direction: 'left' }), 500);
+    };
+
+    onLeftClick = () => {
+        const { index } = this.state;
+        let newIndex = index - 1;
+        if (newIndex === -1) {
+            newIndex = projectInfo.length - 1;
+        }
+        this.setState({ index: newIndex, in: false, direction: 'left' });
+        setTimeout(() => this.setState({ in: true, direction: 'right' }), 500);
     };
 
     render() {
@@ -78,6 +117,7 @@ class Projects extends React.Component {
                 borderRadius: 5,
                 alignItems: 'center',
                 justifyContent: 'space-evenly',
+                margin: '100px 25px',
             },
         })(Card);
 
@@ -101,29 +141,36 @@ class Projects extends React.Component {
             <div className='projects-container'>
                 <Header page='projects' />
                 <div className='projects-content'>
+                    <LeftArrow clickFunction={this.onLeftClick} />
                     <div className='projectcard-container'>
-                        <ProjectCard>
-                            <div className='projectcard-image'>
-                                <img src={image} />
-                            </div>
-                            <InfoCard>
-                                <h2 style={{ marginBottom: 30 }}>{name}</h2>
-                                <div className='projectcard-content'>
-                                    <h3 style={{ color }}>type: </h3>
-                                    <p>{type}</p>
-                                    <h3 style={{ color }}>stack:</h3>
-                                    <p>{stack}</p>
-                                    <h3 style={{ color }}>description:</h3>
-                                    <p>{description}</p>
+                        <Slide
+                            in={this.state.in}
+                            direction={this.state.direction}
+                        >
+                            <ProjectCard>
+                                <div className='projectcard-image'>
+                                    <img src={image} />
                                 </div>
-                                <div className='projectcard-buttons'>
-                                    {siteButton}
-                                    {codeButton}
-                                </div>
-                                <h2></h2>
-                            </InfoCard>
-                        </ProjectCard>
+                                <InfoCard>
+                                    <h2 style={{ marginBottom: 30 }}>{name}</h2>
+                                    <div className='projectcard-content'>
+                                        <h3 style={{ color }}>type: </h3>
+                                        <p>{type}</p>
+                                        <h3 style={{ color }}>stack:</h3>
+                                        <p>{stack}</p>
+                                        <h3 style={{ color }}>description:</h3>
+                                        <p>{description}</p>
+                                    </div>
+                                    <div className='projectcard-buttons'>
+                                        {siteButton}
+                                        {codeButton}
+                                    </div>
+                                    <h2></h2>
+                                </InfoCard>
+                            </ProjectCard>
+                        </Slide>
                     </div>
+                    <RightArrow clickFunction={this.onRightClick} />
                 </div>
             </div>
         );
