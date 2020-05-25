@@ -3,7 +3,12 @@ import '../Styles/Projects.css';
 import Header from './Header';
 import { projectInfo } from '../constants';
 import { FiExternalLink } from 'react-icons/fi';
-import { FaCode, FaChevronLeft, FaChevronRight } from 'react-icons/fa';
+import {
+    FaCode,
+    FaChevronLeft,
+    FaChevronRight,
+    FaPaperclip,
+} from 'react-icons/fa';
 import Slide from '@material-ui/core/Slide';
 import Hidden from '@material-ui/core/Hidden';
 import Grid from '@material-ui/core/Grid';
@@ -32,18 +37,18 @@ function RightArrow(props) {
 
 function Projects() {
     const [index, setIndex] = useState(0);
-    const [slideIn, setIn] = useState(true);
+    const [slideIn, setSlideIn] = useState(true);
     const [direction, setDirection] = useState('left');
 
     const onRightClick = () => {
         let newIndex = (index + 1) % projectInfo.length;
-        setIn(false);
+        setSlideIn(false);
         setDirection('right');
 
         setTimeout(() => {
             setDirection('left');
             setIndex(newIndex);
-            setIn(true);
+            setSlideIn(true);
         }, 500);
     };
 
@@ -53,13 +58,13 @@ function Projects() {
             newIndex = projectInfo.length - 1;
         }
 
-        setIn(false);
+        setSlideIn(false);
         setDirection('left');
 
         setTimeout(() => {
             setDirection('right');
             setIndex(newIndex);
-            setIn(true);
+            setSlideIn(true);
         }, 500);
     };
 
@@ -74,12 +79,13 @@ function Projects() {
         description,
         site,
         code,
+        paper,
     } = currInfo;
 
     const siteButton = site ? (
         <a href={site}>
             <div
-                className='projectcard-site'
+                className='projectcard-button'
                 style={{
                     backgroundColor: color,
                 }}
@@ -93,13 +99,27 @@ function Projects() {
     const codeButton = code ? (
         <a href={code}>
             <div
-                className='projectcard-code'
+                className='projectcard-button'
                 style={{
                     backgroundColor: color,
                 }}
             >
                 <FaCode color='#f5f5f5' style={{ paddingRight: 7 }} />
                 <h3 style={{ color: '#f5f5f5' }}>code</h3>
+            </div>
+        </a>
+    ) : null;
+
+    const paperButton = paper ? (
+        <a href={paper}>
+            <div
+                className='projectcard-button'
+                style={{
+                    backgroundColor: color,
+                }}
+            >
+                <FaPaperclip color='#f5f5f5' style={{ paddingRight: 7 }} />
+                <h3 style={{ color: '#f5f5f5' }}>paper</h3>
             </div>
         </a>
     ) : null;
@@ -220,6 +240,7 @@ function Projects() {
                                 </Grid>
                                 <div className='projectcard-buttons'>
                                     {siteButton}
+                                    {paperButton}
                                     {codeButton}
                                 </div>
                             </Card>

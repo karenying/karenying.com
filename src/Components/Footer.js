@@ -1,7 +1,7 @@
 import React from 'react';
 import '../Styles/Footer.css';
-import { FaFacebook, FaLinkedin, FaCode, FaChevronDown } from 'react-icons/fa';
-import { AiFillInstagram, AiFillTwitterCircle } from 'react-icons/ai';
+import { FaLinkedin, FaCode, FaChevronDown } from 'react-icons/fa';
+import { AiFillTwitterCircle } from 'react-icons/ai';
 import { GoMarkGithub } from 'react-icons/go';
 import { IoMdMail } from 'react-icons/io';
 import { LIGHT_GRAY, BLUE, YELLOW, LIGHT_PINK, DARK_PINK } from '../constants';
@@ -78,35 +78,14 @@ class Footer extends React.Component {
                                 />
                             </a>
                         </div>
-                        <div className='footer-link'>
-                            <a href='https://www.facebook.com/karen.ying.31'>
-                                <FaFacebook
-                                    color={YELLOW}
-                                    style={{ animationDelay: '500ms' }}
-                                    title='Facebook'
-                                />
-                            </a>
-                        </div>
+
                         <div className='footer-link'>
                             <a href='https://twitter.com/karen_ying_'>
                                 <AiFillTwitterCircle
-                                    color={DARK_PINK}
+                                    color={YELLOW}
                                     size='18px'
-                                    style={{ animationDelay: '600ms' }}
+                                    style={{ animationDelay: '500ms' }}
                                     title='Twitter'
-                                />
-                            </a>
-                        </div>
-                        <div
-                            className='footer-link'
-                            style={{ marginRight: '5px' }}
-                        >
-                            <a href='https://www.instagram.com/karenyingstagram/'>
-                                <AiFillInstagram
-                                    color={LIGHT_PINK}
-                                    size='18px'
-                                    style={{ animationDelay: '700ms' }}
-                                    title='Instagram'
                                 />
                             </a>
                         </div>
@@ -114,7 +93,7 @@ class Footer extends React.Component {
                             <h3
                                 style={{
                                     color: LIGHT_GRAY,
-                                    animationDelay: '800ms',
+                                    animationDelay: '600ms',
                                 }}
                             >
                                 •
@@ -122,7 +101,7 @@ class Footer extends React.Component {
                         </div>
                         <div className='footer-link' onClick={clickFunction}>
                             <FaChevronDown
-                                color={BLUE}
+                                color={DARK_PINK}
                                 size='20px'
                                 title='Hide footer'
                             />

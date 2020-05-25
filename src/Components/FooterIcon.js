@@ -1,18 +1,24 @@
 import React from 'react';
 import '../Styles/FooterIcon.css';
 import { FaChevronUp } from 'react-icons/fa';
-import { BLUE } from '../constants';
+import { DARK_PINK } from '../constants';
 
 class FooterIcon extends React.Component {
-
     render() {
         const { clickFunction } = this.props;
 
         return (
             <>
-                <div className="footer-icon-container">
-                    <div className="footer-icon-content" onClick={ clickFunction }>
-                        <FaChevronUp color={ BLUE } size="20px" title="Show footer"/>
+                <div className='footer-icon-container'>
+                    <div
+                        className='footer-icon-content'
+                        onClick={clickFunction}
+                    >
+                        <FaChevronUp
+                            color={DARK_PINK}
+                            size='20px'
+                            title='Show footer'
+                        />
                     </div>
                 </div>
             </>

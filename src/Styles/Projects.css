@@ -76,8 +76,7 @@
     margin: 0px;
 }
 
-.projectcard-site,
-.projectcard-code {
+.projectcard-button {
     width: 80px;
     padding: 10px;
     border-radius: 100px;
@@ -89,14 +88,12 @@
     margin: 10px;
 }
 
-.projectcard-site:hover svg,
-.projectcard-code:hover svg,
+.projectcard-button:hover svg,
 .arrow-container:hover svg {
     transform: scale(1.15);
 }
 
-.projectcard-site svg,
-.projectcard-code svg,
+.projectcard-button svg,
 .arrow-container svg {
     transition: transform 0.1s;
 }
