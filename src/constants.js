@@ -89,7 +89,7 @@ export const projectInfo = [
         stack: 'JS',
         description:
             "Driver’s Ed is an infinite runner game. A student driver must navigate Princeton University's Washington Road to collect coins while avoiding obstacles such as students and the campus fox.",
-        site: 'https://karenying.com/drivers-ed/',
+        site: 'https://karenying.github.io/drivers-ed/',
         code: 'https://github.com/karenying/drivers-ed/',
         paper: null,
     },
