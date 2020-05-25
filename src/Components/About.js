@@ -6,6 +6,8 @@ import Grid from '@material-ui/core/Grid';
 import Karen from '../Assets/karen.png';
 import Fade from '@material-ui/core/Fade';
 import { BLUE, YELLOW, LIGHT_PINK, DARK_PINK } from '../constants';
+import MiniKaren from '../Assets/mini-karen.png';
+import ProgressiveImage from 'react-progressive-image';
 
 function About() {
     const useStyles = makeStyles((theme) => ({
@@ -13,10 +15,10 @@ function About() {
             textAlign: 'left',
             maxWidth: 800,
             [theme.breakpoints.up('sm')]: {
-                padding: '100px 0px',
+                padding: '200px 0px',
             },
             [theme.breakpoints.down('sm')]: {
-                paddingTop: 10,
+                paddingTop: 80,
                 paddingLeft: 50,
                 paddingRight: 50,
             },
@@ -43,9 +45,23 @@ function About() {
                 <Header page='about' />
                 <Grid className={classes.aboutGrid} container>
                     <Grid item sm={12} md={4} className={classes.image}>
+                        {/*
                         <Fade in={true} timeout={{ enter: 1200 }}>
                             <img src={Karen} alt='karen' />
-                        </Fade>
+                        </Fade> */}
+                        <ProgressiveImage
+                            src={Karen}
+                            placeholder={MiniKaren}
+                            delay={300}
+                        >
+                            {(src, loading) => (
+                                <img
+                                    style={{ opacity: loading ? 0.8 : 1 }}
+                                    src={src}
+                                    alt='karen'
+                                />
+                            )}
+                        </ProgressiveImage>
                     </Grid>
                     <Grid item sm={12} md={8}>
                         <Fade in={true} timeout={{ enter: 1200 }}>

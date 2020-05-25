@@ -18,22 +18,17 @@
 }
 
 .header-content {
-    position: fixed;
-    right: 0px;
-    padding-top: 30px;
-    padding-right: 50px;
     display: flex;
     flex-direction: row;
+    padding-top: 30px;
 }
-
-.header-link {}
 
 .header-dot {
     margin-top: -5px;
     display: none;
     cursor: default;
 }
-    
+
 .header-link:hover .header-dot {
     display: block;
 }
