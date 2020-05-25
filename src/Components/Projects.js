@@ -40,7 +40,6 @@ function RightArrow(props) {
 function Projects() {
     useEffect(() => {
         const handleKeyDown = (e) => {
-            console.log(e);
             if (e.keyCode === 39) {
                 onRightClick();
             }
