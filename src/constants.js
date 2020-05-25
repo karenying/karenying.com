@@ -3,6 +3,7 @@ import Dayz from './Assets/dayz.png';
 import Gradient from './Assets/gradient.png';
 import ColorCharts from './Assets/colorcharts.png';
 import DriversEd from './Assets/driversed.gif';
+import React from 'react';
 
 export const DARK_GRAY = '#333333';
 
@@ -24,8 +25,17 @@ export const projectInfo = [
         name: 'gradient.png',
         type: 'static web page',
         stack: 'React',
-        description:
-            ' Nulla mi ultrices risus lectus vel, elit nulla etiam in tristique nec in, vivamu eget ut, id sapien integer. Sed semper ridiculus facilisis ante. Nulla libero ut vestibulum vitae quam, justo consequat nunc orci. Nisl interdum aliquet elementum pellentesque venenatis quis.',
+        description: (
+            <span>
+                gradient.png is a custom image generation web app. It was a
+                UI/UX redesign of{' '}
+                <a href='https://cssgradient.io/' style={{ color: DARK_PINK }}>
+                    CSS Gradient
+                </a>
+                . On top of redesigning the interface, I added a feature that
+                allowed the user to download the gradient as an image.
+            </span>
+        ),
         site: 'https://gradient-png.netlify.app/',
         code: 'https://github.com/karenying/gradient',
     },
@@ -49,7 +59,7 @@ export const projectInfo = [
         type: 'full stack web app',
         stack: 'MySQL + Flask + React',
         description:
-            ' Nulla mi ultrices risus lectus vel, elit nulla etiam in tristique nec in, vivamu eget ut, id sapien integer. Sed semper ridiculus facilisis ante. Nulla libero ut vestibulum vitae quam, justo consequat nunc orci. Nisl interdum aliquet elementum pellentesque venenatis quis.',
+            'Expresso is an online-ordering app for Princeton University’s Coffee Club. We worked closely with the club to implement an interface for the baristas and the students.',
         site: 'http://coffeeclub.princeton.edu/',
         code: null,
     },

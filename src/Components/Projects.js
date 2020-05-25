@@ -2,7 +2,7 @@ import React from 'react';
 import '../Styles/Projects.css';
 import Header from './Header';
 import { projectInfo } from '../constants';
-import { withStyles, makeStyles } from '@material-ui/core/styles';
+import { withStyles } from '@material-ui/core/styles';
 import { Card } from '@material-ui/core';
 import { FiExternalLink } from 'react-icons/fi';
 import { FaCode, FaChevronLeft, FaChevronRight } from 'react-icons/fa';
