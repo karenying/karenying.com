@@ -44,9 +44,9 @@ function Projects() {
         let newIndex = (index + 1) % projectInfo.length;
         setSlideIn(false);
         setDirection('right');
-        setIndex(newIndex);
 
         setTimeout(() => {
+            setIndex(newIndex);
             setDirection('left');
             setSlideIn(true);
         }, 500);
@@ -60,9 +60,9 @@ function Projects() {
 
         setSlideIn(false);
         setDirection('left');
-        setIndex(newIndex);
 
         setTimeout(() => {
+            setIndex(newIndex);
             setDirection('right');
             setSlideIn(true);
         }, 500);
