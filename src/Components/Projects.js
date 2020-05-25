@@ -170,7 +170,7 @@ function Projects() {
         infoGridItem: {
             textAlign: 'left',
             [theme.breakpoints.up('xs')]: { marginBottom: 15 },
-            [theme.breakpoints.down('xs')]: { marginBottom: 5 },
+            [theme.breakpoints.down('xs')]: { marginBottom: 8 },
         },
     }));
 

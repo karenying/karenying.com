@@ -69,7 +69,7 @@ export const projectInfo = [
                 Student Charge.
                 <br />
                 <br />
-                It launches in Fall 2020.
+                It launches Fall 2020.
             </span>
         ),
 

@@ -87,7 +87,7 @@ function About() {
                                     >
                                         fries
                                     </a>
-                                    , and trying to convince my friends that
+                                    , or trying to convince my friends that
                                     country and EDM are the best music genres (
                                     <a
                                         href='https://www.youtube.com/watch?v=qDyCMxS8YfE'
@@ -98,7 +98,7 @@ function About() {
                                     are even better).
                                     <br />
                                     <br />
-                                    Check out my{' '}
+                                    Browse my{' '}
                                     <Link
                                         to={`/projects`}
                                         style={{
@@ -108,7 +108,7 @@ function About() {
                                     >
                                         projects tab
                                     </Link>{' '}
-                                    to see some of my work!
+                                    to see some examples of my work!
                                 </p>
                             </div>
                         </Fade>

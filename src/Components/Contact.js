@@ -32,7 +32,7 @@ function Contact() {
                         I'd love to hear from you!
                         <br />
                         <br />
-                        The best way to reach me to shoot me an email at{' '}
+                        The best way to reach me is to shoot me an email at{' '}
                         <a
                             href='mailto:karenying7@gmail.com'
                             style={{ color: BLUE }}
@@ -54,7 +54,7 @@ function Contact() {
                             href='https://twitter.com/karen_ying_'
                             style={{ color: DARK_PINK }}
                         >
-                            tweet me{' '}
+                            tweet at me{' '}
                         </a>
                         .
                     </p>
