@@ -5,28 +5,31 @@ import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import Karen from '../Assets/karen.png';
 import Fade from '@material-ui/core/Fade';
+import { BLUE, YELLOW, LIGHT_PINK, DARK_PINK } from '../constants';
 
 function About() {
     const useStyles = makeStyles((theme) => ({
         aboutGrid: {
             textAlign: 'left',
-            maxWidth: 1000,
-            [theme.breakpoints.up('md')]: {
+            maxWidth: 800,
+            [theme.breakpoints.up('sm')]: {
                 padding: '100px 0px',
             },
-            [theme.breakpoints.down('md')]: {
-                padding: '10px 50px',
+            [theme.breakpoints.down('sm')]: {
+                paddingTop: 10,
+                paddingLeft: 50,
+                paddingRight: 50,
             },
         },
         image: {
             display: 'flex',
             alignItems: 'center',
             width: '100%',
-            [theme.breakpoints.up('md')]: {
+            [theme.breakpoints.up('sm')]: {
                 justifyContent: 'left',
             },
-            [theme.breakpoints.down('md')]: {
-                paddingBottom: '10px',
+            [theme.breakpoints.down('sm')]: {
+                paddingBottom: '30px',
                 justifyContent: 'center',
             },
         },
@@ -40,41 +43,54 @@ function About() {
                 <Header page='about' />
                 <Grid className={classes.aboutGrid} container>
                     <Grid item sm={12} md={4} className={classes.image}>
-                        <Fade in={true} timeout={{ enter: 1000 }}>
+                        <Fade in={true} timeout={{ enter: 1200 }}>
                             <img src={Karen} alt='karen' />
                         </Fade>
                     </Grid>
                     <Grid item sm={12} md={8}>
-                        <Fade in={true} timeout={{ enter: 1000 }}>
+                        <Fade in={true} timeout={{ enter: 1200 }}>
                             <div>
-                                <h2>Karen Ying</h2>
                                 <p>
-                                    Blandit nullam nisl, morbi duis. Amet odio,
-                                    amet scelerisque pede volutpat ipsum, lorem
-                                    nisl proin pharetra fusce mollis, ut sed
-                                    morbi nullam semper eget, sem ut urna.
-                                    Ornare mauris aliquip scelerisque, semper
-                                    velit. Fringilla blandit nullam nibh, risus
-                                    porta sagittis, aliquam eu elit sem, sociis
-                                    vitae vel sollicitudin tellus erat turpis.
-                                    Cum feugiat amet, at volutpat et orci amet
-                                    odio tempor, praesent morbi fermentum arcu
-                                    dui duis, sodales nam vitae fringilla
-                                    elementum. Ultricies nibh lectus proin
-                                    scelerisque, aenean ac dapibus consectetuer
-                                    aut bibendum, elit morbi ut tortor nunc nunc
-                                    non, in donec mauris a molestie amet. Purus
-                                    at justo posuere eu, quis nulla ipsum ut
-                                    aenean, dapibus nullam tenetur aliquam in
-                                    aliquam in. Varius pariatur class, etiam
-                                    velit fusce consectetuer magna sem nibh.
-                                    Felis sit pellentesque augue aliquet varius
-                                    est. In lorem, vitae suspendisse aliquet hac
-                                    at nonummy, adipiscing non, felis nam. Magna
-                                    cras quam nec etiam, nulla quis in,
-                                    sollicitudin ante scelerisque tellus.
-                                    Fermentum tincidunt, nulla velit, proin
-                                    maecenas nibh egestas.
+                                    Hi! I'm Karen, a rising senior studying
+                                    Computer Science at Princeton University.
+                                    I'm interested in anything tech &mdash;
+                                    especially web development and UI/UX design.
+                                    <br />
+                                    <br />
+                                    Currently, I'm a SWE intern at{' '}
+                                    <a
+                                        href='https://www.wellsheet.com/'
+                                        style={{ color: BLUE }}
+                                    >
+                                        Wellsheet
+                                    </a>
+                                    . In my free time, you can find me playing
+                                    frisbee, eating{' '}
+                                    <a
+                                        href='https://www.instagram.com/fry.nsta/'
+                                        style={{ color: YELLOW }}
+                                    >
+                                        fries
+                                    </a>
+                                    , and trying to convince her friends that
+                                    country and EDM are the best music genres (
+                                    <a
+                                        href='https://www.youtube.com/watch?v=qDyCMxS8YfE'
+                                        style={{ color: DARK_PINK }}
+                                    >
+                                        EDM remixes of country songs
+                                    </a>{' '}
+                                    are even better).
+                                    <br />
+                                    <br />
+                                    Check out my{' '}
+                                    <a
+                                        href='./projects'
+                                        style={{ color: LIGHT_PINK }}
+                                    >
+                                        projects tab
+                                    </a>{' '}
+                                    to see some of my work!
                                 </p>
                             </div>
                         </Fade>

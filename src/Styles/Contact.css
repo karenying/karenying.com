@@ -1,5 +1,32 @@
 .contact-container {
-    height: 100vh;
-    padding: 150px;
+    padding-top: 200px;
     box-sizing: border-box;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.contact-content {
+    max-width: 400px;
+    text-align: left;
+    padding: 0px 50px;
+}
+
+.contact-content p {
+    color: #d9d9d9;
+}
+
+.contact-content h2 {
+    color: #ffb6b9;
+    font-family: monospace !important;
+    margin-bottom: 40px;
+}
+
+.contact-content a {
+    text-decoration: none;
+}
+
+.contact-content a:hover {
+    text-decoration: underline;
 }

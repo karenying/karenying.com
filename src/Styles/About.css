@@ -21,3 +21,11 @@
     color: #ffb6b9;
     font-family: monospace !important;
 }
+
+.about-container a {
+    text-decoration: none;
+}
+
+.about-container a:hover {
+    text-decoration: underline;
+}
