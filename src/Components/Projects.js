@@ -2,13 +2,13 @@ import React, { useState } from 'react';
 import '../Styles/Projects.css';
 import Header from './Header';
 import { projectInfo } from '../constants';
-import { makeStyles } from '@material-ui/core/styles';
-import { Card } from '@material-ui/core';
 import { FiExternalLink } from 'react-icons/fi';
 import { FaCode, FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 import Slide from '@material-ui/core/Slide';
 import Hidden from '@material-ui/core/Hidden';
 import Grid from '@material-ui/core/Grid';
+import { makeStyles } from '@material-ui/core/styles';
+import { Card } from '@material-ui/core';
 
 function LeftArrow(props) {
     const { clickFunction } = props;
@@ -76,13 +76,11 @@ function Projects() {
         code,
     } = currInfo;
 
-    const buttonMargin = code ? 30 : 0;
     const siteButton = site ? (
         <a href={site}>
             <div
                 className='projectcard-site'
                 style={{
-                    marginRight: buttonMargin,
                     backgroundColor: color,
                 }}
             >
@@ -114,11 +112,18 @@ function Projects() {
             borderRadius: 5,
             alignItems: 'center',
             justifyContent: 'space-evenly',
-            margin: '0px 25px',
-            padding: '75px 50px',
+            [theme.breakpoints.up('md')]: {
+                padding: '75px 50px',
+                margin: '0px 25px',
+            },
+            [theme.breakpoints.down('md')]: {
+                padding: '0px 0px',
+                height: 550,
+                margin: '0px 10px',
+            },
         },
         infoCard: {
-            [theme.breakpoints.up('md')]: { minHeight: 400 },
+            minHeight: 400,
             maxWidth: 400,
             backgroundColor: '#f5f5f5',
             display: 'flex',
@@ -126,11 +131,22 @@ function Projects() {
             boxShadow: '20px 20px 20px rgba(0,0,0,0.5)',
             flexDirection: 'column',
             alignItems: 'center',
-            padding: '30px 40px',
+            [theme.breakpoints.up('md')]: { padding: '30px 40px' },
+            [theme.breakpoints.down('md')]: {
+                padding: '30px 20px',
+                width: '100%',
+                height: '100%',
+                boxSizing: 'border-box',
+            },
             position: 'relative',
         },
         infoGrid: {
             textAlign: 'left',
+        },
+        infoGridItem: {
+            textAlign: 'left',
+            [theme.breakpoints.up('xs')]: { marginBottom: 15 },
+            [theme.breakpoints.down('xs')]: { marginBottom: 5 },
         },
     }));
 
@@ -153,7 +169,7 @@ function Projects() {
                                 <h2 style={{ marginBottom: 30 }}>{name}</h2>
                                 <Grid className={classes.infoGrid} container>
                                     <Grid
-                                        className={classes.infoGrid}
+                                        className={classes.infoGridItem}
                                         item
                                         xs={12}
                                         sm={4}
@@ -162,7 +178,7 @@ function Projects() {
                                         <h3 style={{ color }}>type:</h3>
                                     </Grid>
                                     <Grid
-                                        className={classes.infoGrid}
+                                        className={classes.infoGridItem}
                                         item
                                         xs={12}
                                         sm={8}
@@ -170,7 +186,7 @@ function Projects() {
                                         <p>{type}</p>
                                     </Grid>
                                     <Grid
-                                        className={classes.infoGrid}
+                                        className={classes.infoGridItem}
                                         item
                                         xs={12}
                                         sm={4}
@@ -178,7 +194,7 @@ function Projects() {
                                         <h3 style={{ color }}>stack:</h3>
                                     </Grid>
                                     <Grid
-                                        className={classes.infoGrid}
+                                        className={classes.infoGridItem}
                                         item
                                         xs={12}
                                         sm={8}
@@ -186,7 +202,7 @@ function Projects() {
                                         <p>{stack}</p>
                                     </Grid>
                                     <Grid
-                                        className={classes.infoGrid}
+                                        className={classes.infoGridItem}
                                         item
                                         xs={12}
                                         sm={4}
@@ -194,7 +210,7 @@ function Projects() {
                                         <h3 style={{ color }}>description:</h3>
                                     </Grid>
                                     <Grid
-                                        className={classes.infoGrid}
+                                        className={classes.infoGridItem}
                                         item
                                         xs={12}
                                         sm={8}
