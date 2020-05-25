@@ -139,7 +139,7 @@ function Projects() {
             [theme.breakpoints.down('md')]: {
                 padding: '0px 0px',
                 height: 550,
-                margin: '0px 10px',
+                margin: '0px 10px 50px 10px',
             },
         },
         infoCard: {

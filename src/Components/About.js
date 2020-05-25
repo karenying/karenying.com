@@ -18,9 +18,7 @@ function About() {
                 padding: '200px 0px',
             },
             [theme.breakpoints.down('sm')]: {
-                paddingTop: 80,
-                paddingLeft: 50,
-                paddingRight: 50,
+                padding: '80px 50px 50px 50px',
             },
         },
         image: {
