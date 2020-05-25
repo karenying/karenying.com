@@ -27,8 +27,8 @@ export const projectInfo = [
         stack: 'React',
         description: (
             <span>
-                gradient.png is a custom image generation web app. It was a
-                UI/UX redesign of{' '}
+                gradient.png is a custom image generation web app. It is a UI/UX
+                redesign of{' '}
                 <a href='https://cssgradient.io/' style={{ color: DARK_PINK }}>
                     CSS Gradient
                 </a>
@@ -60,8 +60,19 @@ export const projectInfo = [
         name: 'expresso',
         type: 'full stack web app',
         stack: 'MySQL + Flask + React',
-        description:
-            'Expresso is an online-ordering app for Princeton University’s Coffee Club. Much like any online-ordering interface, the baristas are able to see the orders the students place. The students either pay in store when picking up, or use Princeton’s Student Charge. It launches in Fall 2020.',
+        description: (
+            <span>
+                'Expresso is an online-ordering app for Princeton University’s
+                Coffee Club. Much like any online-ordering interface, the
+                baristas are able to see the orders the students place. The
+                students either pay in store when picking up, or use Princeton’s
+                Student Charge.
+                <br />
+                <br />
+                It launches in Fall 2020.
+            </span>
+        ),
+
         site: 'http://coffeeclub.princeton.edu/',
         code: null,
         paper: null,
@@ -74,7 +85,7 @@ export const projectInfo = [
         type: 'Chrome extension',
         stack: 'JS',
         description:
-            'Color Charts aims to increase the readability of charts, graphs, and diagrams on the web. It improves upon existing extensions by using researched color blind friendly palettes to recolor images. The recoloring algorithm uses HTML Canvas and base64 encoding.',
+            'Color Charts aims to increase the readability of charts, graphs, and diagrams on the web. It improves upon existing extensions by using researched color blind friendly palettes to recolor images. The recoloring algorithm uses HTML Canvas and base64 encoding to recolor images in place.',
         site: null,
         code: 'https://github.com/karenying/color-charts',
         paper:

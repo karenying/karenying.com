@@ -79,6 +79,10 @@
     margin: 0px;
 }
 
+.projectcard-buttons:hover a {
+    text-decoration: none;
+}
+
 .projectcard-button {
     width: 80px;
     padding: 10px;

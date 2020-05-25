@@ -14,6 +14,7 @@ import Hidden from '@material-ui/core/Hidden';
 import Grid from '@material-ui/core/Grid';
 import { makeStyles } from '@material-ui/core/styles';
 import { Card } from '@material-ui/core';
+import Fade from '@material-ui/core/Fade';
 
 function LeftArrow(props) {
     const { clickFunction } = props;
@@ -37,14 +38,30 @@ function RightArrow(props) {
 
 function Projects() {
     const [index, setIndex] = useState(0);
+
+    const currInfo = projectInfo[index];
+    const {
+        backgroundColor,
+        color,
+        image,
+        name,
+        type,
+        stack,
+        description,
+        site,
+        code,
+        paper,
+    } = currInfo;
+
     const [slideIn, setSlideIn] = useState(true);
     const [direction, setDirection] = useState('left');
+    const [imageSrc, setImgSrc] = useState(image);
 
     const onRightClick = () => {
         let newIndex = (index + 1) % projectInfo.length;
         setSlideIn(false);
         setDirection('right');
-
+        setImgSrc(projectInfo[newIndex].image);
         setTimeout(() => {
             setIndex(newIndex);
             setDirection('left');
@@ -61,26 +78,13 @@ function Projects() {
         setSlideIn(false);
         setDirection('left');
 
+        setImgSrc(projectInfo[newIndex].image);
         setTimeout(() => {
             setIndex(newIndex);
             setDirection('right');
             setSlideIn(true);
         }, 500);
     };
-
-    const currInfo = projectInfo[index];
-    const {
-        backgroundColor,
-        color,
-        image,
-        name,
-        type,
-        stack,
-        description,
-        site,
-        code,
-        paper,
-    } = currInfo;
 
     const siteButton = site ? (
         <a href={site}>
@@ -181,9 +185,11 @@ function Projects() {
                     <Slide in={slideIn} direction={direction}>
                         <Card className={classes.projectCard}>
                             <Hidden mdDown>
-                                <div className='projectcard-image'>
-                                    <img src={image} alt='project' />
-                                </div>
+                                <Fade in={slideIn} timeout={{ enter: 1200 }}>
+                                    <div className='projectcard-image'>
+                                        <img src={imageSrc} alt='project' />
+                                    </div>
+                                </Fade>
                             </Hidden>
                             <Card className={classes.infoCard}>
                                 <h2 style={{ marginBottom: 30 }}>{name}</h2>
