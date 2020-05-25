@@ -3,11 +3,14 @@
     padding-top: 100px;
     box-sizing: border-box;
     overflow: hidden;
-    box-sizing: border-box;
 }
 
 .projects-container a {
     text-decoration: none;
+}
+
+.projects-container a:hover {
+    text-decoration: underline;
 }
 
 .projects-content {
