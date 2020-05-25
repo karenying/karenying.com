@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import '../Styles/Projects.css';
 import Header from './Header';
 import { projectInfo } from '../constants';
@@ -8,6 +8,7 @@ import {
     FaChevronLeft,
     FaChevronRight,
     FaPaperclip,
+    FaGamepad,
 } from 'react-icons/fa';
 import Slide from '@material-ui/core/Slide';
 import Hidden from '@material-ui/core/Hidden';
@@ -37,6 +38,24 @@ function RightArrow(props) {
 }
 
 function Projects() {
+    useEffect(() => {
+        const handleKeyDown = (e) => {
+            console.log(e);
+            if (e.keyCode === 39) {
+                onRightClick();
+            }
+            if (e.keyCode === 37) {
+                onLeftClick();
+            }
+        };
+
+        window.addEventListener('keydown', handleKeyDown);
+
+        return () => {
+            window.removeEventListener('keydown', handleKeyDown);
+        };
+    });
+
     const [index, setIndex] = useState(0);
 
     const currInfo = projectInfo[index];
@@ -51,6 +70,7 @@ function Projects() {
         site,
         code,
         paper,
+        game,
     } = currInfo;
 
     const [slideIn, setSlideIn] = useState(true);
@@ -96,6 +116,24 @@ function Projects() {
             >
                 <FiExternalLink color='#f5f5f5' style={{ paddingRight: 7 }} />
                 <h3 style={{ color: '#f5f5f5' }}>site</h3>
+            </div>
+        </a>
+    ) : null;
+
+    const gameButton = game ? (
+        <a href={game}>
+            <div
+                className='projectcard-button'
+                style={{
+                    backgroundColor: color,
+                }}
+            >
+                <FaGamepad
+                    color='#f5f5f5'
+                    style={{ paddingRight: 7 }}
+                    size='17px'
+                />
+                <h3 style={{ color: '#f5f5f5' }}>game</h3>
             </div>
         </a>
     ) : null;
@@ -245,6 +283,7 @@ function Projects() {
                                     </Grid>
                                 </Grid>
                                 <div className='projectcard-buttons'>
+                                    {gameButton}
                                     {siteButton}
                                     {paperButton}
                                     {codeButton}

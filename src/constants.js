@@ -39,6 +39,7 @@ export const projectInfo = [
         site: 'https://gradient-png.netlify.app/',
         code: 'https://github.com/karenying/gradient',
         paper: null,
+        game: null,
     },
     {
         backgroundColor: LIGHT_PINK,
@@ -52,6 +53,7 @@ export const projectInfo = [
         site: 'http://dayz-app.herokuapp.com/',
         code: 'https://github.com/karenying/dayz',
         paper: null,
+        game: null,
     },
     {
         backgroundColor: BLUE,
@@ -76,6 +78,7 @@ export const projectInfo = [
         site: 'http://coffeeclub.princeton.edu/',
         code: null,
         paper: null,
+        game: null,
     },
     {
         backgroundColor: YELLOW,
@@ -90,6 +93,7 @@ export const projectInfo = [
         code: 'https://github.com/karenying/color-charts',
         paper:
             'https://github.com/karenying/color-charts/blob/master/src/assets/paper.pdf',
+        game: null,
     },
     {
         backgroundColor: LIGHT_GRAY,
@@ -100,8 +104,9 @@ export const projectInfo = [
         stack: 'JS',
         description:
             "Driver’s Ed is an infinite runner game. A student driver must navigate Princeton University's Washington Road to collect coins while avoiding obstacles such as students and the campus fox.",
-        site: 'https://karenying.github.io/drivers-ed/',
+        site: null,
         code: 'https://github.com/karenying/drivers-ed/',
         paper: null,
+        game: 'https://karenying.github.io/drivers-ed/',
     },
 ];
