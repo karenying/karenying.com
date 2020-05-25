@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 import '../Styles/Projects.css';
 import Header from './Header';
 import { projectInfo } from '../constants';
-import { withStyles } from '@material-ui/core/styles';
+import { makeStyles } from '@material-ui/core/styles';
 import { Card } from '@material-ui/core';
 import { FiExternalLink } from 'react-icons/fi';
 import { FaCode, FaChevronLeft, FaChevronRight } from 'react-icons/fa';
@@ -30,178 +30,190 @@ function RightArrow(props) {
     );
 }
 
-class Projects extends React.Component {
-    state = {
-        index: 0,
-        in: true,
-        direction: 'left',
-    };
+function Projects() {
+    const [index, setIndex] = useState(0);
+    const [slideIn, setIn] = useState(true);
+    const [direction, setDirection] = useState('left');
 
-    onRightClick = () => {
-        const { index } = this.state;
+    const onRightClick = () => {
         let newIndex = (index + 1) % projectInfo.length;
-        this.setState({ in: false, direction: 'right' });
-        setTimeout(
-            () =>
-                this.setState({ in: true, direction: 'left', index: newIndex }),
-            500
-        );
+        setIn(false);
+        setDirection('right');
+
+        setTimeout(() => {
+            setDirection('left');
+            setIndex(newIndex);
+            setIn(true);
+        }, 500);
     };
 
-    onLeftClick = () => {
-        const { index } = this.state;
+    const onLeftClick = () => {
         let newIndex = index - 1;
         if (newIndex === -1) {
             newIndex = projectInfo.length - 1;
         }
-        this.setState({ in: false, direction: 'left' });
-        setTimeout(
-            () =>
-                this.setState({
-                    in: true,
-                    direction: 'right',
-                    index: newIndex,
-                }),
-            500
-        );
+
+        setIn(false);
+        setDirection('left');
+
+        setTimeout(() => {
+            setDirection('right');
+            setIndex(newIndex);
+            setIn(true);
+        }, 500);
     };
 
-    render() {
-        const { index } = this.state;
-        const currInfo = projectInfo[index];
-        const {
-            backgroundColor,
-            color,
-            image,
-            name,
-            type,
-            stack,
-            description,
-            site,
-            code,
-        } = currInfo;
+    const currInfo = projectInfo[index];
+    const {
+        backgroundColor,
+        color,
+        image,
+        name,
+        type,
+        stack,
+        description,
+        site,
+        code,
+    } = currInfo;
 
-        const buttonMargin = code ? 30 : 0;
-        const siteButton = site ? (
-            <a href={site}>
-                <div
-                    className='projectcard-site'
-                    style={{
-                        marginRight: buttonMargin,
-                        backgroundColor: color,
-                    }}
-                >
-                    <FiExternalLink
-                        color='#f5f5f5'
-                        style={{ paddingRight: 7 }}
-                    />
-                    <h3 style={{ color: '#f5f5f5' }}>site</h3>
-                </div>
-            </a>
-        ) : null;
-
-        const codeButton = code ? (
-            <a href={code}>
-                <div
-                    className='projectcard-code'
-                    style={{
-                        backgroundColor: color,
-                    }}
-                >
-                    <FaCode color='#f5f5f5' style={{ paddingRight: 7 }} />
-                    <h3 style={{ color: '#f5f5f5' }}>code</h3>
-                </div>
-            </a>
-        ) : null;
-
-        const ProjectCard = withStyles({
-            root: {
-                backgroundColor,
-                boxShadow: '20px 20px 20px black',
-                display: 'flex',
-                borderRadius: 5,
-                alignItems: 'center',
-                justifyContent: 'space-evenly',
-                margin: '0px 25px',
-                padding: '75px 50px',
-            },
-        })(Card);
-
-        const InfoCard = withStyles({
-            root: {
-                minHeight: 400,
-                maxWidth: 400,
-                backgroundColor: '#f5f5f5',
-                display: 'flex',
-                borderRadius: 5,
-                boxShadow: '20px 20px 20px rgba(0,0,0,0.5)',
-                flexDirection: 'column',
-                alignItems: 'center',
-                padding: '30px 40px',
-                position: 'relative',
-            },
-        })(Card);
-
-        const InfoGrid = withStyles({
-            root: {
-                textAlign: 'left',
-            },
-        })(Grid);
-
-        return (
-            <div className='projects-container'>
-                <Header page='projects' />
-                <div className='projects-content'>
-                    <LeftArrow clickFunction={this.onLeftClick} />
-                    <div className='projectcard-container'>
-                        <Slide
-                            in={this.state.in}
-                            direction={this.state.direction}
-                        >
-                            <ProjectCard>
-                                <Hidden mdDown>
-                                    <div className='projectcard-image'>
-                                        <img src={image} />
-                                    </div>
-                                </Hidden>
-                                <InfoCard>
-                                    <h2 style={{ marginBottom: 30 }}>{name}</h2>
-                                    <InfoGrid container>
-                                        <InfoGrid item xs={12} sm={4} mb={15}>
-                                            <h3 style={{ color }}>type:</h3>
-                                        </InfoGrid>
-                                        <InfoGrid item xs={12} sm={8}>
-                                            <p>{type}</p>
-                                        </InfoGrid>
-                                        <InfoGrid item xs={12} sm={4}>
-                                            <h3 style={{ color }}>stack:</h3>
-                                        </InfoGrid>
-                                        <InfoGrid item xs={12} sm={8}>
-                                            <p>{stack}</p>
-                                        </InfoGrid>
-                                        <InfoGrid item xs={12} sm={4}>
-                                            <h3 style={{ color }}>
-                                                description:
-                                            </h3>
-                                        </InfoGrid>
-                                        <InfoGrid item xs={12} sm={8}>
-                                            <p>{description}</p>
-                                        </InfoGrid>
-                                    </InfoGrid>
-                                    <div className='projectcard-buttons'>
-                                        {siteButton}
-                                        {codeButton}
-                                    </div>
-                                    <h2></h2>
-                                </InfoCard>
-                            </ProjectCard>
-                        </Slide>
-                    </div>
-                    <RightArrow clickFunction={this.onRightClick} />
-                </div>
+    const buttonMargin = code ? 30 : 0;
+    const siteButton = site ? (
+        <a href={site}>
+            <div
+                className='projectcard-site'
+                style={{
+                    marginRight: buttonMargin,
+                    backgroundColor: color,
+                }}
+            >
+                <FiExternalLink color='#f5f5f5' style={{ paddingRight: 7 }} />
+                <h3 style={{ color: '#f5f5f5' }}>site</h3>
             </div>
-        );
-    }
+        </a>
+    ) : null;
+
+    const codeButton = code ? (
+        <a href={code}>
+            <div
+                className='projectcard-code'
+                style={{
+                    backgroundColor: color,
+                }}
+            >
+                <FaCode color='#f5f5f5' style={{ paddingRight: 7 }} />
+                <h3 style={{ color: '#f5f5f5' }}>code</h3>
+            </div>
+        </a>
+    ) : null;
+
+    const useStyles = makeStyles((theme) => ({
+        projectCard: {
+            backgroundColor,
+            boxShadow: '20px 20px 20px black',
+            display: 'flex',
+            borderRadius: 5,
+            alignItems: 'center',
+            justifyContent: 'space-evenly',
+            margin: '0px 25px',
+            padding: '75px 50px',
+        },
+        infoCard: {
+            [theme.breakpoints.up('md')]: { minHeight: 400 },
+            maxWidth: 400,
+            backgroundColor: '#f5f5f5',
+            display: 'flex',
+            borderRadius: 5,
+            boxShadow: '20px 20px 20px rgba(0,0,0,0.5)',
+            flexDirection: 'column',
+            alignItems: 'center',
+            padding: '30px 40px',
+            position: 'relative',
+        },
+        infoGrid: {
+            textAlign: 'left',
+        },
+    }));
+
+    const classes = useStyles();
+
+    return (
+        <div className='projects-container'>
+            <Header page='projects' />
+            <div className='projects-content'>
+                <LeftArrow clickFunction={onLeftClick} />
+                <div className='projectcard-container'>
+                    <Slide in={slideIn} direction={direction}>
+                        <Card className={classes.projectCard}>
+                            <Hidden mdDown>
+                                <div className='projectcard-image'>
+                                    <img src={image} alt='project' />
+                                </div>
+                            </Hidden>
+                            <Card className={classes.infoCard}>
+                                <h2 style={{ marginBottom: 30 }}>{name}</h2>
+                                <Grid className={classes.infoGrid} container>
+                                    <Grid
+                                        className={classes.infoGrid}
+                                        item
+                                        xs={12}
+                                        sm={4}
+                                        mb={15}
+                                    >
+                                        <h3 style={{ color }}>type:</h3>
+                                    </Grid>
+                                    <Grid
+                                        className={classes.infoGrid}
+                                        item
+                                        xs={12}
+                                        sm={8}
+                                    >
+                                        <p>{type}</p>
+                                    </Grid>
+                                    <Grid
+                                        className={classes.infoGrid}
+                                        item
+                                        xs={12}
+                                        sm={4}
+                                    >
+                                        <h3 style={{ color }}>stack:</h3>
+                                    </Grid>
+                                    <Grid
+                                        className={classes.infoGrid}
+                                        item
+                                        xs={12}
+                                        sm={8}
+                                    >
+                                        <p>{stack}</p>
+                                    </Grid>
+                                    <Grid
+                                        className={classes.infoGrid}
+                                        item
+                                        xs={12}
+                                        sm={4}
+                                    >
+                                        <h3 style={{ color }}>description:</h3>
+                                    </Grid>
+                                    <Grid
+                                        className={classes.infoGrid}
+                                        item
+                                        xs={12}
+                                        sm={8}
+                                    >
+                                        <p>{description}</p>
+                                    </Grid>
+                                </Grid>
+                                <div className='projectcard-buttons'>
+                                    {siteButton}
+                                    {codeButton}
+                                </div>
+                            </Card>
+                        </Card>
+                    </Slide>
+                </div>
+                <RightArrow clickFunction={onRightClick} />
+            </div>
+        </div>
+    );
 }
 
 export default Projects;
