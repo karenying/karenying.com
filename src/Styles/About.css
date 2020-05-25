@@ -28,3 +28,10 @@
 .about-container a:hover {
     text-decoration: underline;
 }
+
+.projects-link {
+    text-decoration: none;
+}
+.projects-link:hover {
+    text-decoration: underline;
+}

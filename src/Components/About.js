@@ -8,6 +8,7 @@ import Fade from '@material-ui/core/Fade';
 import { BLUE, YELLOW, LIGHT_PINK, DARK_PINK } from '../constants';
 import MiniKaren from '../Assets/mini-karen.png';
 import ProgressiveImage from 'react-progressive-image';
+import { Link } from 'react-router-dom';
 
 function About() {
     const useStyles = makeStyles((theme) => ({
@@ -86,7 +87,7 @@ function About() {
                                     >
                                         fries
                                     </a>
-                                    , and trying to convince her friends that
+                                    , and trying to convince my friends that
                                     country and EDM are the best music genres (
                                     <a
                                         href='https://www.youtube.com/watch?v=qDyCMxS8YfE'
@@ -98,12 +99,15 @@ function About() {
                                     <br />
                                     <br />
                                     Check out my{' '}
-                                    <a
-                                        href='./projects'
-                                        style={{ color: LIGHT_PINK }}
+                                    <Link
+                                        to={`/projects`}
+                                        style={{
+                                            color: LIGHT_PINK,
+                                        }}
+                                        className='projects-link'
                                     >
                                         projects tab
-                                    </a>{' '}
+                                    </Link>{' '}
                                     to see some of my work!
                                 </p>
                             </div>
