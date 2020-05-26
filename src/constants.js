@@ -64,14 +64,14 @@ export const projectInfo = [
         stack: 'MySQL + Flask + React',
         description: (
             <span>
-                'Expresso is an online-ordering app for Princeton University’s
+                Expresso is an online-ordering app for Princeton University’s
                 Coffee Club. Much like any online-ordering interface, the
                 baristas are able to see the orders the students place. The
                 students either pay in store when picking up, or use Princeton’s
                 Student Charge.
                 <br />
                 <br />
-                It launches Fall 2020.
+                Launches Fall 2020.
             </span>
         ),
 
@@ -102,8 +102,17 @@ export const projectInfo = [
         name: "driver's ed",
         type: 'three.js game',
         stack: 'JS',
-        description:
-            "Driver’s Ed is an infinite runner game. A student driver must navigate Princeton University's Washington Road to collect coins while avoiding obstacles such as students and the campus fox.",
+        description: (
+            <span>
+                Driver’s Ed is an infinite runner game. A student driver must
+                navigate Princeton University's Washington Road to collect coins
+                while avoiding obstacles such as students and the campus fox.
+                <br />
+                <br />
+                Won Art Direction Award and 3rd Place Runner-up for Spring 2020
+                COS 426: Computer Graphics.
+            </span>
+        ),
         site: null,
         code: 'https://github.com/karenying/drivers-ed/',
         paper: null,

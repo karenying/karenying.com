@@ -54,7 +54,7 @@ function Contact() {
                             href='https://twitter.com/karen_ying_'
                             style={{ color: DARK_PINK }}
                         >
-                            tweet at me{' '}
+                            tweet at me
                         </a>
                         .
                     </p>
