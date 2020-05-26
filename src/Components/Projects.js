@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import '../Styles/Projects.css';
 import Header from './Header';
 import { projectInfo } from '../constants';
@@ -18,20 +18,20 @@ import { Card } from '@material-ui/core';
 import Fade from '@material-ui/core/Fade';
 
 function LeftArrow(props) {
-    const { clickFunction } = props;
+    const { clickFunction, myRef } = props;
 
     return (
-        <div className='arrow-container' onClick={clickFunction}>
+        <div className='arrow-container' onClick={clickFunction} ref={myRef}>
             <FaChevronLeft color='#f5f5f5' size='40px' />
         </div>
     );
 }
 
 function RightArrow(props) {
-    const { clickFunction } = props;
+    const { clickFunction, myRef } = props;
 
     return (
-        <div className='arrow-container' onClick={clickFunction}>
+        <div className='arrow-container' onClick={clickFunction} ref={myRef}>
             <FaChevronRight color='#f5f5f5' size='40px' />
         </div>
     );
@@ -55,6 +55,9 @@ function Projects() {
         };
     });
 
+    const leftArrow = useRef();
+    const rightArrow = useRef();
+
     const [index, setIndex] = useState(0);
 
     const currInfo = projectInfo[index];
@@ -77,6 +80,8 @@ function Projects() {
     const [imageSrc, setImgSrc] = useState(image);
 
     const onRightClick = () => {
+        rightArrow.current.firstChild.style.transform = 'scale(1.15)';
+
         let newIndex = (index + 1) % projectInfo.length;
         setSlideIn(false);
         setDirection('right');
@@ -85,10 +90,13 @@ function Projects() {
             setIndex(newIndex);
             setDirection('left');
             setSlideIn(true);
+            rightArrow.current.firstChild.style.transform = '';
         }, 500);
     };
 
     const onLeftClick = () => {
+        leftArrow.current.firstChild.style.transform = 'scale(1.15)';
+
         let newIndex = index - 1;
         if (newIndex === -1) {
             newIndex = projectInfo.length - 1;
@@ -102,11 +110,12 @@ function Projects() {
             setIndex(newIndex);
             setDirection('right');
             setSlideIn(true);
+            leftArrow.current.firstChild.style.transform = '';
         }, 500);
     };
 
     const siteButton = site ? (
-        <a href={site}>
+        <a href={site} target='_blank' rel='noopener noreferrer'>
             <div
                 className='projectcard-button'
                 style={{
@@ -120,7 +129,7 @@ function Projects() {
     ) : null;
 
     const gameButton = game ? (
-        <a href={game}>
+        <a href={game} target='_blank' rel='noopener noreferrer'>
             <div
                 className='projectcard-button'
                 style={{
@@ -132,13 +141,13 @@ function Projects() {
                     style={{ paddingRight: 7 }}
                     size='17px'
                 />
-                <h3 style={{ color: '#f5f5f5' }}>game</h3>
+                <h3 style={{ color: '#f5f5f5' }}>play</h3>
             </div>
         </a>
     ) : null;
 
     const codeButton = code ? (
-        <a href={code}>
+        <a href={code} target='_blank' rel='noopener noreferrer'>
             <div
                 className='projectcard-button'
                 style={{
@@ -152,7 +161,7 @@ function Projects() {
     ) : null;
 
     const paperButton = paper ? (
-        <a href={paper}>
+        <a href={paper} target='_blank' rel='noopener noreferrer'>
             <div
                 className='projectcard-button'
                 style={{
@@ -217,7 +226,7 @@ function Projects() {
         <div className='projects-container'>
             <Header page='projects' />
             <div className='projects-content'>
-                <LeftArrow clickFunction={onLeftClick} />
+                <LeftArrow clickFunction={onLeftClick} myRef={leftArrow} />
                 <div className='projectcard-container'>
                     <Slide in={slideIn} direction={direction}>
                         <Card className={classes.projectCard}>
@@ -291,7 +300,7 @@ function Projects() {
                         </Card>
                     </Slide>
                 </div>
-                <RightArrow clickFunction={onRightClick} />
+                <RightArrow clickFunction={onRightClick} myRef={rightArrow} />
             </div>
         </div>
     );

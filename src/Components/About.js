@@ -76,6 +76,8 @@ function About() {
                                     <a
                                         href='https://www.wellsheet.com/'
                                         style={{ color: BLUE }}
+                                        target='_blank'
+                                        rel='noopener noreferrer'
                                     >
                                         Wellsheet
                                     </a>
@@ -84,6 +86,8 @@ function About() {
                                     <a
                                         href='https://www.instagram.com/fry.nsta/'
                                         style={{ color: YELLOW }}
+                                        target='_blank'
+                                        rel='noopener noreferrer'
                                     >
                                         fries
                                     </a>
@@ -92,13 +96,15 @@ function About() {
                                     <a
                                         href='https://www.youtube.com/watch?v=qDyCMxS8YfE'
                                         style={{ color: DARK_PINK }}
+                                        target='_blank'
+                                        rel='noopener noreferrer'
                                     >
                                         EDM remixes of country songs
                                     </a>{' '}
-                                    are even better).
+                                    slap even harder).
                                     <br />
                                     <br />
-                                    Browse my{' '}
+                                    Browse the{' '}
                                     <Link
                                         to={`/projects`}
                                         style={{
@@ -108,7 +114,7 @@ function About() {
                                     >
                                         projects tab
                                     </Link>{' '}
-                                    to see some examples of my work!
+                                    to see some of my work!
                                 </p>
                             </div>
                         </Fade>

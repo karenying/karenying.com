@@ -29,7 +29,12 @@ export const projectInfo = [
             <span>
                 gradient.png is a custom image generation web app. It is a UI/UX
                 redesign of{' '}
-                <a href='https://cssgradient.io/' style={{ color: DARK_PINK }}>
+                <a
+                    href='https://cssgradient.io/'
+                    target='_blank'
+                    rel='noopener noreferrer'
+                    style={{ color: DARK_PINK }}
+                >
                     CSS Gradient
                 </a>
                 . On top of redesigning the interface, I added a feature that

@@ -36,6 +36,8 @@ function Contact() {
                         <a
                             href='mailto:karenying7@gmail.com'
                             style={{ color: BLUE }}
+                            target='_blank'
+                            rel='noopener noreferrer'
                         >
                             karenying7@gmail.com
                         </a>
@@ -46,6 +48,8 @@ function Contact() {
                         <a
                             href='https://www.linkedin.com/in/kyying/'
                             style={{ color: YELLOW }}
+                            target='_blank'
+                            rel='noopener noreferrer'
                         >
                             LinkedIn
                         </a>
@@ -53,6 +57,8 @@ function Contact() {
                         <a
                             href='https://twitter.com/karen_ying_'
                             style={{ color: DARK_PINK }}
+                            target='_blank'
+                            rel='noopener noreferrer'
                         >
                             tweet at me
                         </a>

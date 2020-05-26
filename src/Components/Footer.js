@@ -43,7 +43,11 @@ class Footer extends React.Component {
                             <h3 style={{ color: LIGHT_GRAY }}>•</h3>
                         </div>
                         <div className='footer-link'>
-                            <a href='https://github.com/karenying/karenying.com'>
+                            <a
+                                href='https://github.com/karenying/karenying.com'
+                                target='_blank'
+                                rel='noopener noreferrer'
+                            >
                                 <FaCode
                                     color={YELLOW}
                                     style={{ animationDelay: '100ms' }}
@@ -52,7 +56,11 @@ class Footer extends React.Component {
                             </a>
                         </div>
                         <div className='footer-link'>
-                            <a href='https://github.com/karenying/karenying.com'>
+                            <a
+                                href='https://github.com/karenying/karenying.com'
+                                target='_blank'
+                                rel='noopener noreferrer'
+                            >
                                 <GoMarkGithub
                                     color={DARK_PINK}
                                     style={{ animationDelay: '200ms' }}
@@ -61,7 +69,11 @@ class Footer extends React.Component {
                             </a>
                         </div>
                         <div className='footer-link'>
-                            <a href='mailto:karenying7@gmail.com'>
+                            <a
+                                href='mailto:karenying7@gmail.com'
+                                target='_blank'
+                                rel='noopener noreferrer'
+                            >
                                 <IoMdMail
                                     color={LIGHT_PINK}
                                     style={{ animationDelay: '300ms' }}
@@ -70,7 +82,11 @@ class Footer extends React.Component {
                             </a>
                         </div>
                         <div className='footer-link'>
-                            <a href='https://linkedin.com/in/kyying/'>
+                            <a
+                                href='https://linkedin.com/in/kyying/'
+                                target='_blank'
+                                rel='noopener noreferrer'
+                            >
                                 <FaLinkedin
                                     color={BLUE}
                                     style={{ animationDelay: '400ms' }}
@@ -80,7 +96,11 @@ class Footer extends React.Component {
                         </div>
 
                         <div className='footer-link'>
-                            <a href='https://twitter.com/karen_ying_'>
+                            <a
+                                href='https://twitter.com/karen_ying_'
+                                target='_blank'
+                                rel='noopener noreferrer'
+                            >
                                 <AiFillTwitterCircle
                                     color={YELLOW}
                                     size='18px'
