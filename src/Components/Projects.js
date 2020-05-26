@@ -238,7 +238,15 @@ function Projects() {
                                 </Fade>
                             </Hidden>
                             <Card className={classes.infoCard}>
-                                <h2 style={{ marginBottom: 30 }}>{name}</h2>
+                                <h2
+                                    style={{
+                                        marginBottom: 30,
+                                        textShadow:
+                                            ' 3px 3px 5px rgba(0, 0, 0, 0.5)',
+                                    }}
+                                >
+                                    {name}
+                                </h2>
                                 <Grid className={classes.infoGrid} container>
                                     <Grid
                                         className={classes.infoGridItem}
@@ -247,7 +255,13 @@ function Projects() {
                                         sm={4}
                                         mb={15}
                                     >
-                                        <h3 style={{ color }}>type:</h3>
+                                        <h3
+                                            style={{
+                                                color,
+                                            }}
+                                        >
+                                            type:
+                                        </h3>
                                     </Grid>
                                     <Grid
                                         className={classes.infoGridItem}
@@ -263,7 +277,13 @@ function Projects() {
                                         xs={12}
                                         sm={4}
                                     >
-                                        <h3 style={{ color }}>stack:</h3>
+                                        <h3
+                                            style={{
+                                                color,
+                                            }}
+                                        >
+                                            stack:
+                                        </h3>
                                     </Grid>
                                     <Grid
                                         className={classes.infoGridItem}
@@ -279,7 +299,13 @@ function Projects() {
                                         xs={12}
                                         sm={4}
                                     >
-                                        <h3 style={{ color }}>description:</h3>
+                                        <h3
+                                            style={{
+                                                color,
+                                            }}
+                                        >
+                                            description:
+                                        </h3>
                                     </Grid>
                                     <Grid
                                         className={classes.infoGridItem}

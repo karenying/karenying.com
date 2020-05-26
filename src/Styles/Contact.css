@@ -21,6 +21,7 @@
     color: #ffb6b9;
     font-family: monospace !important;
     margin-bottom: 40px;
+    text-shadow: 5px 5px 5px black;
 }
 
 .contact-content a {
