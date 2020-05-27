@@ -25,7 +25,7 @@ function Contact() {
             <Fade in={true} timeout={{ enter: 1200 }}>
                 <div className='contact-content'>
                     <h2>
-                        Got an interesting project you're working on, or just
+                        got an interesting project you're working on, or just
                         want to say hi?
                     </h2>
                     <p>
