@@ -30,7 +30,7 @@ function About() {
                 justifyContent: 'left',
             },
             [theme.breakpoints.down('sm')]: {
-                paddingBottom: '30px',
+                padding: '20px 0px 30px 0px',
                 justifyContent: 'center',
             },
         },
@@ -44,10 +44,6 @@ function About() {
                 <Header page='about' />
                 <Grid className={classes.aboutGrid} container>
                     <Grid item sm={12} md={4} className={classes.image}>
-                        {/*
-                        <Fade in={true} timeout={{ enter: 1200 }}>
-                            <img src={Karen} alt='karen' />
-                        </Fade> */}
                         <ProgressiveImage
                             src={Karen}
                             placeholder={MiniKaren}
