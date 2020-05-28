@@ -218,7 +218,7 @@ function Projects() {
             [theme.breakpoints.up('xs')]: { marginBottom: 15 },
         },
         infoGridTitle: {
-            [theme.breakpoints.down('xs')]: { marginBottom: 8 },
+            [theme.breakpoints.down('xs')]: { marginBottom: 4 },
         },
     }));
 
