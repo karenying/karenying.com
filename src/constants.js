@@ -111,10 +111,10 @@ export const projectInfo = [
             <span>
                 Driver’s Ed is an infinite runner game. A student driver must
                 navigate Princeton University's Washington Road to collect coins
-                while avoiding obstacles such as students and the campus fox.
+                while avoiding obstacles!
                 <br />
                 <br />
-                Won Art Direction Award and 3rd Place Runner-up for Spring 2020
+                Won Art Direction Award and 3rd place overall for Spring 2020
                 COS 426: Computer Graphics.
             </span>
         ),
