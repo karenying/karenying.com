@@ -216,6 +216,8 @@ function Projects() {
         infoGridItem: {
             textAlign: 'left',
             [theme.breakpoints.up('xs')]: { marginBottom: 15 },
+        },
+        infoGridTitle: {
             [theme.breakpoints.down('xs')]: { marginBottom: 8 },
         },
     }));
@@ -249,11 +251,14 @@ function Projects() {
                                 </h2>
                                 <Grid className={classes.infoGrid} container>
                                     <Grid
-                                        className={classes.infoGridItem}
+                                        className={
+                                            classes.infoGridItem +
+                                            ' ' +
+                                            classes.infoGridTitle
+                                        }
                                         item
                                         xs={12}
                                         sm={4}
-                                        mb={15}
                                     >
                                         <h3
                                             style={{
@@ -272,7 +277,11 @@ function Projects() {
                                         <p>{type}</p>
                                     </Grid>
                                     <Grid
-                                        className={classes.infoGridItem}
+                                        className={
+                                            classes.infoGridItem +
+                                            ' ' +
+                                            classes.infoGridTitle
+                                        }
                                         item
                                         xs={12}
                                         sm={4}
@@ -294,7 +303,11 @@ function Projects() {
                                         <p>{stack}</p>
                                     </Grid>
                                     <Grid
-                                        className={classes.infoGridItem}
+                                        className={
+                                            classes.infoGridItem +
+                                            ' ' +
+                                            classes.infoGridTitle
+                                        }
                                         item
                                         xs={12}
                                         sm={4}
