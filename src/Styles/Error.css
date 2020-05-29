@@ -6,8 +6,9 @@
 }
 
 .error-text h1 {
-    color: #FFB6B9;
+    color: #ffb6b9;
     font-family: monospace !important;
     padding: 0px;
     margin: 0px;
+    text-shadow: 5px 5px 5px black;
 }
