@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import './App.css';
 import Home from './Components/Home';
@@ -9,50 +9,36 @@ import Error from './Components/Error';
 import FooterIcon from './Components/FooterIcon';
 import Footer from './Components/Footer';
 
-class App extends React.Component {
-    state = {
-        footerActive: false,
+function App() {
+    const [footerActive, setFooterActive] = useState(false);
+
+    const handleFooterIconClick = () => {
+        setFooterActive(true);
     };
 
-    handleFooterIconClick = () => {
-        this.setState({ footerActive: true });
+    const handleFooterCloseClick = () => {
+        setFooterActive(false);
     };
 
-    handleFooterCloseClick = () => {
-        this.setState({ footerActive: false });
-    };
-
-    render() {
-        return (
-            <Router>
-                <div className='App'>
-                    <Switch>
-                        <Route exact={true} path='/home' component={Home} />
-                        <Route exact={true} path='/' component={Home} />
-                        <Route exact={true} path='/about' component={About} />
-                        <Route
-                            exact={true}
-                            path='/projects'
-                            component={Projects}
-                        />
-                        <Route
-                            exact={true}
-                            path='/contact'
-                            component={Contact}
-                        />
-                        <Route path='*' component={Error} />
-                    </Switch>
-                    {this.state.footerActive ? (
-                        <Footer clickFunction={this.handleFooterCloseClick} />
-                    ) : (
-                        <FooterIcon
-                            clickFunction={this.handleFooterIconClick}
-                        />
-                    )}
-                </div>
-            </Router>
-        );
-    }
+    return (
+        <Router>
+            <div className='App'>
+                <Switch>
+                    <Route exact={true} path='/home' component={Home} />
+                    <Route exact={true} path='/' component={Home} />
+                    <Route exact={true} path='/about' component={About} />
+                    <Route exact={true} path='/projects' component={Projects} />
+                    <Route exact={true} path='/contact' component={Contact} />
+                    <Route path='*' component={Error} />
+                </Switch>
+                {footerActive ? (
+                    <Footer clickFunction={handleFooterCloseClick} />
+                ) : (
+                    <FooterIcon clickFunction={handleFooterIconClick} />
+                )}
+            </div>
+        </Router>
+    );
 }
 
 export default App;
