@@ -81,6 +81,7 @@ function Projects() {
 
     const onRightClick = () => {
         rightArrow.current.firstChild.style.transform = 'scale(1.15)';
+        rightArrow.current.firstChild.style.fill = '#cecece';
 
         let newIndex = (index + 1) % projectInfo.length;
         setSlideIn(false);
@@ -91,11 +92,13 @@ function Projects() {
             setDirection('left');
             setSlideIn(true);
             rightArrow.current.firstChild.style.transform = '';
+            rightArrow.current.firstChild.style.fill = '#f5f5f5';
         }, 500);
     };
 
     const onLeftClick = () => {
         leftArrow.current.firstChild.style.transform = 'scale(1.15)';
+        leftArrow.current.firstChild.style.fill = '#cecece';
 
         let newIndex = index - 1;
         if (newIndex === -1) {
@@ -111,6 +114,7 @@ function Projects() {
             setDirection('right');
             setSlideIn(true);
             leftArrow.current.firstChild.style.transform = '';
+            leftArrow.current.firstChild.style.fill = '#f5f5f5';
         }, 500);
     };
 
