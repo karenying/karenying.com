@@ -6,6 +6,21 @@ import { GoMarkGithub } from 'react-icons/go';
 import { IoMdMail } from 'react-icons/io';
 import { LIGHT_GRAY, BLUE, YELLOW, LIGHT_PINK, DARK_PINK } from '../constants';
 import Hidden from '@material-ui/core/Hidden';
+import Tooltip from '@material-ui/core/Tooltip';
+import { withStyles } from '@material-ui/core/styles';
+
+const LightTooltip = withStyles((theme) => ({
+    tooltip: {
+        backgroundColor: '#f5f5f5',
+        color: '#333333',
+        boxShadow: theme.shadows[1],
+        fontSize: 11,
+        fontWeight: 700,
+    },
+    arrow: {
+        color: '#f5f5f5',
+    },
+}))(Tooltip);
 
 function Footer(props) {
     const { clickFunction } = props;
@@ -42,71 +57,80 @@ function Footer(props) {
                         <h3 style={{ color: LIGHT_GRAY }}>•</h3>
                     </div>
                     <div className='footer-link'>
-                        <a
-                            href='https://github.com/karenying/karenying.com'
-                            target='_blank'
-                            rel='noopener noreferrer'
+                        <LightTooltip
+                            title='Site source code'
+                            placement='top'
+                            arrow
                         >
-                            <FaCode
-                                color={YELLOW}
-                                style={{ animationDelay: '100ms' }}
-                                title='View site source code'
-                            />
-                        </a>
+                            <a
+                                href='https://github.com/karenying/karenying.com'
+                                target='_blank'
+                                rel='noopener noreferrer'
+                            >
+                                <FaCode
+                                    color={YELLOW}
+                                    style={{ animationDelay: '100ms' }}
+                                />
+                            </a>
+                        </LightTooltip>
                     </div>
                     <div className='footer-link'>
-                        <a
-                            href='https://github.com/karenying/karenying.com'
-                            target='_blank'
-                            rel='noopener noreferrer'
-                        >
-                            <GoMarkGithub
-                                color={DARK_PINK}
-                                style={{ animationDelay: '200ms' }}
-                                title='Github'
-                            />
-                        </a>
+                        <LightTooltip title='GitHub' placement='top' arrow>
+                            <a
+                                href='https://github.com/karenying/karenying.com'
+                                target='_blank'
+                                rel='noopener noreferrer'
+                            >
+                                <GoMarkGithub
+                                    color={DARK_PINK}
+                                    style={{ animationDelay: '200ms' }}
+                                />
+                            </a>
+                        </LightTooltip>
                     </div>
                     <div className='footer-link'>
-                        <a
-                            href='mailto:karenying7@gmail.com'
-                            target='_blank'
-                            rel='noopener noreferrer'
-                        >
-                            <IoMdMail
-                                color={LIGHT_PINK}
-                                style={{ animationDelay: '300ms' }}
-                                title='Email'
-                            />
-                        </a>
+                        <LightTooltip title='Email' placement='top' arrow>
+                            <a
+                                href='mailto:karenying7@gmail.com'
+                                target='_blank'
+                                rel='noopener noreferrer'
+                            >
+                                <IoMdMail
+                                    color={LIGHT_PINK}
+                                    style={{ animationDelay: '300ms' }}
+                                />
+                            </a>
+                        </LightTooltip>
                     </div>
                     <div className='footer-link'>
-                        <a
-                            href='https://linkedin.com/in/kyying/'
-                            target='_blank'
-                            rel='noopener noreferrer'
-                        >
-                            <FaLinkedin
-                                color={BLUE}
-                                style={{ animationDelay: '400ms' }}
-                                title='LinkedIn'
-                            />
-                        </a>
+                        <LightTooltip title='LinkedIn' placement='top' arrow>
+                            <a
+                                href='https://linkedin.com/in/kyying/'
+                                target='_blank'
+                                rel='noopener noreferrer'
+                            >
+                                <FaLinkedin
+                                    color={BLUE}
+                                    style={{ animationDelay: '400ms' }}
+                                />
+                            </a>
+                        </LightTooltip>
                     </div>
 
                     <div className='footer-link'>
-                        <a
-                            href='https://twitter.com/karen_ying_'
-                            target='_blank'
-                            rel='noopener noreferrer'
-                        >
-                            <AiFillTwitterCircle
-                                color={YELLOW}
-                                size='18px'
-                                style={{ animationDelay: '500ms' }}
-                                title='Twitter'
-                            />
-                        </a>
+                        <LightTooltip title='Twitter' placement='top' arrow>
+                            <a
+                                href='https://twitter.com/karen_ying_'
+                                target='_blank'
+                                rel='noopener noreferrer'
+                            >
+                                <AiFillTwitterCircle
+                                    color={YELLOW}
+                                    size='18px'
+                                    style={{ animationDelay: '500ms' }}
+                                />
+                            </a>
+                        </LightTooltip>
                     </div>
                     <div className='footer-link'>
                         <h3
