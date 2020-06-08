@@ -26,7 +26,7 @@
 .header-dot {
     margin-top: -5px;
     display: none;
-    cursor: default;
+    cursor: pointer;
 }
 
 .header-link:hover .header-dot {
@@ -36,7 +36,7 @@
 .header-dot-active {
     margin-top: -5px;
     display: block;
-    cursor: default;
+    cursor: pointer;
 }
 
 .header-no-link {
