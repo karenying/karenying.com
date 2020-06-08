@@ -13,7 +13,7 @@ const LightTooltip = withStyles((theme) => ({
     tooltip: {
         backgroundColor: '#f5f5f5',
         color: '#333333',
-        boxShadow: theme.shadows[1],
+        boxShadow: '3px 3px 10px black',
         fontSize: 11,
         fontWeight: 700,
     },
