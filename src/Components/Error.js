@@ -4,19 +4,17 @@ import Header from './Header';
 
 function Error() {
     return (
-        <>
-            <div className='error-container'>
-                <Header page='error' />
-                <div className='error-text'>
-                    <h1>
-                        oops, something went wrong{' '}
-                        <span role='img' aria-label='confused'>
-                            😨
-                        </span>
-                    </h1>
-                </div>
+        <div className='error-container'>
+            <Header page='error' />
+            <div className='error-text'>
+                <h1>
+                    oops, something went wrong{' '}
+                    <span role='img' aria-label='confused'>
+                        😨
+                    </span>
+                </h1>
             </div>
-        </>
+        </div>
     );
 }
 

@@ -17,7 +17,6 @@ const HeaderLink = ({ title, color, edge, selected }) => {
                 className={selected ? 'header-no-link' : null}
             >
                 <h3 style={{ color, paddingRight: padding }}>{title}</h3>
-
                 <div className={selected ? 'header-dot-active' : 'header-dot'}>
                     {title === 'karenying.com' ? null : (
                         <h3 style={{ color }}>•</h3>
@@ -48,55 +47,47 @@ function Header(props) {
     const classes = useStyles();
 
     return (
-        <>
-            <div className={'header-container ' + classes.headerContainer}>
-                <Hidden xsDown>
-                    <div className='header-logo'>
-                        <HeaderLink
-                            title='karenying.com'
-                            color={LIGHT_GRAY}
-                            edge={false}
-                            selected={page === 'home' ? true : false}
-                        />
-                    </div>
-                </Hidden>
-                <div className={'header-content ' + classes.headerContent}>
+        <div className={'header-container ' + classes.headerContainer}>
+            <Hidden xsDown>
+                <div className='header-logo'>
                     <HeaderLink
-                        title='home'
-                        color={DARK_PINK}
+                        title='karenying.com'
+                        color={LIGHT_GRAY}
                         edge={false}
                         selected={page === 'home' ? true : false}
                     />
-                    <h3 style={{ color: LIGHT_GRAY, paddingRight: '5px' }}>
-                        /
-                    </h3>
-                    <HeaderLink
-                        title='about'
-                        color={LIGHT_PINK}
-                        edge={false}
-                        selected={page === 'about' ? true : false}
-                    />
-                    <h3 style={{ color: LIGHT_GRAY, paddingRight: '5px' }}>
-                        /
-                    </h3>
-                    <HeaderLink
-                        title='projects'
-                        color={BLUE}
-                        edge={false}
-                        selected={page === 'projects' ? true : false}
-                    />
-                    <h3 style={{ color: LIGHT_GRAY, paddingRight: '5px' }}>
-                        /
-                    </h3>
-                    <HeaderLink
-                        title='contact'
-                        color={YELLOW}
-                        edge={true}
-                        selected={page === 'contact' ? true : false}
-                    />
                 </div>
+            </Hidden>
+            <div className={'header-content ' + classes.headerContent}>
+                <HeaderLink
+                    title='home'
+                    color={DARK_PINK}
+                    edge={false}
+                    selected={page === 'home' ? true : false}
+                />
+                <h3 id='slash'>/</h3>
+                <HeaderLink
+                    title='about'
+                    color={LIGHT_PINK}
+                    edge={false}
+                    selected={page === 'about' ? true : false}
+                />
+                <h3 id='slash'>/</h3>
+                <HeaderLink
+                    title='projects'
+                    color={BLUE}
+                    edge={false}
+                    selected={page === 'projects' ? true : false}
+                />
+                <h3 id='slash'>/</h3>
+                <HeaderLink
+                    title='contact'
+                    color={YELLOW}
+                    edge={true}
+                    selected={page === 'contact' ? true : false}
+                />
             </div>
-        </>
+        </div>
     );
 }
 
