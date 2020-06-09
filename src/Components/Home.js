@@ -10,7 +10,7 @@ function Home() {
                 <h1>
                     hi, i'm karen{' '}
                     <span className='wave' role='img' aria-label='wave'>
-                        👋
+                        👋🏼
                     </span>
                 </h1>
             </div>
