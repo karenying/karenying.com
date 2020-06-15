@@ -6,7 +6,7 @@ Personal site of Karen Ying.
 
 This personal site was bootstrapped with [Create React App](https://github.com/facebook/create-react-app). It heavily depends on [Material UI](https://material-ui.com/) for styling and responsiveness.
 
-![](./src/Assets/homepage.gif)
+![](./public/preview.png)
 
 ## Installation
 
