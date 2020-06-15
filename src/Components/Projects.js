@@ -16,13 +16,14 @@ import Grid from '@material-ui/core/Grid';
 import { makeStyles } from '@material-ui/core/styles';
 import { Card } from '@material-ui/core';
 import Fade from '@material-ui/core/Fade';
+import { ALMOST_WHITE } from '../constants';
 
 function LeftArrow(props) {
     const { clickFunction, myRef } = props;
 
     return (
         <div className='arrow-container' onClick={clickFunction} ref={myRef}>
-            <FaChevronLeft color='#f5f5f5' size='40px' />
+            <FaChevronLeft color={ALMOST_WHITE} size='40px' />
         </div>
     );
 }
@@ -32,7 +33,7 @@ function RightArrow(props) {
 
     return (
         <div className='arrow-container' onClick={clickFunction} ref={myRef}>
-            <FaChevronRight color='#f5f5f5' size='40px' />
+            <FaChevronRight color={ALMOST_WHITE} size='40px' />
         </div>
     );
 }
@@ -92,7 +93,7 @@ function Projects() {
             setDirection('left');
             setSlideIn(true);
             rightArrow.current.firstChild.style.transform = '';
-            rightArrow.current.firstChild.style.fill = '#f5f5f5';
+            rightArrow.current.firstChild.style.fill = ALMOST_WHITE;
         }, 500);
     };
 
@@ -114,7 +115,7 @@ function Projects() {
             setDirection('right');
             setSlideIn(true);
             leftArrow.current.firstChild.style.transform = '';
-            leftArrow.current.firstChild.style.fill = '#f5f5f5';
+            leftArrow.current.firstChild.style.fill = ALMOST_WHITE;
         }, 500);
     };
 
@@ -126,8 +127,11 @@ function Projects() {
                     backgroundColor: color,
                 }}
             >
-                <FiExternalLink color='#f5f5f5' style={{ paddingRight: 7 }} />
-                <h3 style={{ color: '#f5f5f5' }}>site</h3>
+                <FiExternalLink
+                    color={ALMOST_WHITE}
+                    style={{ paddingRight: 7 }}
+                />
+                <h3 style={{ color: ALMOST_WHITE }}>site</h3>
             </div>
         </a>
     ) : null;
@@ -141,11 +145,11 @@ function Projects() {
                 }}
             >
                 <FaGamepad
-                    color='#f5f5f5'
+                    color={ALMOST_WHITE}
                     style={{ paddingRight: 7 }}
                     size='17px'
                 />
-                <h3 style={{ color: '#f5f5f5' }}>play</h3>
+                <h3 style={{ color: ALMOST_WHITE }}>play</h3>
             </div>
         </a>
     ) : null;
@@ -158,8 +162,8 @@ function Projects() {
                     backgroundColor: color,
                 }}
             >
-                <FaCode color='#f5f5f5' style={{ paddingRight: 7 }} />
-                <h3 style={{ color: '#f5f5f5' }}>code</h3>
+                <FaCode color={ALMOST_WHITE} style={{ paddingRight: 7 }} />
+                <h3 style={{ color: ALMOST_WHITE }}>code</h3>
             </div>
         </a>
     ) : null;
@@ -172,8 +176,8 @@ function Projects() {
                     backgroundColor: color,
                 }}
             >
-                <FaPaperclip color='#f5f5f5' style={{ paddingRight: 7 }} />
-                <h3 style={{ color: '#f5f5f5' }}>paper</h3>
+                <FaPaperclip color={ALMOST_WHITE} style={{ paddingRight: 7 }} />
+                <h3 style={{ color: ALMOST_WHITE }}>paper</h3>
             </div>
         </a>
     ) : null;
@@ -199,7 +203,7 @@ function Projects() {
         infoCard: {
             minHeight: 400,
             maxWidth: 400,
-            backgroundColor: '#f5f5f5',
+            backgroundColor: ALMOST_WHITE,
             display: 'flex',
             borderRadius: 5,
             boxShadow: '20px 20px 20px rgba(0,0,0,0.5)',

@@ -1,14 +1,23 @@
 @import url('https://fonts.googleapis.com/css?family=Varela+Round');
 
 .App {
-  text-align: center;
-  background-color: #333333;
-  padding: 0px;
-  margin: 0px;
-  min-height: 100vh;
-  width: 100%;
+    text-align: center;
+    background-color: var(--dark-gray);
+    padding: 0px;
+    margin: 0px;
+    min-height: 100vh;
+    width: 100%;
 }
 
 * {
-  font-family: 'Varela Round', sans-serif !important;
+    font-family: 'Varela Round', sans-serif !important;
+}
+
+:root {
+    --dark-gray: #333333;
+    --dark-pink: #ff7c7c;
+    --light-pink: #ffb6b9;
+    --blue: #8deaff;
+    --yellow: #ffe084;
+    --light-gray: #d9d9d9;
 }

@@ -6,7 +6,7 @@
 }
 
 .error-text h1 {
-    color: #ffb6b9;
+    color: var(--light-pink);
     font-family: monospace !important;
     padding: 0px;
     margin: 0px;

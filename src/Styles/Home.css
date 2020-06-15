@@ -6,7 +6,7 @@
 }
 
 .home-text h1 {
-    color: #ffb6b9;
+    color: var(--light-pink);
     text-shadow: 5px 5px 5px black;
     overflow: hidden;
     font-family: monospace !important;
@@ -38,7 +38,7 @@
 
 @keyframes animated-cursor {
     from {
-        border-right-color: #d9d9d9;
+        border-right-color: var(--light-gray);
     }
     to {
         border-right-color: transparent;
@@ -53,14 +53,6 @@ span.wave {
     display: inline-block;
     padding-right: 10px;
     padding-bottom: 5px;
-}
-
-.home-text:hover span.wave {
-    animation-name: wave-animation;
-    animation-duration: 2.5s;
-    animation-iteration-count: infinite;
-    transform-origin: 70% 70%;
-    animation-fill-mode: forwards;
 }
 
 @keyframes wave-animation {

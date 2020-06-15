@@ -25,7 +25,7 @@
 }
 
 .projects-container h1 {
-    color: #ffb6b9;
+    color: var(--light-pink);
     font-family: monospace !important;
     text-align: left;
     padding: 0px;
@@ -52,7 +52,7 @@
 .projectcard-container h2,
 .projectcard-container h3 {
     font-family: monospace !important;
-    color: #333333;
+    color: var(--dark-gray);
     display: inline;
     font-weight: bold;
     margin: 0px;
@@ -61,7 +61,7 @@
 .projectcard-container p {
     display: inline;
     margin: 0px;
-    color: #333333;
+    color: var(--dark-gray);
 }
 
 .projectcard-buttons {
@@ -117,8 +117,3 @@
     display: flex;
     cursor: pointer;
 }
-
-/*
-.MuiGrid-item {
-    margin-bottom: 15px !important;
-} */

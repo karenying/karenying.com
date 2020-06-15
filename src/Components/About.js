@@ -3,10 +3,10 @@ import '../Styles/About.css';
 import Header from './Header';
 import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
-import Karen from '../Assets/karen.png';
 import Fade from '@material-ui/core/Fade';
-import { BLUE, YELLOW, LIGHT_PINK, DARK_PINK } from '../constants';
+import Karen from '../Assets/karen.png';
 import MiniKaren from '../Assets/mini-karen.png';
+import { BLUE, YELLOW, LIGHT_PINK, DARK_PINK } from '../constants';
 import ProgressiveImage from 'react-progressive-image';
 import { Link } from 'react-router-dom';
 

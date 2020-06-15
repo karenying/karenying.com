@@ -13,11 +13,11 @@
 }
 
 .about-container p {
-    color: #d9d9d9;
+    color: var(--light-gray);
 }
 
 .about-container h2 {
-    color: #ffb6b9;
+    color: var(--light-pink);
     font-family: monospace !important;
 }
 

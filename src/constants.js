@@ -17,6 +17,8 @@ export const YELLOW = '#FFE084';
 
 export const LIGHT_GRAY = '#D9D9D9';
 
+export const ALMOST_WHITE = '#F5F5F5';
+
 export const projectInfo = [
     {
         backgroundColor: DARK_PINK,

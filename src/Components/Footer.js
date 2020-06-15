@@ -4,21 +4,29 @@ import { FaLinkedin, FaCode, FaChevronDown } from 'react-icons/fa';
 import { AiFillTwitterCircle } from 'react-icons/ai';
 import { GoMarkGithub } from 'react-icons/go';
 import { IoMdMail } from 'react-icons/io';
-import { LIGHT_GRAY, BLUE, YELLOW, LIGHT_PINK, DARK_PINK } from '../constants';
+import {
+    LIGHT_GRAY,
+    BLUE,
+    YELLOW,
+    LIGHT_PINK,
+    DARK_PINK,
+    ALMOST_WHITE,
+    DARK_GRAY,
+} from '../constants';
 import Hidden from '@material-ui/core/Hidden';
 import Tooltip from '@material-ui/core/Tooltip';
 import { withStyles } from '@material-ui/core/styles';
 
 const LightTooltip = withStyles((theme) => ({
     tooltip: {
-        backgroundColor: '#f5f5f5',
-        color: '#333333',
+        backgroundColor: ALMOST_WHITE,
+        color: DARK_GRAY,
         boxShadow: '3px 3px 10px black',
         fontSize: 11,
         fontWeight: 700,
     },
     arrow: {
-        color: '#f5f5f5',
+        color: ALMOST_WHITE,
     },
 }))(Tooltip);
 
