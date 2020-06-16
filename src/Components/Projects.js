@@ -77,7 +77,7 @@ function Projects() {
     } = currInfo;
 
     const [slideIn, setSlideIn] = useState(true);
-    const [direction, setDirection] = useState('left');
+    const [direction, setDirection] = useState('down');
     const [imageSrc, setImgSrc] = useState(image);
 
     const onRightClick = () => {
