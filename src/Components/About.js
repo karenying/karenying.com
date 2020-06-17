@@ -43,14 +43,10 @@ function About() {
             <Header page='about' />
             <Grid className={classes.aboutGrid} container>
                 <Grid item sm={12} md={4} className={classes.image}>
-                    <ProgressiveImage
-                        src={Karen}
-                        placeholder={MiniKaren}
-                        delay={300}
-                    >
+                    <ProgressiveImage src={Karen} placeholder={MiniKaren}>
                         {(src, loading) => (
                             <img
-                                style={{ opacity: loading ? 0.8 : 1 }}
+                                style={{ opacity: loading ? 0.7 : 1 }}
                                 src={src}
                                 alt='karen'
                             />
