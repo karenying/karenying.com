@@ -21,7 +21,7 @@ const LightTooltip = withStyles((theme) => ({
     tooltip: {
         backgroundColor: ALMOST_WHITE,
         color: DARK_GRAY,
-        boxShadow: '3px 3px 10px black',
+        boxShadow: '0.3rem 0.3rem 1rem black',
         fontSize: 11,
         fontWeight: 700,
     },
@@ -39,7 +39,7 @@ function Footer(props) {
                 <div className='footer-copyright'>
                     <p
                         style={{
-                            marginRight: '10px',
+                            marginRight: '1rem',
                             color: DARK_PINK,
                         }}
                     >
@@ -47,14 +47,14 @@ function Footer(props) {
                     </p>
                     <p
                         style={{
-                            marginRight: '10px',
+                            marginRight: '1rem',
                             color: LIGHT_PINK,
                         }}
                     >
                         karen ying 2020
                     </p>
                     <h3 style={{ color: LIGHT_GRAY }}>•</h3>
-                    <p style={{ marginLeft: '10px', color: BLUE }}>
+                    <p style={{ marginLeft: '1rem', color: BLUE }}>
                         all rights reserved
                     </p>
                 </div>
@@ -133,7 +133,7 @@ function Footer(props) {
                         >
                             <AiFillTwitterCircle
                                 color={YELLOW}
-                                size='18px'
+                                size='1.8rem'
                                 style={{ animationDelay: '500ms' }}
                             />
                         </a>
@@ -152,7 +152,7 @@ function Footer(props) {
                 <div className='footer-link' onClick={clickFunction}>
                     <FaChevronDown
                         color={DARK_PINK}
-                        size='20px'
+                        size='2rem'
                         title='Hide footer'
                     />
                 </div>

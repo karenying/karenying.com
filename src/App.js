@@ -22,21 +22,19 @@ function App() {
 
     return (
         <Router>
-            <div className='App'>
-                <Switch>
-                    <Route exact={true} path='/home' component={Home} />
-                    <Route exact={true} path='/' component={Home} />
-                    <Route exact={true} path='/about' component={About} />
-                    <Route exact={true} path='/projects' component={Projects} />
-                    <Route exact={true} path='/contact' component={Contact} />
-                    <Route path='*' component={Error} />
-                </Switch>
-                {footerActive ? (
-                    <Footer clickFunction={handleFooterCloseClick} />
-                ) : (
-                    <FooterIcon clickFunction={handleFooterIconClick} />
-                )}
-            </div>
+            <Switch>
+                <Route exact={true} path='/home' component={Home} />
+                <Route exact={true} path='/' component={Home} />
+                <Route exact={true} path='/about' component={About} />
+                <Route exact={true} path='/projects' component={Projects} />
+                <Route exact={true} path='/contact' component={Contact} />
+                <Route path='*' component={Error} />
+            </Switch>
+            {footerActive ? (
+                <Footer clickFunction={handleFooterCloseClick} />
+            ) : (
+                <FooterIcon clickFunction={handleFooterIconClick} />
+            )}
         </Router>
     );
 }

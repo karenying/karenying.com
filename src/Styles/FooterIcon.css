@@ -1,21 +1,21 @@
 .footer-icon-container {
     position: fixed;
-    bottom: 0px;
+    bottom: 0rem;
     width: 100%;
     display: flex;
     align-items: center;
-    height: 25px;
-    padding: 10px;
+    height: 2.5rem;
+    padding: 1rem;
 }
 
 .footer-icon-content {
     position: fixed;
-    right: 0px;
-    padding-right: 28px;
+    right: 0rem;
+    padding-right: 2.8rem;
 }
 
 .footer-icon-content svg {
-    transition: transform .15s;
+    transition: transform 0.15s;
     cursor: pointer;
     animation-name: fadeIn;
     animation-duration: 0.3s;

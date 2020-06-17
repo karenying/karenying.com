@@ -7,9 +7,9 @@
 }
 
 .about-container img {
-    height: 200px;
-    box-shadow: 20px 20px 20px black;
-    border-radius: 100px;
+    height: 20rem;
+    box-shadow: 2rem 2rem 2rem black;
+    border-radius: 10rem;
 }
 
 .about-container p {

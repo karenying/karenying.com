@@ -1,6 +1,6 @@
 .projects-container {
     min-height: 100vh;
-    padding-top: 100px;
+    padding-top: 10rem;
     box-sizing: border-box;
     overflow: hidden;
 }
@@ -21,15 +21,15 @@
 }
 
 .projects-title {
-    padding-bottom: 100px;
+    padding-bottom: 10rem;
 }
 
 .projects-container h1 {
     color: var(--light-pink);
     font-family: monospace !important;
     text-align: left;
-    padding: 0px;
-    margin: 0px;
+    padding: 0rem;
+    margin: 0rem;
 }
 
 .projectcard-container {
@@ -38,10 +38,10 @@
 }
 
 .projectcard-image img {
-    width: 350px;
-    border-radius: 5px;
-    box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.5);
-    margin-right: 40px;
+    width: 35rem;
+    border-radius: 0.5rem;
+    box-shadow: 2rem 2rem 2rem rgba(0, 0, 0, 0.5);
+    margin-right: 4rem;
 }
 
 .projectcard-image {
@@ -55,20 +55,20 @@
     color: var(--dark-gray);
     display: inline;
     font-weight: bold;
-    margin: 0px;
+    margin: 0rem;
 }
 
 .projectcard-container p {
     display: inline;
-    margin: 0px;
+    margin: 0rem;
     color: var(--dark-gray);
 }
 
 .projectcard-buttons {
     display: flex;
     position: absolute;
-    bottom: 30px;
-    padding-top: 30px;
+    bottom: 3rem;
+    padding-top: 3rem;
     justify-content: center;
     width: 100%;
     box-sizing: border-box;
@@ -76,7 +76,7 @@
 
 .projectcard-buttons p {
     font-family: monospace !important;
-    margin: 0px;
+    margin: 0rem;
 }
 
 .projectcard-buttons:hover a {
@@ -88,15 +88,15 @@
 }
 
 .projectcard-button {
-    width: 80px;
-    padding: 10px;
-    border-radius: 100px;
+    width: 8rem;
+    padding: 1rem;
+    border-radius: 10rem;
     cursor: pointer;
     display: flex;
     justify-content: center;
-    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 0.3rem 0.3rem 1rem rgba(0, 0, 0, 0.5);
     align-items: center;
-    margin: 10px;
+    margin: 1rem;
 }
 
 .projectcard-button:hover svg,

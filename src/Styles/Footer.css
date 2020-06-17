@@ -1,23 +1,23 @@
 .footer-container {
     position: fixed;
-    bottom: 0px;
+    bottom: 0rem;
     display: flex;
     min-width: 100%;
-    padding: 10px;
+    padding: 1rem;
     align-items: center;
-    height: 25px;
+    height: 2.5rem;
 }
 
 .footer-copyright {
     position: fixed;
-    left: 20px;
+    left: 2rem;
     display: flex;
     align-items: center;
 }
 
 .footer-copyright p {
-    padding: 0px;
-    margin: 0px;
+    padding: 0rem;
+    margin: 0rem;
     font-size: small;
     animation-name: fadeIn;
     animation-duration: 0.5s;
@@ -27,8 +27,8 @@
 }
 
 .footer-copyright h3 {
-    padding: 0px;
-    margin: 0px;
+    padding: 0rem;
+    margin: 0rem;
     animation-name: fadeIn;
     animation-duration: 0.5s;
     opacity: 0;
@@ -38,36 +38,36 @@
 
 .footer-links-container {
     position: fixed;
-    right: 20px;
+    right: 2rem;
     display: flex;
     align-items: center;
 }
 
 .footer-link {
-    margin: 0px 7px 0px;
+    margin: 0rem 0.7rem 0rem;
 }
 
 .footer-link svg {
-    transition: transform .15s;
+    transition: transform 0.15s;
     cursor: pointer;
     animation-name: fadeIn;
     animation-duration: 0.3s;
     opacity: 0;
-    animation-fill-mode: forwards; 
+    animation-fill-mode: forwards;
 }
 
 .footer-link:hover svg {
     transform: scale(1.3);
-} 
+}
 
 .footer-link h3 {
-    padding: 0px;
-    margin: 0px;
-    transition: transform .15s;
+    padding: 0rem;
+    margin: 0rem;
+    transition: transform 0.15s;
     animation-name: fadeIn;
     animation-duration: 0.3s;
     opacity: 0;
-    animation-fill-mode: forwards;     
+    animation-fill-mode: forwards;
     cursor: default;
-    margin-top: -2px;
+    margin-top: -0.2rem;
 }

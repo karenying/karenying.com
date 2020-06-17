@@ -1,5 +1,5 @@
 .contact-container {
-    padding-top: 200px;
+    padding-top: 20rem;
     box-sizing: border-box;
     overflow: hidden;
     display: flex;
@@ -8,9 +8,9 @@
 }
 
 .contact-content {
-    max-width: 400px;
+    max-width: 40rem;
     text-align: left;
-    padding: 0px 50px;
+    padding: 0rem 5rem;
 }
 
 .contact-content p {
@@ -20,8 +20,8 @@
 .contact-content h2 {
     color: var(--light-pink);
     font-family: monospace !important;
-    margin-bottom: 40px;
-    text-shadow: 5px 5px 5px black;
+    margin-bottom: 4rem;
+    text-shadow: 0.5rem 0.5rem 0.5rem black;
 }
 
 .contact-content a {

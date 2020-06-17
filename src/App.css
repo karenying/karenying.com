@@ -10,11 +10,19 @@
         U+2215, U+FEFF, U+FFFD;
 }
 
-.App {
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+}
+
+#root {
     text-align: center;
     background-color: var(--dark-gray);
-    padding: 0px;
-    margin: 0px;
+    padding: 0rem;
+    margin: 0rem;
     min-height: 100vh;
     width: 100%;
 }

@@ -13,7 +13,7 @@ function FooterIcon(props) {
                 <div className='footer-icon-content' onClick={clickFunction}>
                     <FaChevronUp
                         color={DARK_PINK}
-                        size='20px'
+                        size='2rem'
                         title='Show footer'
                     />
                 </div>

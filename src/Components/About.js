@@ -14,12 +14,12 @@ function About() {
     const useStyles = makeStyles((theme) => ({
         aboutGrid: {
             textAlign: 'left',
-            maxWidth: 800,
+            maxWidth: '80rem',
             [theme.breakpoints.up('sm')]: {
-                padding: '200px 0px',
+                padding: '20rem 0rem',
             },
             [theme.breakpoints.down('sm')]: {
-                padding: '80px 50px 50px 50px',
+                padding: '8rem 5rem 5rem 5rem',
             },
         },
         image: {
@@ -30,7 +30,7 @@ function About() {
                 justifyContent: 'left',
             },
             [theme.breakpoints.down('sm')]: {
-                padding: '20px 0px 30px 0px',
+                padding: '2rem 0rem 3rem 0rem',
                 justifyContent: 'center',
             },
         },

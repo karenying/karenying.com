@@ -6,7 +6,7 @@ import Hidden from '@material-ui/core/Hidden';
 import { makeStyles } from '@material-ui/core/styles';
 
 const HeaderLink = ({ title, color, edge, selected }) => {
-    const padding = edge ? '0px' : '5px';
+    const padding = edge ? '0rem' : '0.5rem';
     let link = title === 'karenying.com' ? 'home' : title;
 
     return (
@@ -35,7 +35,7 @@ function Header(props) {
             [theme.breakpoints.up('sm')]: {
                 position: 'fixed',
                 right: 0,
-                paddingRight: 50,
+                paddingRight: '5rem',
             },
             [theme.breakpoints.down('sm')]: {},
         },

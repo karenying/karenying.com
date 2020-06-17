@@ -19,21 +19,29 @@ import Fade from '@material-ui/core/Fade';
 import { ALMOST_WHITE } from '../constants';
 
 function LeftArrow(props) {
-    const { clickFunction, myRef } = props;
+    const { clickFunction, myRef, arrowClass } = props;
 
     return (
-        <div className='arrow-container' onClick={clickFunction} ref={myRef}>
-            <FaChevronLeft color={ALMOST_WHITE} size='40px' />
+        <div
+            className={`arrow-container ${arrowClass}`}
+            onClick={clickFunction}
+            ref={myRef}
+        >
+            <FaChevronLeft color={ALMOST_WHITE} size='4rem' />
         </div>
     );
 }
 
 function RightArrow(props) {
-    const { clickFunction, myRef } = props;
+    const { clickFunction, myRef, arrowClass } = props;
 
     return (
-        <div className='arrow-container' onClick={clickFunction} ref={myRef}>
-            <FaChevronRight color={ALMOST_WHITE} size='40px' />
+        <div
+            className={`arrow-container ${arrowClass}`}
+            onClick={clickFunction}
+            ref={myRef}
+        >
+            <FaChevronRight color={ALMOST_WHITE} size='4rem' />
         </div>
     );
 }
@@ -147,7 +155,7 @@ function Projects() {
                 <FaGamepad
                     color={ALMOST_WHITE}
                     style={{ paddingRight: 7 }}
-                    size='17px'
+                    size='1.7rem'
                 />
                 <h3 style={{ color: ALMOST_WHITE }}>play</h3>
             </div>
@@ -185,33 +193,33 @@ function Projects() {
     const useStyles = makeStyles((theme) => ({
         projectCard: {
             backgroundColor,
-            boxShadow: '20px 20px 20px black',
+            boxShadow: '2rem 2rem 2rem black',
             display: 'flex',
             borderRadius: 5,
             alignItems: 'center',
             justifyContent: 'space-evenly',
             [theme.breakpoints.up('md')]: {
-                padding: '75px 50px',
-                margin: '0px 25px',
+                padding: '7.5rem 5rem',
+                margin: '0rem 2.5rem',
             },
             [theme.breakpoints.down('md')]: {
-                padding: '0px 0px',
+                padding: '0rem 0rem',
                 height: 550,
-                margin: '0px 10px 50px 10px',
+                margin: '0rem 1rem 5rem 1rem',
             },
         },
         infoCard: {
-            minHeight: 400,
-            maxWidth: 400,
+            minHeight: '40rem',
+            maxWidth: '40rem',
             backgroundColor: ALMOST_WHITE,
             display: 'flex',
             borderRadius: 5,
-            boxShadow: '20px 20px 20px rgba(0,0,0,0.5)',
+            boxShadow: '2rem 2rem 2rem rgba(0,0,0,0.5)',
             flexDirection: 'column',
             alignItems: 'center',
-            [theme.breakpoints.up('md')]: { padding: '30px 40px' },
+            [theme.breakpoints.up('md')]: { padding: '3rem 4rem' },
             [theme.breakpoints.down('md')]: {
-                padding: '30px 20px',
+                padding: '3rem 2rem',
                 width: '100%',
                 height: '100%',
                 boxSizing: 'border-box',
@@ -223,10 +231,13 @@ function Projects() {
         },
         infoGridItem: {
             textAlign: 'left',
-            [theme.breakpoints.up('xs')]: { marginBottom: 15 },
+            [theme.breakpoints.up('xs')]: { marginBottom: '1.5rem' },
         },
         infoGridTitle: {
-            [theme.breakpoints.down('xs')]: { marginBottom: 4 },
+            [theme.breakpoints.down('xs')]: { marginBottom: '0.4rem' },
+        },
+        arrow: {
+            [theme.breakpoints.down('md')]: { marginBottom: '5rem' },
         },
     }));
 
@@ -236,7 +247,11 @@ function Projects() {
         <div className='projects-container'>
             <Header page='projects' />
             <div className='projects-content'>
-                <LeftArrow clickFunction={onLeftClick} myRef={leftArrow} />
+                <LeftArrow
+                    clickFunction={onLeftClick}
+                    myRef={leftArrow}
+                    arrowClass={classes.arrow}
+                />
                 <div className='projectcard-container'>
                     <Slide in={slideIn} direction={direction}>
                         <Card className={classes.projectCard}>
@@ -252,7 +267,7 @@ function Projects() {
                                     style={{
                                         marginBottom: 30,
                                         textShadow:
-                                            ' 3px 3px 5px rgba(0, 0, 0, 0.5)',
+                                            '0.3rem 0.3rem 0.5rem rgba(0, 0, 0, 0.5)',
                                     }}
                                 >
                                     {name}
@@ -347,7 +362,11 @@ function Projects() {
                         </Card>
                     </Slide>
                 </div>
-                <RightArrow clickFunction={onRightClick} myRef={rightArrow} />
+                <RightArrow
+                    clickFunction={onRightClick}
+                    myRef={rightArrow}
+                    arrowClass={classes.arrow}
+                />
             </div>
         </div>
     );

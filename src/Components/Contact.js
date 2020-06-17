@@ -9,10 +9,10 @@ function Contact() {
     const useStyles = makeStyles((theme) => ({
         contact: {
             [theme.breakpoints.up('sm')]: {
-                paddingTop: 200,
+                paddingTop: '20rem',
             },
             [theme.breakpoints.down('sm')]: {
-                paddingTop: 80,
+                paddingTop: '8rem',
             },
         },
     }));

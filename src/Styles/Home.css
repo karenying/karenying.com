@@ -7,12 +7,12 @@
 
 .home-text h1 {
     color: var(--light-pink);
-    text-shadow: 5px 5px 5px black;
+    text-shadow: 0.5rem 0.5rem 0.5rem black;
     overflow: hidden;
     font-family: monospace !important;
     border-right: 0.15em solid transparent;
     white-space: nowrap;
-    margin: 0px;
+    margin: 0rem;
     cursor: default;
     animation: animated-text 3s steps(15, end) 1s 1 normal both,
         animated-cursor 700ms steps(15, end) 1s 5;
@@ -29,10 +29,10 @@
 
 @keyframes animated-text {
     from {
-        width: 0px;
+        width: 0rem;
     }
     to {
-        width: 260px;
+        width: 26rem;
     }
 }
 
@@ -51,8 +51,8 @@ span.wave {
     animation-iteration-count: 3;
     transform-origin: 70% 70%;
     display: inline-block;
-    padding-right: 10px;
-    padding-bottom: 5px;
+    padding-right: 1rem;
+    padding-bottom: 0.5rem;
 }
 
 @keyframes wave-animation {
