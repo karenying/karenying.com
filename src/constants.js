@@ -5,7 +5,7 @@ import ColorCharts from './Assets/colorcharts.png';
 import DriversEd from './Assets/driversed.gif';
 import React from 'react';
 
-export const DARK_GRAY = '#333333';
+export const DARK_GRAY = '#2A2B2E';
 
 export const DARK_PINK = '#FF7C7C';
 
