@@ -202,6 +202,9 @@ function Projects() {
                 padding: '7.5rem 5rem',
                 margin: '0rem 2.5rem',
             },
+            [theme.breakpoints.up('lg')]: {
+                width: '87rem',
+            },
             [theme.breakpoints.down('md')]: {
                 padding: '0rem 0px',
                 height: 550,
