@@ -9,6 +9,8 @@
 .about-container img {
     box-shadow: 2rem 2rem 2rem black;
     border-radius: 100px;
+    width: 200px;
+    height: 200px;
 }
 
 .about-container p {
