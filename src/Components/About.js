@@ -16,7 +16,7 @@ function About() {
             textAlign: 'left',
             maxWidth: '80rem',
             [theme.breakpoints.up('sm')]: {
-                padding: '20rem 0rem',
+                padding: '20rem 0px',
             },
             [theme.breakpoints.down('sm')]: {
                 padding: '8rem 5rem 5rem 5rem',
@@ -30,7 +30,7 @@ function About() {
                 justifyContent: 'left',
             },
             [theme.breakpoints.down('sm')]: {
-                padding: '2rem 0rem 3rem 0rem',
+                padding: '2rem 0px 3rem 0px',
                 justifyContent: 'center',
             },
         },

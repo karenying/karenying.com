@@ -12,7 +12,7 @@
     font-family: monospace !important;
     border-right: 0.15em solid transparent;
     white-space: nowrap;
-    margin: 0rem;
+    margin: 0px;
     cursor: default;
     animation: animated-text 3s steps(15, end) 1s 1 normal both,
         animated-cursor 700ms steps(15, end) 1s 5;
@@ -29,7 +29,7 @@
 
 @keyframes animated-text {
     from {
-        width: 0rem;
+        width: 0px;
     }
     to {
         width: 26rem;

@@ -1,6 +1,6 @@
 .footer-icon-container {
     position: fixed;
-    bottom: 0rem;
+    bottom: 0px;
     width: 100%;
     display: flex;
     align-items: center;
@@ -10,7 +10,7 @@
 
 .footer-icon-content {
     position: fixed;
-    right: 0rem;
+    right: 0px;
     padding-right: 2.8rem;
 }
 

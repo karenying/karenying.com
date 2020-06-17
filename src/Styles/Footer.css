@@ -1,6 +1,6 @@
 .footer-container {
     position: fixed;
-    bottom: 0rem;
+    bottom: 0px;
     display: flex;
     min-width: 100%;
     padding: 1rem;
@@ -16,8 +16,8 @@
 }
 
 .footer-copyright p {
-    padding: 0rem;
-    margin: 0rem;
+    padding: 0px;
+    margin: 0px;
     font-size: small;
     animation-name: fadeIn;
     animation-duration: 0.5s;
@@ -27,8 +27,8 @@
 }
 
 .footer-copyright h3 {
-    padding: 0rem;
-    margin: 0rem;
+    padding: 0px;
+    margin: 0px;
     animation-name: fadeIn;
     animation-duration: 0.5s;
     opacity: 0;
@@ -44,7 +44,7 @@
 }
 
 .footer-link {
-    margin: 0rem 0.7rem 0rem;
+    margin: 0px 0.7rem 0px;
 }
 
 .footer-link svg {
@@ -61,8 +61,8 @@
 }
 
 .footer-link h3 {
-    padding: 0rem;
-    margin: 0rem;
+    padding: 0px;
+    margin: 0px;
     transition: transform 0.15s;
     animation-name: fadeIn;
     animation-duration: 0.3s;

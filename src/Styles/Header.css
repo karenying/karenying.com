@@ -1,18 +1,18 @@
 .header-container {
     position: absolute;
-    top: 0rem;
+    top: 0px;
     width: 100%;
     display: flex;
 }
 
 .header-container h3 {
-    padding: 0rem;
-    margin: 0rem;
+    padding: 0px;
+    margin: 0px;
 }
 
 .header-logo {
     position: fixed;
-    left: 0rem;
+    left: 0px;
     padding-top: 3rem;
     padding-left: 5rem;
 }

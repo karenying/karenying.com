@@ -28,8 +28,8 @@
     color: var(--light-pink);
     font-family: monospace !important;
     text-align: left;
-    padding: 0rem;
-    margin: 0rem;
+    padding: 0px;
+    margin: 0px;
 }
 
 .projectcard-container {
@@ -38,8 +38,7 @@
 }
 
 .projectcard-image img {
-    width: 35rem;
-    border-radius: 0.5rem;
+    border-radius: 5px;
     box-shadow: 2rem 2rem 2rem rgba(0, 0, 0, 0.5);
     margin-right: 4rem;
 }
@@ -55,12 +54,12 @@
     color: var(--dark-gray);
     display: inline;
     font-weight: bold;
-    margin: 0rem;
+    margin: 0px;
 }
 
 .projectcard-container p {
     display: inline;
-    margin: 0rem;
+    margin: 0px;
     color: var(--dark-gray);
 }
 
@@ -76,7 +75,7 @@
 
 .projectcard-buttons p {
     font-family: monospace !important;
-    margin: 0rem;
+    margin: 0px;
 }
 
 .projectcard-buttons:hover a {

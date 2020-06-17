@@ -203,7 +203,7 @@ function Projects() {
                 margin: '0rem 2.5rem',
             },
             [theme.breakpoints.down('md')]: {
-                padding: '0rem 0rem',
+                padding: '0rem 0px',
                 height: 550,
                 margin: '0rem 1rem 5rem 1rem',
             },
