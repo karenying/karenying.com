@@ -6,6 +6,8 @@ Personal site of Karen Ying.
 
 This personal site was bootstrapped with [Create React App](https://github.com/facebook/create-react-app). It heavily depends on [Material UI](https://material-ui.com/) for styling and responsiveness.
 
+A tutorial for the [carousel](https://karenying.com/projects) can be found [here](https://medium.com/frontend-digest/let-2020-be-the-year-png-icons-die-aeb898263180?source=friends_link&sk=d48411e6b94be910e63410e8244ea887).
+
 ![](./public/preview.png)
 
 ## Installation
