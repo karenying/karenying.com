@@ -127,7 +127,7 @@ function Projects() {
         }, 500);
     };
 
-    const siteButton = site ? (
+    const siteButton = (
         <a href={site} target='_blank' rel='noopener noreferrer'>
             <div
                 className='projectcard-button'
@@ -142,9 +142,9 @@ function Projects() {
                 <h3 style={{ color: ALMOST_WHITE }}>site</h3>
             </div>
         </a>
-    ) : null;
+    );
 
-    const gameButton = game ? (
+    const gameButton = (
         <a href={game} target='_blank' rel='noopener noreferrer'>
             <div
                 className='projectcard-button'
@@ -160,9 +160,9 @@ function Projects() {
                 <h3 style={{ color: ALMOST_WHITE }}>play</h3>
             </div>
         </a>
-    ) : null;
+    );
 
-    const codeButton = code ? (
+    const codeButton = (
         <a href={code} target='_blank' rel='noopener noreferrer'>
             <div
                 className='projectcard-button'
@@ -174,9 +174,9 @@ function Projects() {
                 <h3 style={{ color: ALMOST_WHITE }}>code</h3>
             </div>
         </a>
-    ) : null;
+    );
 
-    const paperButton = paper ? (
+    const paperButton = (
         <a href={paper} target='_blank' rel='noopener noreferrer'>
             <div
                 className='projectcard-button'
@@ -188,7 +188,7 @@ function Projects() {
                 <h3 style={{ color: ALMOST_WHITE }}>paper</h3>
             </div>
         </a>
-    ) : null;
+    );
 
     const useStyles = makeStyles((theme) => ({
         projectCard: {
@@ -356,10 +356,10 @@ function Projects() {
                                     </Grid>
                                 </Grid>
                                 <div className='projectcard-buttons'>
-                                    {gameButton}
-                                    {siteButton}
-                                    {paperButton}
-                                    {codeButton}
+                                    {game && gameButton}
+                                    {site && siteButton}
+                                    {paper && paperButton}
+                                    {code && codeButton}
                                 </div>
                             </Card>
                         </Card>
