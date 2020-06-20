@@ -46,6 +46,7 @@
 .projectcard-image {
     display: flex;
     align-items: center;
+    width: calc(350px + 4rem);
 }
 
 .projectcard-container h2,
