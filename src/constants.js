@@ -57,7 +57,6 @@ export const projectInfo = [
         stack: 'MongoDB + Express + React',
         description:
             'Dayz is a bullet journal style mood tracker. It utilizes a RESTful api to write and read data. This was my first solo full stack project. I thoroughly enjoyed implementing and deploying all the components from scratch.',
-        site: 'http://dayz-app.herokuapp.com/',
         code: 'https://github.com/karenying/dayz',
         paper: null,
         game: null,
