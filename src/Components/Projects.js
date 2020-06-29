@@ -15,8 +15,8 @@ import Hidden from '@material-ui/core/Hidden';
 import Grid from '@material-ui/core/Grid';
 import { makeStyles } from '@material-ui/core/styles';
 import { Card } from '@material-ui/core';
-import Fade from '@material-ui/core/Fade';
 import { ALMOST_WHITE } from '../constants';
+import ProgressiveImage from 'react-progressive-image';
 
 function LeftArrow(props) {
     const { clickFunction, myRef, arrowClass } = props;
@@ -74,6 +74,7 @@ function Projects() {
         backgroundColor,
         color,
         image,
+        mini,
         name,
         type,
         stack,
@@ -86,7 +87,6 @@ function Projects() {
 
     const [slideIn, setSlideIn] = useState(true);
     const [direction, setDirection] = useState('down');
-    const [imageSrc, setImgSrc] = useState(image);
 
     const onRightClick = () => {
         rightArrow.current.firstChild.style.transform = 'scale(1.15)';
@@ -95,7 +95,6 @@ function Projects() {
         let newIndex = (index + 1) % projectInfo.length;
         setSlideIn(false);
         setDirection('right');
-        setImgSrc(projectInfo[newIndex].image);
         setTimeout(() => {
             setIndex(newIndex);
             setDirection('left');
@@ -117,7 +116,6 @@ function Projects() {
         setSlideIn(false);
         setDirection('left');
 
-        setImgSrc(projectInfo[newIndex].image);
         setTimeout(() => {
             setIndex(newIndex);
             setDirection('right');
@@ -259,11 +257,22 @@ function Projects() {
                     <Slide in={slideIn} direction={direction}>
                         <Card className={classes.projectCard}>
                             <Hidden mdDown>
-                                <Fade in={slideIn} timeout={{ enter: 1200 }}>
-                                    <div className='projectcard-image'>
-                                        <img src={imageSrc} alt='project' />
-                                    </div>
-                                </Fade>
+                                <div className='projectcard-image'>
+                                    <ProgressiveImage
+                                        src={image}
+                                        placeholder={mini}
+                                    >
+                                        {(src, loading) => (
+                                            <img
+                                                style={{
+                                                    opacity: loading ? 0.7 : 1,
+                                                }}
+                                                src={src}
+                                                alt='project'
+                                            />
+                                        )}
+                                    </ProgressiveImage>
+                                </div>
                             </Hidden>
                             <Card className={classes.infoCard}>
                                 <h2
