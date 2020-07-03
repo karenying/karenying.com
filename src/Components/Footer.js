@@ -1,7 +1,7 @@
 import React from 'react';
 import '../Styles/Footer.css';
 import { FaLinkedin, FaCode, FaChevronDown } from 'react-icons/fa';
-import { AiFillTwitterCircle } from 'react-icons/ai';
+import { AiFillTwitterCircle, AiFillMediumCircle } from 'react-icons/ai';
 import { GoMarkGithub } from 'react-icons/go';
 import { IoMdMail } from 'react-icons/io';
 import {
@@ -75,7 +75,7 @@ function Footer(props) {
                             rel='noopener noreferrer'
                         >
                             <FaCode
-                                color={YELLOW}
+                                color={DARK_PINK}
                                 style={{ animationDelay: '100ms' }}
                             />
                         </a>
@@ -89,7 +89,7 @@ function Footer(props) {
                             rel='noopener noreferrer'
                         >
                             <GoMarkGithub
-                                color={DARK_PINK}
+                                color={LIGHT_PINK}
                                 style={{ animationDelay: '200ms' }}
                             />
                         </a>
@@ -103,8 +103,9 @@ function Footer(props) {
                             rel='noopener noreferrer'
                         >
                             <IoMdMail
-                                color={LIGHT_PINK}
+                                color={BLUE}
                                 style={{ animationDelay: '300ms' }}
+                                size='1.7rem'
                             />
                         </a>
                     </LightTooltip>
@@ -117,8 +118,9 @@ function Footer(props) {
                             rel='noopener noreferrer'
                         >
                             <FaLinkedin
-                                color={BLUE}
+                                color={YELLOW}
                                 style={{ animationDelay: '400ms' }}
+                                size='1.7rem'
                             />
                         </a>
                     </LightTooltip>
@@ -132,9 +134,24 @@ function Footer(props) {
                             rel='noopener noreferrer'
                         >
                             <AiFillTwitterCircle
-                                color={YELLOW}
-                                size='1.8rem'
+                                color={DARK_PINK}
+                                size='1.9rem'
                                 style={{ animationDelay: '500ms' }}
+                            />
+                        </a>
+                    </LightTooltip>
+                </div>
+                <div className='footer-link'>
+                    <LightTooltip title='Medium' placement='top' arrow>
+                        <a
+                            href='https://medium.com/@karenying'
+                            target='_blank'
+                            rel='noopener noreferrer'
+                        >
+                            <AiFillMediumCircle
+                                color={LIGHT_PINK}
+                                size='1.9rem'
+                                style={{ animationDelay: '600ms' }}
                             />
                         </a>
                     </LightTooltip>
@@ -143,7 +160,7 @@ function Footer(props) {
                     <h3
                         style={{
                             color: LIGHT_GRAY,
-                            animationDelay: '600ms',
+                            animationDelay: '700ms',
                         }}
                     >
                         •
@@ -151,7 +168,7 @@ function Footer(props) {
                 </div>
                 <div className='footer-link' onClick={clickFunction}>
                     <FaChevronDown
-                        color={DARK_PINK}
+                        color={BLUE}
                         size='2rem'
                         title='Hide footer'
                     />

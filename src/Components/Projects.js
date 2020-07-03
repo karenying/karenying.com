@@ -8,7 +8,7 @@ import {
     FaChevronLeft,
     FaChevronRight,
     FaPaperclip,
-    FaGamepad,
+    FaPlay,
 } from 'react-icons/fa';
 import Slide from '@material-ui/core/Slide';
 import Hidden from '@material-ui/core/Hidden';
@@ -150,10 +150,10 @@ function Projects() {
                     backgroundColor: color,
                 }}
             >
-                <FaGamepad
+                <FaPlay
                     color={ALMOST_WHITE}
                     style={{ paddingRight: 7 }}
-                    size='1.7rem'
+                    size='1.2rem'
                 />
                 <h3 style={{ color: ALMOST_WHITE }}>play</h3>
             </div>
@@ -182,7 +182,11 @@ function Projects() {
                     backgroundColor: color,
                 }}
             >
-                <FaPaperclip color={ALMOST_WHITE} style={{ paddingRight: 7 }} />
+                <FaPaperclip
+                    color={ALMOST_WHITE}
+                    style={{ paddingRight: 7 }}
+                    size='1.5rem'
+                />
                 <h3 style={{ color: ALMOST_WHITE }}>paper</h3>
             </div>
         </a>
