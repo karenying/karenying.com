@@ -60,7 +60,7 @@ function Contact() {
                             target='_blank'
                             rel='noopener noreferrer'
                         >
-                            tweet at me
+                            DM/tweet at me
                         </a>
                         .
                     </p>
