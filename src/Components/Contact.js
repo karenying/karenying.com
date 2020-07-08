@@ -53,14 +53,14 @@ function Contact() {
                         >
                             LinkedIn
                         </a>
-                        , or{' '}
+                        , or DM/tweet at me on{' '}
                         <a
                             href='https://twitter.com/karen_ying_'
                             style={{ color: DARK_PINK }}
                             target='_blank'
                             rel='noopener noreferrer'
                         >
-                            DM/tweet at me
+                            Twitter
                         </a>
                         .
                     </p>
