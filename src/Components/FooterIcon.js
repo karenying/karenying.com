@@ -1,7 +1,7 @@
 import React from 'react';
 import '../Styles/FooterIcon.css';
 import { FaChevronUp } from 'react-icons/fa';
-import { BLUE } from '../constants';
+import { LIGHT_PINK } from '../constants';
 import Hidden from '@material-ui/core/Hidden';
 
 export default function FooterIcon(props) {
@@ -11,7 +11,11 @@ export default function FooterIcon(props) {
         <Hidden xsDown>
             <div className='footer-icon-container'>
                 <div className='footer-icon-content' onClick={clickFunction}>
-                    <FaChevronUp color={BLUE} size='2rem' title='Show footer' />
+                    <FaChevronUp
+                        color={LIGHT_PINK}
+                        size='2rem'
+                        title='Show footer'
+                    />
                 </div>
             </div>
         </Hidden>

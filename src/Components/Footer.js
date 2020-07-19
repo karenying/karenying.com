@@ -17,7 +17,7 @@ import Hidden from '@material-ui/core/Hidden';
 import Tooltip from '@material-ui/core/Tooltip';
 import { withStyles } from '@material-ui/core/styles';
 
-const LightTooltip = withStyles((theme) => ({
+const LightTooltip = withStyles(() => ({
     tooltip: {
         backgroundColor: ALMOST_WHITE,
         color: DARK_GRAY,
@@ -75,7 +75,7 @@ export default function Footer(props) {
                             rel='noopener noreferrer'
                         >
                             <FaCode
-                                color={DARK_PINK}
+                                color={YELLOW}
                                 style={{ animationDelay: '100ms' }}
                             />
                         </a>
@@ -89,7 +89,7 @@ export default function Footer(props) {
                             rel='noopener noreferrer'
                         >
                             <GoMarkGithub
-                                color={LIGHT_PINK}
+                                color={DARK_PINK}
                                 style={{ animationDelay: '200ms' }}
                             />
                         </a>
@@ -103,7 +103,7 @@ export default function Footer(props) {
                             rel='noopener noreferrer'
                         >
                             <IoMdMail
-                                color={BLUE}
+                                color={LIGHT_PINK}
                                 style={{ animationDelay: '300ms' }}
                                 size='1.7rem'
                             />
@@ -118,7 +118,7 @@ export default function Footer(props) {
                             rel='noopener noreferrer'
                         >
                             <FaLinkedin
-                                color={YELLOW}
+                                color={BLUE}
                                 style={{ animationDelay: '400ms' }}
                                 size='1.7rem'
                             />
@@ -134,7 +134,7 @@ export default function Footer(props) {
                             rel='noopener noreferrer'
                         >
                             <AiFillTwitterCircle
-                                color={DARK_PINK}
+                                color={YELLOW}
                                 size='1.9rem'
                                 style={{ animationDelay: '500ms' }}
                             />
@@ -149,7 +149,7 @@ export default function Footer(props) {
                             rel='noopener noreferrer'
                         >
                             <AiFillMediumCircle
-                                color={LIGHT_PINK}
+                                color={DARK_PINK}
                                 size='1.9rem'
                                 style={{ animationDelay: '600ms' }}
                             />
@@ -168,7 +168,7 @@ export default function Footer(props) {
                 </div>
                 <div className='footer-link' onClick={clickFunction}>
                     <FaChevronDown
-                        color={BLUE}
+                        color={LIGHT_PINK}
                         size='2rem'
                         title='Hide footer'
                     />
