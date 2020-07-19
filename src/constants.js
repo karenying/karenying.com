@@ -104,7 +104,7 @@ export const projectInfo = [
         type: 'Chrome extension',
         stack: 'JS',
         description:
-            'Color Charts aims to increase the readability of charts, graphs, and diagrams on the web. It improves upon existing extensions by using researched color blind friendly palettes to recolor images. The recoloring algorithm uses HTML Canvas and base64 encoding to recolor images in place.',
+            'Color Charts aims to increase the readability of charts, graphs, and diagrams on the web. It improves upon existing extensions by using researched color blind friendly palettes to recolor images. The recoloring algorithm uses HTML Canvas and Base64 encoding to recolor images in place.',
         site: null,
         code: 'https://github.com/karenying/color-charts',
         paper:
