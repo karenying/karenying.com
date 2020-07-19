@@ -30,7 +30,7 @@ const LightTooltip = withStyles((theme) => ({
     },
 }))(Tooltip);
 
-function Footer(props) {
+export default function Footer(props) {
     const { clickFunction } = props;
 
     return (
@@ -177,5 +177,3 @@ function Footer(props) {
         </div>
     );
 }
-
-export default Footer;

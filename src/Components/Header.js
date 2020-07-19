@@ -27,7 +27,7 @@ const HeaderLink = ({ title, color, edge, selected }) => {
     );
 };
 
-function Header(props) {
+export default function Header(props) {
     const { page } = props;
 
     const useStyles = makeStyles((theme) => ({
@@ -90,5 +90,3 @@ function Header(props) {
         </div>
     );
 }
-
-export default Header;

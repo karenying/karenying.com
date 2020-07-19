@@ -2,7 +2,7 @@ import React from 'react';
 import '../Styles/Error.css';
 import Header from './Header';
 
-function Error() {
+export default function Error() {
     return (
         <div className='error-container'>
             <Header page='error' />
@@ -17,5 +17,3 @@ function Error() {
         </div>
     );
 }
-
-export default Error;

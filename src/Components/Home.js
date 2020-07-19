@@ -2,7 +2,7 @@ import React from 'react';
 import '../Styles/Home.css';
 import Header from './Header';
 
-function Home() {
+export default function Home() {
     return (
         <div className='home-container'>
             <Header page='home' />
@@ -17,5 +17,3 @@ function Home() {
         </div>
     );
 }
-
-export default Home;

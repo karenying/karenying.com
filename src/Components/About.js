@@ -10,7 +10,7 @@ import { BLUE, YELLOW, LIGHT_PINK, DARK_PINK } from '../constants';
 import ProgressiveImage from 'react-progressive-image';
 import { Link } from 'react-router-dom';
 
-function About() {
+export default function About() {
     const useStyles = makeStyles((theme) => ({
         aboutGrid: {
             textAlign: 'left',
@@ -123,5 +123,3 @@ function About() {
         </div>
     );
 }
-
-export default About;

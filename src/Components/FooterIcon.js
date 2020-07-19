@@ -4,7 +4,7 @@ import { FaChevronUp } from 'react-icons/fa';
 import { BLUE } from '../constants';
 import Hidden from '@material-ui/core/Hidden';
 
-function FooterIcon(props) {
+export default function FooterIcon(props) {
     const { clickFunction } = props;
 
     return (
@@ -17,5 +17,3 @@ function FooterIcon(props) {
         </Hidden>
     );
 }
-
-export default FooterIcon;

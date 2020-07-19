@@ -46,7 +46,7 @@ function RightArrow(props) {
     );
 }
 
-function Projects() {
+export default function Projects() {
     useEffect(() => {
         const handleKeyDown = (e) => {
             if (e.keyCode === 39) {
@@ -387,5 +387,3 @@ function Projects() {
         </div>
     );
 }
-
-export default Projects;
