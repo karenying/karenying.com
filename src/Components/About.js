@@ -97,7 +97,7 @@ function About() {
                                 <br />
                                 Sometimes I{' '}
                                 <a
-                                    href='https://www.youtube.com/watch?v=qDyCMxS8YfE'
+                                    href='https://medium.com/@karenying'
                                     style={{ color: LIGHT_PINK }}
                                     target='_blank'
                                     rel='noopener noreferrer'
