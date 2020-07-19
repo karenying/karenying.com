@@ -36,8 +36,8 @@ export const projectInfo = [
         stack: 'React',
         description: (
             <span>
-                gradient.png is a custom image generation web app. It is a UI/UX
-                redesign of{' '}
+                gradient.png is a custom image generation web app. It is also a
+                UI/UX redesign of{' '}
                 <a
                     href='https://cssgradient.io/'
                     target='_blank'
