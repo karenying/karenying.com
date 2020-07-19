@@ -95,17 +95,26 @@ function About() {
                                 slap even harder).
                                 <br />
                                 <br />
-                                Browse the{' '}
+                                Sometimes I{' '}
+                                <a
+                                    href='https://www.youtube.com/watch?v=qDyCMxS8YfE'
+                                    style={{ color: LIGHT_PINK }}
+                                    target='_blank'
+                                    rel='noopener noreferrer'
+                                >
+                                    blog
+                                </a>{' '}
+                                about coding and visual design. Browse the{' '}
                                 <Link
                                     to={`/projects`}
                                     style={{
-                                        color: LIGHT_PINK,
+                                        color: BLUE,
                                     }}
                                     className='projects-link'
                                 >
-                                    projects tab
+                                    projects
                                 </Link>{' '}
-                                to see some of my work!
+                                tab to see some of my work!
                             </p>
                         </div>
                     </Fade>
