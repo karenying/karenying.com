@@ -57,7 +57,15 @@ export default function About() {
                     <Fade in={true} timeout={{ enter: 1200 }}>
                         <div>
                             <p>
-                                Hi! I'm Karen, a rising senior studying Computer
+                                Hi{' '}
+                                <span
+                                    className='wave'
+                                    role='img'
+                                    aria-label='wave'
+                                >
+                                    👋🏼
+                                </span>{' '}
+                                I'm Karen, a rising senior studying Computer
                                 Science at Princeton University. I'm interested
                                 in anything tech &mdash; especially web
                                 development and UI/UX design.

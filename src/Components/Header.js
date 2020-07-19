@@ -1,13 +1,13 @@
 import React from 'react';
 import '../Styles/Header.css';
-import { DARK_PINK, LIGHT_PINK, BLUE, YELLOW, LIGHT_GRAY } from '../constants';
+import { DARK_PINK, BLUE, YELLOW, LIGHT_GRAY } from '../constants';
 import { Link } from 'react-router-dom';
 import Hidden from '@material-ui/core/Hidden';
 import { makeStyles } from '@material-ui/core/styles';
 
 const HeaderLink = ({ title, color, edge, selected }) => {
     const padding = edge ? '0rem' : '0.5rem';
-    let link = title === 'karenying.com' ? 'home' : title;
+    let link = title === 'karenying.com' ? 'about' : title;
 
     return (
         <div className='header-link'>
@@ -54,21 +54,14 @@ export default function Header(props) {
                         title='karenying.com'
                         color={LIGHT_GRAY}
                         edge={false}
-                        selected={page === 'home' ? true : false}
+                        selected={page === 'about' ? true : false}
                     />
                 </div>
             </Hidden>
             <div className={'header-content ' + classes.headerContent}>
                 <HeaderLink
-                    title='home'
-                    color={DARK_PINK}
-                    edge={false}
-                    selected={page === 'home' ? true : false}
-                />
-                <h3 id='slash'>/</h3>
-                <HeaderLink
                     title='about'
-                    color={LIGHT_PINK}
+                    color={DARK_PINK}
                     edge={false}
                     selected={page === 'about' ? true : false}
                 />

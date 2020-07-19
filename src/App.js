@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import './App.css';
-import Home from './Components/Home';
 import About from './Components/About';
 import Projects from './Components/Projects';
 import Contact from './Components/Contact';
@@ -23,8 +22,7 @@ function App() {
     return (
         <Router>
             <Switch>
-                <Route exact={true} path='/home' component={Home} />
-                <Route exact={true} path='/' component={Home} />
+                <Route exact={true} path='/' component={About} />
                 <Route exact={true} path='/about' component={About} />
                 <Route exact={true} path='/projects' component={Projects} />
                 <Route exact={true} path='/contact' component={Contact} />

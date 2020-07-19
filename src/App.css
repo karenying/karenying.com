@@ -39,3 +39,12 @@ body {
     --yellow: #ffe084;
     --light-gray: #d9d9d9;
 }
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
