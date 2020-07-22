@@ -80,8 +80,8 @@ export default function About() {
                                 >
                                     Wellsheet
                                 </a>
-                                . In my free time, you can find me playing
-                                frisbee, eating{' '}
+                                . In my free time, you can find me speaking to
+                                your manager, playing frisbee, eating{' '}
                                 <a
                                     href='https://www.instagram.com/fry.nsta/'
                                     style={{ color: YELLOW }}
@@ -98,9 +98,9 @@ export default function About() {
                                     target='_blank'
                                     rel='noopener noreferrer'
                                 >
-                                    EDM remixes of country songs
+                                    EDM x country
                                 </a>{' '}
-                                slap even harder).
+                                slaps even harder).
                                 <br />
                                 <br />
                                 Sometimes I{' '}
@@ -110,7 +110,7 @@ export default function About() {
                                     target='_blank'
                                     rel='noopener noreferrer'
                                 >
-                                    blog
+                                    blog/complain
                                 </a>{' '}
                                 about coding and visual design. Browse the{' '}
                                 <Link
