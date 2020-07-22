@@ -80,8 +80,8 @@ export default function About() {
                                 >
                                     Wellsheet
                                 </a>
-                                . In my free time, you can find me speaking to
-                                your manager, playing frisbee, eating{' '}
+                                . In my free time, you can find me playing
+                                frisbee, eating{' '}
                                 <a
                                     href='https://www.instagram.com/fry.nsta/'
                                     style={{ color: YELLOW }}
@@ -90,8 +90,8 @@ export default function About() {
                                 >
                                     fries
                                 </a>
-                                , or trying to convince my friends that country
-                                and EDM are the best music genres (
+                                , trying to convince my friends that country and
+                                EDM are the best music genres (
                                 <a
                                     href='https://www.youtube.com/watch?v=qDyCMxS8YfE'
                                     style={{ color: DARK_PINK }}
@@ -100,7 +100,7 @@ export default function About() {
                                 >
                                     EDM x country
                                 </a>{' '}
-                                slaps even harder).
+                                slaps even harder), or speaking to your manager.
                                 <br />
                                 <br />
                                 Sometimes I{' '}
