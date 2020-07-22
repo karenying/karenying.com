@@ -43,7 +43,6 @@ span.wave {
     animation-iteration-count: 1;
     transform-origin: 70% 70%;
     display: inline-block;
-    padding-right: 2px;
 }
 
 @keyframes wave-animation {
