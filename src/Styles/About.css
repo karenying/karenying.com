@@ -39,6 +39,7 @@
 
 span.wave {
     animation-name: wave-animation;
+    animation-delay: 1s;
     animation-duration: 2.5s;
     animation-iteration-count: 1;
     transform-origin: 70% 70%;
