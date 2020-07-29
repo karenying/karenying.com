@@ -54,7 +54,7 @@ export default function About() {
                     </ProgressiveImage>
                 </Grid>
                 <Grid item sm={12} md={8}>
-                    <Fade in={true} timeout={{ enter: 1200 }}>
+                    <Fade in timeout={{ enter: 1200 }}>
                         <div>
                             <p>
                                 Hi{' '}

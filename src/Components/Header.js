@@ -76,7 +76,7 @@ export default function Header(props) {
                 <HeaderLink
                     title='contact'
                     color={YELLOW}
-                    edge={true}
+                    edge
                     selected={page === 'contact' ? true : false}
                 />
             </div>

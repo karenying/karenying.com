@@ -22,10 +22,10 @@ function App() {
     return (
         <Router>
             <Switch>
-                <Route exact={true} path='/' component={About} />
-                <Route exact={true} path='/about' component={About} />
-                <Route exact={true} path='/projects' component={Projects} />
-                <Route exact={true} path='/contact' component={Contact} />
+                <Route exact path='/' component={About} />
+                <Route exact path='/about' component={About} />
+                <Route exact path='/projects' component={Projects} />
+                <Route exact path='/contact' component={Contact} />
                 <Route path='*' component={Error} />
             </Switch>
             {footerActive ? (

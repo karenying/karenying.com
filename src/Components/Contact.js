@@ -22,7 +22,7 @@ export default function Contact() {
     return (
         <div className={'contact-container ' + classes.contact}>
             <Header page='contact' />
-            <Fade in={true} timeout={{ enter: 1200 }}>
+            <Fade in timeout={{ enter: 1200 }}>
                 <div className='contact-content'>
                     <h2>
                         got an interesting project you're working on, or just
