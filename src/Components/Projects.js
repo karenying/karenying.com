@@ -1,7 +1,4 @@
 import React, { useState, useEffect, useRef } from 'react';
-import '../Styles/Projects.css';
-import Header from './Header';
-import { projectInfo } from '../constants';
 import { FiExternalLink } from 'react-icons/fi';
 import {
     FaCode,
@@ -10,13 +7,16 @@ import {
     FaPaperclip,
     FaPlay,
 } from 'react-icons/fa';
+import ProgressiveImage from 'react-progressive-image';
 import Slide from '@material-ui/core/Slide';
 import Hidden from '@material-ui/core/Hidden';
 import Grid from '@material-ui/core/Grid';
 import { makeStyles } from '@material-ui/core/styles';
 import { Card } from '@material-ui/core';
-import { ALMOST_WHITE } from '../constants';
-import ProgressiveImage from 'react-progressive-image';
+
+import '../Styles/Projects.css';
+import { projectInfo, ALMOST_WHITE } from '../constants';
+import Header from './Header';
 
 function LeftArrow(props) {
     const { clickFunction, myRef, arrowClass } = props;

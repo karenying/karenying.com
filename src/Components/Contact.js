@@ -1,9 +1,10 @@
 import React from 'react';
-import '../Styles/Contact.css';
-import Header from './Header';
-import { BLUE, YELLOW, DARK_PINK } from '../constants';
 import Fade from '@material-ui/core/Fade';
 import { makeStyles } from '@material-ui/core/styles';
+
+import '../Styles/Contact.css';
+import { BLUE, YELLOW, DARK_PINK } from '../constants';
+import Header from './Header';
 
 export default function Contact() {
     const useStyles = makeStyles((theme) => ({

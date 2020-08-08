@@ -1,9 +1,13 @@
 import React from 'react';
-import '../Styles/Footer.css';
-import { FaLinkedin, FaCode, FaChevronDown } from 'react-icons/fa';
+import { FaLinkedin, FaCode } from 'react-icons/fa';
 import { AiFillTwitterCircle, AiFillMediumCircle } from 'react-icons/ai';
 import { GoMarkGithub } from 'react-icons/go';
 import { IoMdMail } from 'react-icons/io';
+import Hidden from '@material-ui/core/Hidden';
+import Tooltip from '@material-ui/core/Tooltip';
+import { withStyles, makeStyles } from '@material-ui/core/styles';
+
+import '../Styles/Footer.css';
 import {
     LIGHT_GRAY,
     BLUE,
@@ -13,10 +17,23 @@ import {
     ALMOST_WHITE,
     DARK_GRAY,
 } from '../constants';
-import Hidden from '@material-ui/core/Hidden';
-import Tooltip from '@material-ui/core/Tooltip';
-import { withStyles } from '@material-ui/core/styles';
-import { useStyles } from './FooterIcon';
+
+const useStyles = makeStyles((theme) => ({
+    footerContainer: {
+        [theme.breakpoints.down('xs')]: {
+            position: 'static',
+            padding: 0,
+            paddingBottom: '1rem',
+        },
+    },
+    footerContent: {
+        [theme.breakpoints.down('xs')]: {
+            position: 'static',
+            marginLeft: 'auto',
+            paddingRight: '1rem',
+        },
+    },
+}));
 
 const LightTooltip = withStyles(() => ({
     tooltip: {
@@ -31,8 +48,7 @@ const LightTooltip = withStyles(() => ({
     },
 }))(Tooltip);
 
-export default function Footer(props) {
-    const { clickFunction } = props;
+export default function Footer() {
     const classes = useStyles();
 
     return (
@@ -167,13 +183,6 @@ export default function Footer(props) {
                     >
                         •
                     </h3>
-                </div>
-                <div className='footer-link' onClick={clickFunction}>
-                    <FaChevronDown
-                        color={LIGHT_PINK}
-                        size='2rem'
-                        title='Hide footer'
-                    />
                 </div>
             </div>
         </div>

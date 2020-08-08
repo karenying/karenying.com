@@ -1,24 +1,14 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+
 import './App.css';
 import About from './Components/About';
 import Projects from './Components/Projects';
 import Contact from './Components/Contact';
 import Error from './Components/Error';
-import FooterIcon from './Components/FooterIcon';
 import Footer from './Components/Footer';
 
-function App() {
-    const [footerActive, setFooterActive] = useState(false);
-
-    const handleFooterIconClick = () => {
-        setFooterActive(true);
-    };
-
-    const handleFooterCloseClick = () => {
-        setFooterActive(false);
-    };
-
+export default function App() {
     return (
         <Router>
             <Switch>
@@ -28,13 +18,7 @@ function App() {
                 <Route exact path='/contact' component={Contact} />
                 <Route path='*' component={Error} />
             </Switch>
-            {footerActive ? (
-                <Footer clickFunction={handleFooterCloseClick} />
-            ) : (
-                <FooterIcon clickFunction={handleFooterIconClick} />
-            )}
+            <Footer />
         </Router>
     );
 }
-
-export default App;

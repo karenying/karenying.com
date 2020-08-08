@@ -1,14 +1,15 @@
 import React from 'react';
-import '../Styles/About.css';
-import Header from './Header';
+import { Link } from 'react-router-dom';
+import ProgressiveImage from 'react-progressive-image';
 import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import Fade from '@material-ui/core/Fade';
+
+import '../Styles/About.css';
+import { BLUE, YELLOW, LIGHT_PINK, DARK_PINK } from '../constants';
 import Karen from '../Assets/karen.png';
 import MiniKaren from '../Assets/mini-karen.png';
-import { BLUE, YELLOW, LIGHT_PINK, DARK_PINK } from '../constants';
-import ProgressiveImage from 'react-progressive-image';
-import { Link } from 'react-router-dom';
+import Header from './Header';
 
 export default function About() {
     const useStyles = makeStyles((theme) => ({

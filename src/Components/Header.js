@@ -1,9 +1,10 @@
 import React from 'react';
-import '../Styles/Header.css';
-import { DARK_PINK, BLUE, YELLOW, LIGHT_GRAY } from '../constants';
 import { Link } from 'react-router-dom';
 import Hidden from '@material-ui/core/Hidden';
 import { makeStyles } from '@material-ui/core/styles';
+
+import '../Styles/Header.css';
+import { DARK_PINK, BLUE, YELLOW, LIGHT_GRAY } from '../constants';
 
 const HeaderLink = ({ title, color, edge, selected }) => {
     const padding = edge ? '0rem' : '0.5rem';
