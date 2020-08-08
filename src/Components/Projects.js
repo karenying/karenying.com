@@ -193,6 +193,11 @@ export default function Projects() {
     );
 
     const useStyles = makeStyles((theme) => ({
+        projectContainer: {
+            [theme.breakpoints.down('xs')]: {
+                minHeight: 'calc(100vh - 3.5rem)',
+            },
+        },
         projectCard: {
             backgroundColor,
             boxShadow: '2rem 2rem 2rem black',
@@ -249,7 +254,7 @@ export default function Projects() {
     const classes = useStyles();
 
     return (
-        <div className='projects-container'>
+        <div className={`projects-container ${classes.projectContainer}`}>
             <Header page='projects' />
             <div className='projects-content'>
                 <LeftArrow

@@ -16,6 +16,7 @@ import {
 import Hidden from '@material-ui/core/Hidden';
 import Tooltip from '@material-ui/core/Tooltip';
 import { withStyles } from '@material-ui/core/styles';
+import { useStyles } from './FooterIcon';
 
 const LightTooltip = withStyles(() => ({
     tooltip: {
@@ -32,9 +33,10 @@ const LightTooltip = withStyles(() => ({
 
 export default function Footer(props) {
     const { clickFunction } = props;
+    const classes = useStyles();
 
     return (
-        <div className='footer-container'>
+        <div className={`footer-container ${classes.footerContainer}`}>
             <Hidden xsDown>
                 <div className='footer-copyright'>
                     <p
@@ -59,7 +61,7 @@ export default function Footer(props) {
                     </p>
                 </div>
             </Hidden>
-            <div className='footer-links-container'>
+            <div className={`footer-links-container ${classes.footerContent}`}>
                 <div className='footer-link'>
                     <h3 style={{ color: LIGHT_GRAY }}>•</h3>
                 </div>
