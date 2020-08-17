@@ -48,7 +48,7 @@ export default function About() {
                     <ProgressiveImage src={Karen} placeholder={MiniKaren}>
                         {(src, loading) => (
                             <img
-                                style={{ opacity: loading ? 0.7 : 1 }}
+                                style={{ opacity: loading ? 0.8 : 1 }}
                                 src={src}
                                 alt='karen'
                             />
