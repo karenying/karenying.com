@@ -1,34 +1,34 @@
 .contact-container {
-    padding-top: 20rem;
-    padding-bottom: 8rem;
-    box-sizing: border-box;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    width: 100%;
+  padding-top: 20rem;
+  padding-bottom: 8rem;
+  box-sizing: border-box;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  width: 100%;
 }
 
 .contact-content {
-    max-width: 40rem;
-    text-align: left;
-    padding: 0px 5rem;
+  max-width: 40rem;
+  text-align: left;
+  padding: 0px 5rem;
 }
 
 .contact-content p {
-    color: var(--light-gray);
+  color: var(--light-gray);
 }
 
 .contact-content h2 {
-    color: var(--light-pink);
-    font-family: monospace !important;
-    margin-bottom: 4rem;
-    text-shadow: 0.5rem 0.5rem 0.5rem black;
+  color: var(--light-pink);
+  font-family: monospace !important;
+  margin-bottom: 4rem;
+  text-shadow: 0.5rem 0.5rem 0.5rem black;
 }
 
 .contact-content a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 .contact-content a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }

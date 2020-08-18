@@ -1,45 +1,45 @@
 @font-face {
-    font-family: 'Varela Round';
-    font-style: normal;
-    font-weight: 400;
-    src: local('Varela Round Regular'), local('VarelaRound-Regular'),
-        url(https://fonts.gstatic.com/s/varelaround/v12/w8gdH283Tvk__Lua32TysjIfp8uPLdshZg.woff2)
-            format('woff2');
-    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
-        U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212,
-        U+2215, U+FEFF, U+FFFD;
+  font-family: 'Varela Round';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Varela Round Regular'), local('VarelaRound-Regular'),
+    url(https://fonts.gstatic.com/s/varelaround/v12/w8gdH283Tvk__Lua32TysjIfp8uPLdshZg.woff2)
+      format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
+    U+FEFF, U+FFFD;
 }
 
 html {
-    font-size: 62.5%;
+  font-size: 62.5%;
 }
 
 body {
-    font-size: 1.6rem;
+  font-size: 1.6rem;
 }
 
 #root {
-    text-align: center;
+  text-align: center;
 }
 
 * {
-    font-family: 'Varela Round', sans-serif !important;
+  font-family: 'Varela Round', sans-serif !important;
 }
 
 :root {
-    --dark-gray: #2a2b2e;
-    --dark-pink: #ff7c7c;
-    --light-pink: #ffb6b9;
-    --blue: #8deaff;
-    --yellow: #ffe084;
-    --light-gray: #d9d9d9;
+  --dark-gray: #2a2b2e;
+  --dark-pink: #ff7c7c;
+  --light-pink: #ffb6b9;
+  --blue: #8deaff;
+  --yellow: #ffe084;
+  --light-gray: #d9d9d9;
 }
 
 @keyframes fadeIn {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }

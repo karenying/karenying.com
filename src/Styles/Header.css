@@ -1,51 +1,51 @@
 .header-container {
-    position: absolute;
-    top: 0px;
-    width: 100%;
-    display: flex;
+  position: absolute;
+  top: 0px;
+  width: 100%;
+  display: flex;
 }
 
 .header-container h3 {
-    padding: 0px;
-    margin: 0px;
+  padding: 0px;
+  margin: 0px;
 }
 
 .header-logo {
-    position: fixed;
-    left: 0px;
-    padding-top: 3rem;
-    padding-left: 5rem;
+  position: fixed;
+  left: 0px;
+  padding-top: 3rem;
+  padding-left: 5rem;
 }
 
 .header-content {
-    display: flex;
-    flex-direction: row;
-    padding-top: 3rem;
+  display: flex;
+  flex-direction: row;
+  padding-top: 3rem;
 }
 
 .header-dot {
-    margin-top: -0.5rem;
-    display: none;
-    cursor: pointer;
+  margin-top: -0.5rem;
+  display: none;
+  cursor: pointer;
 }
 
 .header-link:hover .header-dot {
-    display: block;
+  display: block;
 }
 
 .header-dot-active {
-    margin-top: -0.5rem;
-    display: block;
-    cursor: pointer;
+  margin-top: -0.5rem;
+  display: block;
+  cursor: pointer;
 }
 
 .header-no-link {
-    pointer-events: none;
-    cursor: default;
+  pointer-events: none;
+  cursor: default;
 }
 
 #slash {
-    color: var(--light-gray);
-    padding-right: 0.5rem;
-    cursor: default;
+  color: var(--light-gray);
+  padding-right: 0.5rem;
+  cursor: default;
 }

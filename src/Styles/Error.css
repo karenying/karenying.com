@@ -1,14 +1,14 @@
 .error-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
 .error-text h1 {
-    color: var(--light-pink);
-    font-family: monospace !important;
-    padding: 0px;
-    margin: 0px;
-    text-shadow: 0.5rem 0.5rem 0.5rem black;
+  color: var(--light-pink);
+  font-family: monospace !important;
+  padding: 0px;
+  margin: 0px;
+  text-shadow: 0.5rem 0.5rem 0.5rem black;
 }

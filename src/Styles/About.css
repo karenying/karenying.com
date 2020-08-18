@@ -1,71 +1,71 @@
 .about-container {
-    box-sizing: border-box;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  width: 100%;
 }
 
 .about-container img {
-    box-shadow: 2rem 2rem 2rem black;
-    border-radius: 100px;
-    width: 200px;
-    height: 200px;
+  box-shadow: 2rem 2rem 2rem black;
+  border-radius: 100px;
+  width: 200px;
+  height: 200px;
 }
 
 .about-container p {
-    color: var(--light-gray);
+  color: var(--light-gray);
 }
 
 .about-container h2 {
-    color: var(--light-pink);
-    font-family: monospace !important;
+  color: var(--light-pink);
+  font-family: monospace !important;
 }
 
 .about-container a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 .about-container a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 .projects-link {
-    text-decoration: none;
+  text-decoration: none;
 }
 .projects-link:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 span.wave {
-    animation-name: wave-animation;
-    animation-delay: 1s;
-    animation-duration: 2.5s;
-    animation-iteration-count: 1;
-    transform-origin: 70% 70%;
-    display: inline-block;
+  animation-name: wave-animation;
+  animation-delay: 1s;
+  animation-duration: 2.5s;
+  animation-iteration-count: 1;
+  transform-origin: 70% 70%;
+  display: inline-block;
 }
 
 @keyframes wave-animation {
-    0% {
-        transform: rotate(0deg);
-    }
-    10% {
-        transform: rotate(-10deg);
-    }
-    20% {
-        transform: rotate(12deg);
-    }
-    30% {
-        transform: rotate(-10deg);
-    }
-    40% {
-        transform: rotate(9deg);
-    }
-    50% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(0deg);
-    }
+  0% {
+    transform: rotate(0deg);
+  }
+  10% {
+    transform: rotate(-10deg);
+  }
+  20% {
+    transform: rotate(12deg);
+  }
+  30% {
+    transform: rotate(-10deg);
+  }
+  40% {
+    transform: rotate(9deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
 }
