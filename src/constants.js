@@ -1,29 +1,29 @@
-import React from 'react';
+import React from 'react'
 
-import Expresso from './Assets/expresso.png';
-import Dayz from './Assets/dayz.png';
-import Gradient from './Assets/gradient.png';
-import ColorCharts from './Assets/colorcharts.png';
-import DriversEd from './Assets/driversed.gif';
-import MiniExpresso from './Assets/mini-expresso.jpg';
-import MiniDayz from './Assets/mini-dayz.jpg';
-import MiniGradient from './Assets/mini-gradient.jpg';
-import MiniColorCharts from './Assets/mini-colorcharts.jpg';
-import MiniDriversEd from './Assets/mini-driversed.jpg';
+import Expresso from './Assets/expresso.png'
+import Dayz from './Assets/dayz.png'
+import Gradient from './Assets/gradient.png'
+import ColorCharts from './Assets/colorcharts.png'
+import DriversEd from './Assets/driversed.gif'
+import MiniExpresso from './Assets/mini-expresso.jpg'
+import MiniDayz from './Assets/mini-dayz.jpg'
+import MiniGradient from './Assets/mini-gradient.jpg'
+import MiniColorCharts from './Assets/mini-colorcharts.jpg'
+import MiniDriversEd from './Assets/mini-driversed.jpg'
 
-export const DARK_GRAY = '#2A2B2E';
+export const DARK_GRAY = '#2A2B2E'
 
-export const DARK_PINK = '#FF7C7C';
+export const DARK_PINK = '#FF7C7C'
 
-export const LIGHT_PINK = '#FFB6B9';
+export const LIGHT_PINK = '#FFB6B9'
 
-export const BLUE = '#8DEAFF';
+export const BLUE = '#8DEAFF'
 
-export const YELLOW = '#FFE084';
+export const YELLOW = '#FFE084'
 
-export const LIGHT_GRAY = '#D9D9D9';
+export const LIGHT_GRAY = '#D9D9D9'
 
-export const ALMOST_WHITE = '#F5F5F5';
+export const ALMOST_WHITE = '#F5F5F5'
 
 export const projectInfo = [
   {
@@ -83,9 +83,6 @@ export const projectInfo = [
         Club. Much like any online-ordering interface, the baristas are able to
         see the orders the students place. The students either pay in store when
         picking up, or use Princeton’s Student Charge.
-        <br />
-        <br />
-        Launches Fall 2020.
       </span>
     ),
 
@@ -134,4 +131,4 @@ export const projectInfo = [
     paper: null,
     game: 'https://karenying.github.io/drivers-ed/',
   },
-];
+]

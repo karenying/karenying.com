@@ -1,14 +1,14 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import ProgressiveImage from 'react-progressive-image';
-import { makeStyles } from '@material-ui/core/styles';
-import Grid from '@material-ui/core/Grid';
-import Fade from '@material-ui/core/Fade';
+import React from 'react'
+import { Link } from 'react-router-dom'
+import ProgressiveImage from 'react-progressive-image'
+import { makeStyles } from '@material-ui/core/styles'
+import Grid from '@material-ui/core/Grid'
+import Fade from '@material-ui/core/Fade'
 
-import '../Styles/About.css';
-import { BLUE, YELLOW, LIGHT_PINK, DARK_PINK } from '../constants';
-import Karen from '../Assets/karen.png';
-import MiniKaren from '../Assets/mini-karen.png';
+import '../Styles/About.css'
+import { BLUE, YELLOW, LIGHT_PINK, DARK_PINK } from '../constants'
+import Karen from '../Assets/karen.png'
+import MiniKaren from '../Assets/mini-karen.png'
 
 const About = () => {
   const useStyles = makeStyles((theme) => ({
@@ -35,9 +35,9 @@ const About = () => {
         justifyContent: 'center',
       },
     },
-  }));
+  }))
 
-  const classes = useStyles();
+  const classes = useStyles()
 
   return (
     <div className='about-container'>
@@ -61,12 +61,12 @@ const About = () => {
                 <span className='wave' role='img' aria-label='wave'>
                   👋🏼
                 </span>{' '}
-                I'm Karen, a rising senior studying Computer Science at
-                Princeton University. I'm interested in anything tech &mdash;
-                especially web development and UI/UX design.
+                I'm Karen, a senior studying Computer Science at Princeton
+                University. I'm interested in anything tech &mdash; especially
+                web development and UI/UX design.
                 <br />
                 <br />
-                Currently, I'm a SWE intern at{' '}
+                This summer, I was a full-stack SWE intern at{' '}
                 <a
                   href='https://www.wellsheet.com/'
                   style={{ color: BLUE }}
@@ -75,7 +75,11 @@ const About = () => {
                 >
                   Wellsheet
                 </a>
-                . In my free time, you can find me playing frisbee, eating{' '}
+                , a fast-paced healthcare startup based in NYC. Currently I'm in
+                Boston, Zoomin' about my last year at Princeton.
+                <br />
+                <br />
+                In my free time, you can find me playing frisbee, eating{' '}
                 <a
                   href='https://www.instagram.com/fry.nsta/'
                   style={{ color: YELLOW }}
@@ -84,15 +88,14 @@ const About = () => {
                 >
                   fries
                 </a>
-                , trying to convince my friends that country and EDM are the
-                best music genres (
+                , jamming out to Country and EDM (
                 <a
                   href='https://www.youtube.com/watch?v=qDyCMxS8YfE'
                   style={{ color: DARK_PINK }}
                   target='_blank'
                   rel='noopener noreferrer'
                 >
-                  EDM x country
+                  Country x EDM
                 </a>{' '}
                 slaps even harder), or speaking to your manager.
                 <br />
@@ -112,18 +115,28 @@ const About = () => {
                   style={{
                     color: BLUE,
                   }}
-                  className='projects-link'
+                  className='internal-link'
                 >
                   projects
                 </Link>{' '}
-                tab to see some of my work!
+                tab to see some of my work or feel free to{' '}
+                <Link
+                  to={`/contact`}
+                  style={{
+                    color: YELLOW,
+                  }}
+                  className='internal-link'
+                >
+                  reach out
+                </Link>
+                !
               </p>
             </div>
           </Fade>
         </Grid>
       </Grid>
     </div>
-  );
-};
+  )
+}
 
-export default About;
+export default About
