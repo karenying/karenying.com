@@ -9,7 +9,6 @@ import '../Styles/About.css';
 import { BLUE, YELLOW, LIGHT_PINK, DARK_PINK } from '../constants';
 import Karen from '../Assets/karen.png';
 import MiniKaren from '../Assets/mini-karen.png';
-import Header from './Header';
 
 export default function About() {
   const useStyles = makeStyles((theme) => ({
@@ -42,7 +41,6 @@ export default function About() {
 
   return (
     <div className='about-container'>
-      <Header page='about' />
       <Grid className={classes.aboutGrid} container>
         <Grid item sm={12} md={4} className={classes.image}>
           <ProgressiveImage src={Karen} placeholder={MiniKaren}>
