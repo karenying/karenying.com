@@ -83,6 +83,9 @@ export const projectInfo = [
         Club. Much like any online-ordering interface, the baristas are able to
         see the orders the students place. The students either pay in store when
         picking up, or use Princeton’s Student Charge.
+        <br />
+        <br />
+        Launch postponed.
       </span>
     ),
 
