@@ -27,8 +27,7 @@ const HeaderLink = ({ title, color, edge, selected }) => {
 };
 
 export default function Header(props) {
-  const { page } = props;
-
+  const { page } = props.match.params;
   const useStyles = makeStyles((theme) => ({
     headerContent: {
       [theme.breakpoints.up('sm')]: {

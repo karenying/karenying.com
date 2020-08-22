@@ -16,7 +16,6 @@ import { Card } from '@material-ui/core';
 
 import '../Styles/Projects.css';
 import { projectInfo, ALMOST_WHITE } from '../constants';
-import Header from './Header';
 
 function LeftArrow(props) {
   const { clickFunction, myRef, arrowClass } = props;
@@ -252,7 +251,6 @@ export default function Projects() {
 
   return (
     <div className={`projects-container ${classes.projectContainer}`}>
-      <Header page='projects' />
       <div className='projects-content'>
         <LeftArrow
           clickFunction={onLeftClick}

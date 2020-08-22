@@ -4,7 +4,6 @@ import { makeStyles } from '@material-ui/core/styles';
 
 import '../Styles/Contact.css';
 import { BLUE, YELLOW, DARK_PINK } from '../constants';
-import Header from './Header';
 
 export default function Contact() {
   const useStyles = makeStyles((theme) => ({
@@ -22,7 +21,6 @@ export default function Contact() {
 
   return (
     <div className={'contact-container ' + classes.contact}>
-      <Header page='contact' />
       <Fade in timeout={{ enter: 1200 }}>
         <div className='contact-content'>
           <h2>
