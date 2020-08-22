@@ -48,7 +48,7 @@ const LightTooltip = withStyles(() => ({
   },
 }))(Tooltip);
 
-export default function Footer() {
+const Footer = () => {
   const classes = useStyles();
 
   return (
@@ -178,4 +178,6 @@ export default function Footer() {
       </div>
     </div>
   );
-}
+};
+
+export default Footer;

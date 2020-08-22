@@ -10,7 +10,7 @@ import { BLUE, YELLOW, LIGHT_PINK, DARK_PINK } from '../constants';
 import Karen from '../Assets/karen.png';
 import MiniKaren from '../Assets/mini-karen.png';
 
-export default function About() {
+const About = () => {
   const useStyles = makeStyles((theme) => ({
     aboutGrid: {
       textAlign: 'left',
@@ -124,4 +124,6 @@ export default function About() {
       </Grid>
     </div>
   );
-}
+};
+
+export default About;

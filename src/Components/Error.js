@@ -2,7 +2,7 @@ import React from 'react';
 
 import '../Styles/Error.css';
 
-export default function Error() {
+const Error = () => {
   return (
     <div className='error-container'>
       <div className='error-text'>
@@ -15,4 +15,6 @@ export default function Error() {
       </div>
     </div>
   );
-}
+};
+
+export default Error;

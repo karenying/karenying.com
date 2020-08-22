@@ -5,7 +5,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import '../Styles/Contact.css';
 import { BLUE, YELLOW, DARK_PINK } from '../constants';
 
-export default function Contact() {
+const Contact = () => {
   const useStyles = makeStyles((theme) => ({
     contact: {
       [theme.breakpoints.up('sm')]: {
@@ -67,4 +67,6 @@ export default function Contact() {
       </Fade>
     </div>
   );
-}
+};
+
+export default Contact;

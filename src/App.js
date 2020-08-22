@@ -14,7 +14,7 @@ import Error from './Components/Error';
 import Footer from './Components/Footer';
 import Header from './Components/Header';
 
-export default function App() {
+const App = () => {
   return (
     <Router>
       <Switch>
@@ -34,4 +34,6 @@ export default function App() {
       <Footer />
     </Router>
   );
-}
+};
+
+export default App;

@@ -17,7 +17,7 @@ import { Card } from '@material-ui/core';
 import '../Styles/Projects.css';
 import { projectInfo, ALMOST_WHITE } from '../constants';
 
-function LeftArrow(props) {
+const LeftArrow = (props) => {
   const { clickFunction, myRef, arrowClass } = props;
 
   return (
@@ -29,9 +29,9 @@ function LeftArrow(props) {
       <FaChevronLeft color={ALMOST_WHITE} size='4rem' />
     </div>
   );
-}
+};
 
-function RightArrow(props) {
+const RightArrow = (props) => {
   const { clickFunction, myRef, arrowClass } = props;
 
   return (
@@ -43,9 +43,9 @@ function RightArrow(props) {
       <FaChevronRight color={ALMOST_WHITE} size='4rem' />
     </div>
   );
-}
+};
 
-export default function Projects() {
+const Projects = () => {
   useEffect(() => {
     const handleKeyDown = (e) => {
       if (e.keyCode === 39) {
@@ -361,4 +361,6 @@ export default function Projects() {
       </div>
     </div>
   );
-}
+};
+
+export default Projects;
