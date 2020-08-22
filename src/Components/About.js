@@ -76,7 +76,7 @@ const About = () => {
                   Wellsheet
                 </a>
                 , a fast-paced healthcare startup based in NYC. Currently I'm in
-                Boston, Zoomin' about my last year at Princeton.
+                Boston, Zoomin' my last year at Princeton.
                 <br />
                 <br />
                 In my free time, you can find me playing frisbee, eating{' '}
