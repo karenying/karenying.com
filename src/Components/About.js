@@ -19,7 +19,7 @@ const About = () => {
         padding: '20rem 0px',
       },
       [theme.breakpoints.down('sm')]: {
-        padding: '8rem 5rem 0rem 5rem',
+        padding: '8rem 4.5rem 3rem',
         minHeight: 'calc(100vh - 3.5rem)',
       },
     },
