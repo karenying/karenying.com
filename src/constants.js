@@ -1,29 +1,29 @@
-import React from 'react'
+import React from 'react';
 
-import Expresso from './Assets/expresso.png'
-import Dayz from './Assets/dayz.png'
-import Gradient from './Assets/gradient.png'
-import ColorCharts from './Assets/colorcharts.png'
-import DriversEd from './Assets/driversed.gif'
-import MiniExpresso from './Assets/mini-expresso.jpg'
-import MiniDayz from './Assets/mini-dayz.jpg'
-import MiniGradient from './Assets/mini-gradient.jpg'
-import MiniColorCharts from './Assets/mini-colorcharts.jpg'
-import MiniDriversEd from './Assets/mini-driversed.jpg'
+import Expresso from './Assets/expresso.png';
+import Dayz from './Assets/dayz.png';
+import Gradient from './Assets/gradient.png';
+import ColorCharts from './Assets/colorcharts.png';
+import DriversEd from './Assets/driversed.gif';
+import MiniExpresso from './Assets/mini-expresso.jpg';
+import MiniDayz from './Assets/mini-dayz.jpg';
+import MiniGradient from './Assets/mini-gradient.jpg';
+import MiniColorCharts from './Assets/mini-colorcharts.jpg';
+import MiniDriversEd from './Assets/mini-driversed.jpg';
 
-export const DARK_GRAY = '#2A2B2E'
+export const DARK_GRAY = '#2A2B2E';
 
-export const DARK_PINK = '#FF7C7C'
+export const DARK_PINK = '#FF7C7C';
 
-export const LIGHT_PINK = '#FFB6B9'
+export const LIGHT_PINK = '#FFB6B9';
 
-export const BLUE = '#8DEAFF'
+export const BLUE = '#8DEAFF';
 
-export const YELLOW = '#FFE084'
+export const YELLOW = '#FFE084';
 
-export const LIGHT_GRAY = '#D9D9D9'
+export const LIGHT_GRAY = '#D9D9D9';
 
-export const ALMOST_WHITE = '#F5F5F5'
+export const ALMOST_WHITE = '#F5F5F5';
 
 export const projectInfo = [
   {
@@ -52,8 +52,6 @@ export const projectInfo = [
     ),
     site: 'https://gradient-png.netlify.app/',
     code: 'https://github.com/karenying/gradient',
-    paper: null,
-    game: null,
   },
   {
     backgroundColor: LIGHT_PINK,
@@ -66,8 +64,6 @@ export const projectInfo = [
     description:
       'Dayz is a bullet journal style mood tracker. It utilizes a RESTful api to write and read data. This was my first solo full stack project. I thoroughly enjoyed implementing and deploying all the components from scratch.',
     code: 'https://github.com/karenying/dayz',
-    paper: null,
-    game: null,
   },
   {
     backgroundColor: BLUE,
@@ -90,9 +86,6 @@ export const projectInfo = [
     ),
 
     site: 'http://coffeeclub.princeton.edu/',
-    code: null,
-    paper: null,
-    game: null,
   },
   {
     backgroundColor: YELLOW,
@@ -104,11 +97,9 @@ export const projectInfo = [
     stack: 'JS',
     description:
       'Color Charts aims to increase the readability of charts, graphs, and diagrams on the web. It improves upon existing extensions by using researched color blind friendly palettes to recolor images. The recoloring algorithm uses HTML Canvas and Base64 encoding to recolor images in place.',
-    site: null,
     code: 'https://github.com/karenying/color-charts',
     paper:
       'https://github.com/karenying/color-charts/blob/master/src/assets/paper.pdf',
-    game: null,
   },
   {
     backgroundColor: LIGHT_GRAY,
@@ -129,9 +120,7 @@ export const projectInfo = [
         Computer Graphics.
       </span>
     ),
-    site: null,
     code: 'https://github.com/karenying/drivers-ed/',
-    paper: null,
     game: 'https://karenying.github.io/drivers-ed/',
   },
-]
+];

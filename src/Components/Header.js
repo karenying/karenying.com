@@ -15,11 +15,11 @@ const HeaderLink = ({ title, color, edge, selected }) => {
       <Link
         to={`/${link}`}
         style={{ textDecoration: 'none' }}
-        className={selected ? 'header-no-link' : null}
+        className={selected && 'header-no-link'}
       >
         <h3 style={{ color, paddingRight: padding }}>{title}</h3>
         <div className={selected ? 'header-dot-active' : 'header-dot'}>
-          {title === 'karenying.com' ? null : <h3 style={{ color }}>•</h3>}
+          {title !== 'karenying.com' && <h3 style={{ color }}>•</h3>}
         </div>
       </Link>
     </div>
