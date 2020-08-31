@@ -45,11 +45,11 @@
 
 .footer-link {
   margin: 0px 0.7rem 0px;
+  cursor: pointer;
 }
 
 .footer-link svg {
   transition: transform 0.15s;
-  cursor: pointer;
   animation-name: fadeIn;
   animation-duration: 0.3s;
   opacity: 0;
