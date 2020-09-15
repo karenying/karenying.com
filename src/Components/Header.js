@@ -8,14 +8,14 @@ import { DARK_PINK, BLUE, YELLOW, LIGHT_GRAY } from '../constants';
 
 const HeaderLink = ({ title, color, edge, selected }) => {
   const padding = edge ? '0rem' : '0.5rem';
-  let link = title === 'karenying.com' ? 'about' : title;
+  const link = title === 'karenying.com' ? 'about' : title;
 
   return (
     <div className='header-link'>
       <Link
         to={`/${link}`}
         style={{ textDecoration: 'none' }}
-        className={selected && 'header-no-link'}
+        className={selected ? 'header-no-link' : null}
       >
         <h3 style={{ color, paddingRight: padding }}>{title}</h3>
         <div className={selected ? 'header-dot-active' : 'header-dot'}>

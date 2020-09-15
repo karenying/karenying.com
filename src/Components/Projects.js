@@ -17,8 +17,8 @@ import { Card } from '@material-ui/core';
 import '../Styles/Projects.css';
 import { projectInfo, ALMOST_WHITE } from '../constants';
 
-const LeftArrow = (props) => {
-  const { clickFunction, myRef, arrowClass } = props;
+const Arrow = (props) => {
+  const { icon: Icon, clickFunction, myRef, arrowClass } = props;
 
   return (
     <div
@@ -26,21 +26,7 @@ const LeftArrow = (props) => {
       onClick={clickFunction}
       ref={myRef}
     >
-      <FaChevronLeft color={ALMOST_WHITE} size='4rem' />
-    </div>
-  );
-};
-
-const RightArrow = (props) => {
-  const { clickFunction, myRef, arrowClass } = props;
-
-  return (
-    <div
-      className={`arrow-container ${arrowClass}`}
-      onClick={clickFunction}
-      ref={myRef}
-    >
-      <FaChevronRight color={ALMOST_WHITE} size='4rem' />
+      <Icon color={ALMOST_WHITE} size='4rem' />
     </div>
   );
 };
@@ -49,10 +35,10 @@ const Projects = () => {
   useEffect(() => {
     const handleKeyDown = (e) => {
       if (e.keyCode === 39) {
-        onRightClick();
+        handleClick('right');
       }
       if (e.keyCode === 37) {
-        onLeftClick();
+        handleClick('left');
       }
     };
 
@@ -87,40 +73,22 @@ const Projects = () => {
   const [slideIn, setSlideIn] = useState(true);
   const [direction, setDirection] = useState('down');
 
-  const onRightClick = () => {
-    rightArrow.current.firstChild.style.transform = 'scale(1.15)';
-    rightArrow.current.firstChild.style.fill = '#cecece';
+  const handleClick = (direction) => {
+    const ref = direction === 'right' ? rightArrow : leftArrow;
+    const oppDirection = direction === 'right' ? 'left' : 'right';
+
+    ref.current.firstChild.style.transform = 'scale(1.15)';
+    ref.current.firstChild.style.fill = '#cecece';
 
     let newIndex = (index + 1) % projectInfo.length;
     setSlideIn(false);
-    setDirection('right');
+    setDirection(direction);
     setTimeout(() => {
       setIndex(newIndex);
-      setDirection('left');
+      setDirection(oppDirection);
       setSlideIn(true);
-      rightArrow.current.firstChild.style.transform = '';
-      rightArrow.current.firstChild.style.fill = ALMOST_WHITE;
-    }, 500);
-  };
-
-  const onLeftClick = () => {
-    leftArrow.current.firstChild.style.transform = 'scale(1.15)';
-    leftArrow.current.firstChild.style.fill = '#cecece';
-
-    let newIndex = index - 1;
-    if (newIndex === -1) {
-      newIndex = projectInfo.length - 1;
-    }
-
-    setSlideIn(false);
-    setDirection('left');
-
-    setTimeout(() => {
-      setIndex(newIndex);
-      setDirection('right');
-      setSlideIn(true);
-      leftArrow.current.firstChild.style.transform = '';
-      leftArrow.current.firstChild.style.fill = ALMOST_WHITE;
+      ref.current.firstChild.style.transform = '';
+      ref.current.firstChild.style.fill = ALMOST_WHITE;
     }, 500);
   };
 
@@ -252,8 +220,9 @@ const Projects = () => {
   return (
     <div className={`projects-container ${classes.projectContainer}`}>
       <div className='projects-content'>
-        <LeftArrow
-          clickFunction={onLeftClick}
+        <Arrow
+          icon={FaChevronLeft}
+          clickFunction={() => handleClick('left')}
           myRef={leftArrow}
           arrowClass={classes.arrow}
         />
@@ -353,8 +322,9 @@ const Projects = () => {
             </Card>
           </Slide>
         </div>
-        <RightArrow
-          clickFunction={onRightClick}
+        <Arrow
+          icon={FaChevronRight}
+          clickFunction={() => handleClick('right')}
           myRef={rightArrow}
           arrowClass={classes.arrow}
         />
