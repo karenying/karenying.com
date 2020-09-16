@@ -76,11 +76,14 @@ const Projects = () => {
   const handleClick = (direction) => {
     const ref = direction === 'right' ? rightArrow : leftArrow;
     const oppDirection = direction === 'right' ? 'left' : 'right';
+    const numSlides = projectInfo.length;
 
     ref.current.firstChild.style.transform = 'scale(1.15)';
     ref.current.firstChild.style.fill = '#cecece';
 
-    let newIndex = (index + 1) % projectInfo.length;
+    const increment = direction === 'left' ? -1 : 1;
+    const newIndex = (index + increment + numSlides) % numSlides;
+
     setSlideIn(false);
     setDirection(direction);
     setTimeout(() => {
@@ -170,7 +173,7 @@ const Projects = () => {
       alignItems: 'center',
       justifyContent: 'space-evenly',
       [theme.breakpoints.up('md')]: {
-        padding: '7.5rem 5rem',
+        padding: '5rem 5rem',
         margin: '0rem 2.5rem',
       },
       [theme.breakpoints.up('lg')]: {
