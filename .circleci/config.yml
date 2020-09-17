@@ -4,4 +4,4 @@ orbs:
 workflows:
   node-tests:
     jobs:
-      - run: npm test
+      - node/test
