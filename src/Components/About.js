@@ -1,14 +1,14 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-import ProgressiveImage from 'react-progressive-image'
-import { makeStyles } from '@material-ui/core/styles'
-import Grid from '@material-ui/core/Grid'
-import Fade from '@material-ui/core/Fade'
+import React from 'react';
+import { Link } from 'react-router-dom';
+import ProgressiveImage from 'react-progressive-image';
+import { makeStyles } from '@material-ui/core/styles';
+import Grid from '@material-ui/core/Grid';
+import Fade from '@material-ui/core/Fade';
 
-import '../Styles/About.css'
-import { BLUE, YELLOW, LIGHT_PINK, DARK_PINK } from '../constants'
-import Karen from '../Assets/karen.png'
-import MiniKaren from '../Assets/mini-karen.png'
+import '../Styles/About.css';
+import { BLUE, YELLOW, LIGHT_PINK, DARK_PINK } from '../constants';
+import Karen from '../Assets/karen.png';
+import MiniKaren from '../Assets/mini-karen.png';
 
 const About = () => {
   const useStyles = makeStyles((theme) => ({
@@ -35,9 +35,9 @@ const About = () => {
         justifyContent: 'center',
       },
     },
-  }))
+  }));
 
-  const classes = useStyles()
+  const classes = useStyles();
 
   return (
     <div className='about-container'>
@@ -136,7 +136,7 @@ const About = () => {
         </Grid>
       </Grid>
     </div>
-  )
-}
+  );
+};
 
-export default About
+export default About;
