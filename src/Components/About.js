@@ -66,16 +66,16 @@ const About = () => {
                 web development and UI/UX design.
                 <br />
                 <br />
-                This summer, I was a full-stack SWE intern at{' '}
-                <a
+                
+                I will be returning to         <a
                   href='https://www.wellsheet.com/'
                   style={{ color: BLUE }}
                   target='_blank'
                   rel='noopener noreferrer'
                 >
                   Wellsheet
-                </a>
-                , a fast-paced healthcare startup based in NYC. Currently I'm in
+                </a>, a fast-paced healthcare startup based in NYC, as a full-time software engineer in Summer 2020. 
+                Currently I'm in
                 Boston, Zoomin' my last year at Princeton.
                 <br />
                 <br />
