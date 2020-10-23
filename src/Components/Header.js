@@ -4,7 +4,7 @@ import Hidden from '@material-ui/core/Hidden';
 import { makeStyles } from '@material-ui/core/styles';
 
 import '../Styles/Header.css';
-import { DARK_PINK, BLUE, YELLOW, LIGHT_GRAY } from '../constants';
+import { DARK_PINK, BLUE, YELLOW, LIGHT_GRAY, LIGHT_PINK } from '../constants';
 
 const HeaderLink = ({ title, color, edge, selected }) => {
   const padding = edge ? '0rem' : '0.5rem';
@@ -51,7 +51,6 @@ const Header = (props) => {
           <HeaderLink
             title='karenying.com'
             color={LIGHT_GRAY}
-            edge={false}
             selected={page === 'about' ? true : false}
           />
         </div>
@@ -60,23 +59,32 @@ const Header = (props) => {
         <HeaderLink
           title='about'
           color={DARK_PINK}
-          edge={false}
           selected={page === 'about' ? true : false}
         />
         <h3 id='slash'>/</h3>
         <HeaderLink
           title='projects'
           color={BLUE}
-          edge={false}
           selected={page === 'projects' ? true : false}
         />
         <h3 id='slash'>/</h3>
         <HeaderLink
           title='contact'
           color={YELLOW}
-          edge
           selected={page === 'contact' ? true : false}
         />
+        <h3 id='slash'>/</h3>
+        <div className='header-link'>
+          <a
+            href='https://www.blog.karenying.com/'
+            style={{ textDecoration: 'none' }}
+          >
+            <h3 style={{ color: LIGHT_PINK }}>blog</h3>
+            <div className='header-dot'>
+              <h3 style={{ color: LIGHT_PINK }}>•</h3>
+            </div>
+          </a>
+        </div>
       </div>
     </div>
   );

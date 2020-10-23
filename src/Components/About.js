@@ -102,7 +102,7 @@ const About = () => {
                 <br />
                 Sometimes I{' '}
                 <a
-                  href='https://medium.com/@karenying'
+                  href='https://blog.karenying.com'
                   style={{ color: LIGHT_PINK }}
                   target='_blank'
                   rel='noopener noreferrer'
