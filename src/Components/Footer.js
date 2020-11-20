@@ -8,7 +8,15 @@ import Tooltip from '@material-ui/core/Tooltip';
 import { withStyles, makeStyles } from '@material-ui/core/styles';
 
 import '../Styles/Footer.css';
-import { LIGHT_GRAY, BLUE, YELLOW, LIGHT_PINK, DARK_PINK } from '../constants';
+import {
+  LIGHT_GRAY,
+  BLUE,
+  YELLOW,
+  LIGHT_PINK,
+  DARK_PINK,
+  ALMOST_WHITE,
+  DARK_GRAY,
+} from '../constants';
 
 const useStyles = makeStyles((theme) => ({
   footerContainer: {
