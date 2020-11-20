@@ -15,12 +15,14 @@ const HeaderLink = ({ title, color, edge, selected }) => {
       <Link
         to={`/${link}`}
         style={{ textDecoration: 'none' }}
-        className={selected ? 'header-no-link' : null}
+        className={selected && 'header-no-link'}
       >
         <h3 style={{ color, paddingRight: padding }}>{title}</h3>
-        <div className={selected ? 'header-dot-active' : 'header-dot'}>
-          {title !== 'karenying.com' && <h3 style={{ color }}>•</h3>}
-        </div>
+        {title !== 'karenying.com' && (
+          <div className={selected ? 'header-dot-active' : 'header-dot'}>
+            <h3 style={{ color }}>•</h3>
+          </div>
+        )}
       </Link>
     </div>
   );
@@ -28,6 +30,7 @@ const HeaderLink = ({ title, color, edge, selected }) => {
 
 const Header = (props) => {
   const { page } = props.match.params;
+
   const useStyles = makeStyles((theme) => ({
     headerContent: {
       [theme.breakpoints.up('sm')]: {
@@ -35,7 +38,6 @@ const Header = (props) => {
         right: 0,
         paddingRight: '5rem',
       },
-      [theme.breakpoints.down('sm')]: {},
     },
     headerContainer: {
       [theme.breakpoints.down('sm')]: { justifyContent: 'center' },
@@ -43,35 +45,36 @@ const Header = (props) => {
   }));
 
   const classes = useStyles();
+  const { headerContent, headerContainer } = classes;
 
   return (
-    <div className={'header-container ' + classes.headerContainer}>
+    <div className={`header-container ${headerContainer}`}>
       <Hidden xsDown>
         <div className='header-logo'>
           <HeaderLink
             title='karenying.com'
             color={LIGHT_GRAY}
-            selected={page === 'about' ? true : false}
+            selected={page === 'about'}
           />
         </div>
       </Hidden>
-      <div className={'header-content ' + classes.headerContent}>
+      <div className={`header-content ${headerContent}`}>
         <HeaderLink
           title='about'
           color={DARK_PINK}
-          selected={page === 'about' ? true : false}
+          selected={page === 'about'}
         />
         <h3 id='slash'>/</h3>
         <HeaderLink
           title='projects'
           color={BLUE}
-          selected={page === 'projects' ? true : false}
+          selected={page === 'projects'}
         />
         <h3 id='slash'>/</h3>
         <HeaderLink
           title='contact'
           color={YELLOW}
-          selected={page === 'contact' ? true : false}
+          selected={page === 'contact'}
         />
         <h3 id='slash'>/</h3>
         <div className='header-link'>

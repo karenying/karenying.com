@@ -8,15 +8,7 @@ import Tooltip from '@material-ui/core/Tooltip';
 import { withStyles, makeStyles } from '@material-ui/core/styles';
 
 import '../Styles/Footer.css';
-import {
-  LIGHT_GRAY,
-  BLUE,
-  YELLOW,
-  LIGHT_PINK,
-  DARK_PINK,
-  ALMOST_WHITE,
-  DARK_GRAY,
-} from '../constants';
+import { LIGHT_GRAY, BLUE, YELLOW, LIGHT_PINK, DARK_PINK } from '../constants';
 
 const useStyles = makeStyles((theme) => ({
   footerContainer: {
@@ -50,9 +42,10 @@ const LightTooltip = withStyles(() => ({
 
 const Footer = () => {
   const classes = useStyles();
+  const { footerContainer, footerContent } = classes;
 
   return (
-    <div className={`footer-container ${classes.footerContainer}`}>
+    <div className={`footer-container ${footerContainer}`}>
       <Hidden xsDown>
         <div className='footer-copyright'>
           <p
@@ -75,7 +68,7 @@ const Footer = () => {
           <p style={{ marginLeft: '1rem', color: BLUE }}>all rights reserved</p>
         </div>
       </Hidden>
-      <div className={`footer-links-container ${classes.footerContent}`}>
+      <div className={`footer-links-container ${footerContent}`}>
         <div className='footer-link'>
           <h3 style={{ color: LIGHT_GRAY }}>•</h3>
         </div>

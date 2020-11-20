@@ -38,11 +38,12 @@ const About = () => {
   }));
 
   const classes = useStyles();
+  const { aboutGrid, image } = classes;
 
   return (
     <div className='about-container'>
-      <Grid className={classes.aboutGrid} container>
-        <Grid item sm={12} md={4} className={classes.image}>
+      <Grid className={aboutGrid} container>
+        <Grid item sm={12} md={4} className={image}>
           <ProgressiveImage src={Karen} placeholder={MiniKaren}>
             {(src, loading) => (
               <img

@@ -18,9 +18,10 @@ const Contact = () => {
   }));
 
   const classes = useStyles();
+  const { contact } = classes;
 
   return (
-    <div className={'contact-container ' + classes.contact}>
+    <div className={`contact-container ${contact}`}>
       <Fade in timeout={{ enter: 1200 }}>
         <div className='contact-content'>
           <h2>

@@ -86,6 +86,7 @@ const Projects = () => {
 
     setSlideIn(false);
     setDirection(direction);
+
     setTimeout(() => {
       setIndex(newIndex);
       setDirection(oppDirection);
@@ -219,19 +220,28 @@ const Projects = () => {
   }));
 
   const classes = useStyles();
+  const {
+    projectContainer,
+    projectCard,
+    infoCard,
+    infoGrid,
+    infoGridItem,
+    infoGridTitle,
+    arrow,
+  } = classes;
 
   return (
-    <div className={`projects-container ${classes.projectContainer}`}>
+    <div className={`projects-container ${projectContainer}`}>
       <div className='projects-content'>
         <Arrow
           icon={FaChevronLeft}
           clickFunction={() => handleClick('left')}
           myRef={leftArrow}
-          arrowClass={classes.arrow}
+          arrowClass={arrow}
         />
         <div className='projectcard-container'>
           <Slide in={slideIn} direction={direction}>
-            <Card className={classes.projectCard}>
+            <Card className={projectCard}>
               <Hidden mdDown>
                 <div className='projectcard-image'>
                   <ProgressiveImage src={image} placeholder={mini}>
@@ -247,7 +257,7 @@ const Projects = () => {
                   </ProgressiveImage>
                 </div>
               </Hidden>
-              <Card className={classes.infoCard}>
+              <Card className={infoCard}>
                 <h2
                   style={{
                     marginBottom: 30,
@@ -256,11 +266,9 @@ const Projects = () => {
                 >
                   {name}
                 </h2>
-                <Grid className={classes.infoGrid} container>
+                <Grid className={infoGrid} container>
                   <Grid
-                    className={
-                      classes.infoGridItem + ' ' + classes.infoGridTitle
-                    }
+                    className={`${infoGridItem} ${infoGridTitle}`}
                     item
                     xs={12}
                     sm={4}
@@ -273,13 +281,11 @@ const Projects = () => {
                       type:
                     </h3>
                   </Grid>
-                  <Grid className={classes.infoGridItem} item xs={12} sm={8}>
+                  <Grid className={infoGridItem} item xs={12} sm={8}>
                     <p>{type}</p>
                   </Grid>
                   <Grid
-                    className={
-                      classes.infoGridItem + ' ' + classes.infoGridTitle
-                    }
+                    className={`${infoGridItem} ${infoGridTitle}`}
                     item
                     xs={12}
                     sm={4}
@@ -292,13 +298,11 @@ const Projects = () => {
                       stack:
                     </h3>
                   </Grid>
-                  <Grid className={classes.infoGridItem} item xs={12} sm={8}>
+                  <Grid className={infoGridItem} item xs={12} sm={8}>
                     <p>{stack}</p>
                   </Grid>
                   <Grid
-                    className={
-                      classes.infoGridItem + ' ' + classes.infoGridTitle
-                    }
+                    className={`${infoGridItem} ${infoGridTitle}`}
                     item
                     xs={12}
                     sm={4}
@@ -311,7 +315,7 @@ const Projects = () => {
                       description:
                     </h3>
                   </Grid>
-                  <Grid className={classes.infoGridItem} item xs={12} sm={8}>
+                  <Grid className={infoGridItem} item xs={12} sm={8}>
                     <p>{description}</p>
                   </Grid>
                 </Grid>
@@ -329,7 +333,7 @@ const Projects = () => {
           icon={FaChevronRight}
           clickFunction={() => handleClick('right')}
           myRef={rightArrow}
-          arrowClass={classes.arrow}
+          arrowClass={arrow}
         />
       </div>
     </div>
