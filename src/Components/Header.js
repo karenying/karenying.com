@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import Hidden from '@material-ui/core/Hidden';
 import { makeStyles } from '@material-ui/core/styles';
 
@@ -8,7 +8,7 @@ import { DARK_PINK, BLUE, YELLOW, LIGHT_GRAY, LIGHT_PINK } from '../constants';
 
 const HeaderLink = ({ title, color, edge, selected }) => {
   const padding = edge ? '0rem' : '0.5rem';
-  const link = title === 'karenying.com' ? 'about' : title;
+  const link = title === 'karenying.com' ? '' : title;
 
   return (
     <div className='header-link'>
@@ -28,8 +28,8 @@ const HeaderLink = ({ title, color, edge, selected }) => {
   );
 };
 
-const Header = ({ match }) => {
-  const { page } = match.params;
+const Header = () => {
+  const page = useParams().page || 'about';
 
   const useStyles = makeStyles((theme) => ({
     headerContent: {

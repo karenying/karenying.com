@@ -1,10 +1,5 @@
 import React from 'react';
-import {
-  BrowserRouter as Router,
-  Route,
-  Switch,
-  Redirect,
-} from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 import './App.css';
 import About from './Components/About';
@@ -18,13 +13,11 @@ const App = () => {
   return (
     <Router>
       <Switch>
-        <Route
-          path={'/:page'}
-          render={({ match }) => <Header match={match} />}
-        />
-        <Redirect to={'/about'} />
+        <Route path={'/:page'} component={Header} />
+        <Route path={'/'} component={Header} />
       </Switch>
       <Switch>
+        <Route exact path='/' component={About} />
         <Route exact path='/about' component={About} />
         <Route exact path='/projects' component={Projects} />
         <Route exact path='/contact' component={Contact} />
