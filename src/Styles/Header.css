@@ -25,12 +25,13 @@
 
 .header-dot {
   margin-top: -0.5rem;
-  display: none;
+  opacity: 0;
+  transition: opacity 200ms linear;
   cursor: pointer;
 }
 
 .header-link:hover .header-dot {
-  display: block;
+  opacity: 1;
 }
 
 .header-dot-active {
