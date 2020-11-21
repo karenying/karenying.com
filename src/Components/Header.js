@@ -28,8 +28,8 @@ const HeaderLink = ({ title, color, edge, selected }) => {
   );
 };
 
-const Header = (props) => {
-  const { page } = props.match.params;
+const Header = ({ match }) => {
+  const { page } = match.params;
 
   const useStyles = makeStyles((theme) => ({
     headerContent: {
