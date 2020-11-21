@@ -27,7 +27,6 @@
   margin-top: -0.5rem;
   opacity: 0;
   transition: opacity 200ms linear;
-  cursor: pointer;
 }
 
 .header-link:hover .header-dot {
@@ -37,7 +36,6 @@
 .header-dot-active {
   margin-top: -0.5rem;
   display: block;
-  cursor: pointer;
 }
 
 .header-no-link {
