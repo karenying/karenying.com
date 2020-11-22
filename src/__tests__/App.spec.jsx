@@ -6,6 +6,6 @@ describe('App', () => {
   it('should render 2 react router Switches', () => {
     const wrapper = shallow(<App />);
 
-    expect(wrapper.find('Switch').length).toEqual(2);
+    expect(wrapper.find('Switch').length).toEqual(1);
   });
 });
