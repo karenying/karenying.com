@@ -12,10 +12,8 @@ import Header from './Components/Header';
 const App = () => {
   return (
     <Router>
-      <Switch>
-        <Route path={'/:page'} component={Header} />
-        <Route path={'/'} component={Header} />
-      </Switch>
+      <Route path={'/:page'} component={Header} />
+      <Route exact path={'/'} component={Header} />
       <Switch>
         <Route exact path='/' component={About} />
         <Route exact path='/about' component={About} />
