@@ -66,18 +66,18 @@ const About = () => {
                 University. I'm interested in anything tech &mdash; especially
                 web development and UI/UX design.
                 <br />
-                <br />
-                
-                I will be returning to         <a
+                <br />I will be returning to{' '}
+                <a
                   href='https://www.wellsheet.com/'
                   style={{ color: BLUE }}
                   target='_blank'
                   rel='noopener noreferrer'
                 >
                   Wellsheet
-                </a>, a fast-paced healthcare startup based in NYC, as a full-time software engineer in Summer 2020. 
-                Currently I'm in
-                Boston, Zoomin' my last year at Princeton.
+                </a>
+                , a fast-paced healthcare startup based in NYC, as a full-time
+                software engineer in Summer 2021. Currently I'm in Boston,
+                Zoomin' my last year at Princeton.
                 <br />
                 <br />
                 In my free time, you can find me playing frisbee, eating{' '}
