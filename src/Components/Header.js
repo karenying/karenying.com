@@ -79,7 +79,7 @@ const Header = () => {
         <h3 id='slash'>/</h3>
         <div className='header-link'>
           <a
-            href='https://www.blog.karenying.com/'
+            href='https://blog.karenying.com/'
             style={{ textDecoration: 'none' }}
           >
             <h3 style={{ color: LIGHT_PINK }}>blog</h3>
