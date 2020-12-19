@@ -42,7 +42,7 @@ export const projectInfo = [
     stack: 'ReactJS',
     description: (
       <span>
-        gradient.png is a custom image generation web app. It is also a UI/UX
+        gradient.png is a custom image generation web app. It started as a UI/UX
         redesign of{' '}
         <a
           href='https://cssgradient.io/'
@@ -55,12 +55,12 @@ export const projectInfo = [
         .
         <br />
         <br />
-        Gradients are great for wallpapers, Zoom backgrounds, and LinkedIn
-        banners. I added a feature that allows the user to download the gradient
-        as an image.
+        Gradients are great for wallpapers, Zoom backgrounds, LinkedIn banners,
+        etc. I added a feature that allows users to download the gradient as an
+        image.
         <br />
-        <br /> I've included handpicked palettes from close friends as
-        suggestions on the bottom.
+        <br /> Handpicked palettes from close friends are included as
+        suggestions at the bottom.
       </span>
     ),
     buttons: [
@@ -166,11 +166,11 @@ export const projectInfo = [
     description: (
       <span>
         In the spirit of Vlogmas, I participated in Blogmas — miniposts every
-        day of December 2020 until Christmas. I wrote about something I learned
+        day of December 2020 until Christmas, writing about something I learned
         / coded that day.
         <br />
-        <br />I created a semi-interactive calendar visualizer to showcase my
-        work.
+        <br />I created a semi-interactive calendar visualizer to encapsulate
+        the experience.
       </span>
     ),
     buttons: [
@@ -193,11 +193,10 @@ export const projectInfo = [
     stack: 'MongoDB + Express + ReactJS',
     description: (
       <span>
-        Dayz is a bullet journal style mood tracker. It utilizes a RESTful api
-        with a MERN stack. This was my first solo full stack project.
-        <br />
-        <br />I thoroughly enjoyed implementing and deploying all the components
-        from scratch.
+        Dayz is a bullet journal-style mood tracker. It utilizes a RESTful api
+        with a MERN stack. This was my first solo full stack project where I
+        implemented and deployed all the components from scratch. It's hosted on
+        Heroku.
       </span>
     ),
     buttons: [
@@ -218,7 +217,7 @@ export const projectInfo = [
       <span>
         Driver’s Ed is an infinite runner game. A student driver must navigate
         Princeton University's Washington Road to collect coins while avoiding
-        obstacles!
+        obstacles.
         <br />
         <br />
         Won Art Direction Award and 3rd place overall for Spring 2020 COS 426:
@@ -243,8 +242,17 @@ export const projectInfo = [
     name: 'color charts',
     type: 'Chrome extension',
     stack: 'JS',
-    description:
-      'Color Charts aims to increase the readability of charts, graphs, and diagrams on the web. It improves upon existing extensions by using researched color blind friendly palettes to recolor images. The recoloring algorithm uses HTML Canvas and Base64 encoding to recolor images in place.',
+    description: (
+      <span>
+        Color Charts aims to increase the readability of charts, graphs, and
+        diagrams on the web.
+        <br />
+        <br />
+        It improves upon existing extensions by using researched color blind
+        friendly palettes to recolor images. The algorithm uses HTML Canvas and
+        Base64 encoding to recolor images in place.
+      </span>
+    ),
     buttons: [
       {
         name: 'code',
@@ -266,13 +274,13 @@ export const projectInfo = [
     stack: 'ReactTS',
     description: (
       <span>
-        ACME Search was a take home assessment for a company I interviewed for
+        ACME Search is a take home assessment for a company I interviewed for
         Summer 2020. I was given 5 JSON files with different types of data and
         told to create a search engine from it.
         <br />
         <br />I implemented three features on top of the basic search
-        functionality -- hide / show categories, sort order, and instant search,
-        using React Context API to manage state.
+        functionality - hide / show categories, sort order, and instant search,
+        while using React Context API to manage state.
       </span>
     ),
     buttons: [
