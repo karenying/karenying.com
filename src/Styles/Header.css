@@ -1,4 +1,6 @@
 .header-container {
+  position: absolute;
+  top: 0px;
   width: 100%;
   display: flex;
   font-family: 'Varela Round';
