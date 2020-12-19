@@ -1,6 +1,7 @@
 import React from 'react';
 import ProgressiveImage from 'react-progressive-image';
 import { projectInfo } from '../constants';
+import Fade from '@material-ui/core/Fade';
 
 import '../Styles/Projects.scss';
 
@@ -63,11 +64,13 @@ const ProjectsCard = (props) => {
 
 const Projects = () => {
   return (
-    <div className='projects-container'>
-      {projectInfo.map((project) => (
-        <ProjectsCard {...project} />
-      ))}
-    </div>
+    <Fade in timeout={{ enter: 1200 }}>
+      <div className='projects-container'>
+        {projectInfo.map((project) => (
+          <ProjectsCard {...project} />
+        ))}
+      </div>
+    </Fade>
   );
 };
 
