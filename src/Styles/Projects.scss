@@ -17,106 +17,6 @@ $color-gray-medium: #bdbdbd;
   overflow-y: scroll;
 }
 
-.projects-container a {
-  text-decoration: none;
-}
-
-.projects-container a:hover {
-  text-decoration: underline;
-}
-
-.projects-content {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-}
-
-.projects-title {
-  padding-bottom: 10rem;
-}
-
-.projectcard-container {
-  display: flex;
-  justify-content: center;
-}
-
-.projectcard-image img {
-  border-radius: 5px;
-  box-shadow: 2rem 2rem 2rem rgba(0, 0, 0, 0.5);
-  margin-right: 4rem;
-}
-
-.projectcard-image {
-  display: flex;
-  align-items: center;
-  width: calc(350px + 4rem);
-}
-
-.projectcard-container h2,
-.projectcard-container h3 {
-  font-family: monospace !important;
-  color: var(--dark-gray);
-  display: inline;
-  font-weight: bold;
-  margin: 0px;
-}
-
-.projectcard-container p {
-  display: inline;
-  margin: 0px;
-  color: var(--dark-gray);
-}
-
-.projectcard-buttons {
-  display: flex;
-  position: absolute;
-  bottom: 3rem;
-  padding-top: 3rem;
-  justify-content: center;
-  width: 100%;
-  box-sizing: border-box;
-}
-
-.projectcard-buttons:hover a {
-  text-decoration: none;
-}
-
-.projectcard-button:hover {
-  opacity: 0.87;
-}
-
-.projectcard-button {
-  width: 8rem;
-  margin: 1rem;
-  padding: 1rem;
-  box-shadow: 0.3rem 0.3rem 1rem rgba(0, 0, 0, 0.5);
-  border-radius: 10rem;
-  cursor: pointer;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.projectcard-button:hover svg,
-.arrow-container:hover svg {
-  transform: scale(1.15);
-}
-
-.arrow-container:hover svg {
-  fill: #cecece !important;
-}
-
-.projectcard-button svg,
-.arrow-container svg {
-  transition: transform 0.1s;
-}
-
-.arrow-container {
-  display: flex;
-  cursor: pointer;
-}
-
 .ProjectsCard {
   border: 1px solid $color-white-almost;
   max-width: 700px;
@@ -126,7 +26,11 @@ $color-gray-medium: #bdbdbd;
   justify-content: space-between;
   border-radius: 5px;
   margin: 25px;
+  box-shadow: 10px 10px 20px black;
 
+  a {
+    text-decoration: none;
+  }
   &-left {
     display: flex;
     flex-direction: column;
@@ -149,14 +53,14 @@ $color-gray-medium: #bdbdbd;
       &-left {
         text-align: right;
         font-family: 'Ubuntu Mono';
-        font-size: 20px;
+        font-size: 18px;
         color: $color-white-almost;
       }
 
       &-right {
         text-align: left;
         font-family: 'Varela Round';
-        font-size: 18px;
+        font-size: 16px;
       }
     }
 
@@ -168,22 +72,29 @@ $color-gray-medium: #bdbdbd;
       display: flex;
 
       &-button {
-        width: 75px;
+        width: 60px;
         height: 25px;
         border-radius: 25px;
+
+        border: 1px solid;
+        margin: 0 10px;
+        transition: text-shadow 100ms;
         display: flex;
         align-items: center;
         justify-content: center;
-        border: 1px solid;
-        margin: 0 10px;
+
+        &:hover,
+        &:focus {
+          text-shadow: 10px 10px 10px black;
+          box-shadow: 5px 5px 10px black;
+        }
 
         span {
-          padding: 0;
-          margin: 0;
           font-style: italic;
-          font-size: 15px;
+          font-size: 14px;
           font-family: 'Ubuntu Mono';
           color: $color-white-almost;
+          padding-bottom: 3px;
         }
       }
     }
@@ -200,17 +111,21 @@ $color-gray-medium: #bdbdbd;
     padding: 20px 0 20px 30px;
 
     &-header {
-      font-size: 36px;
+      font-size: 30px;
       font-family: 'Ubuntu Mono';
       font-weight: bold;
       color: $color-white-almost;
     }
 
     p {
-      font-size: 18px;
+      font-size: 15px;
       color: $color-gray-light;
       text-align: left;
       font-family: 'Varela Round';
+    }
+
+    a:hover {
+      text-decoration: underline;
     }
   }
 }
