@@ -1,8 +1,19 @@
+$color-gray-dark: #2a2b2e;
+$color-pink-dark: #ff7c7c;
+$color-pink-light: #ffb6b9;
+$color-blue: #8deaff;
+$color-yellow: #ffe084;
+$color-white-almost: #f5f5f5;
+$color-gray-light: #d9d9d9;
+$color-gray-medium: #bdbdbd;
+
 .projects-container {
   min-height: 100vh;
   padding-top: 10rem;
   box-sizing: border-box;
-  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .projects-container a {
@@ -103,4 +114,102 @@
 .arrow-container {
   display: flex;
   cursor: pointer;
+}
+
+.ProjectsCard {
+  border: 2px solid $color-white-almost;
+  max-width: 700px;
+  display: flex;
+  padding: 20px 30px;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 5px;
+  margin-bottom: 50px;
+
+  &-left {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 30px 20px 0;
+    align-items: center;
+    min-width: 330px;
+
+    img {
+      border-radius: 5px;
+      max-width: 300px;
+      max-height: 170px;
+    }
+
+    &-info {
+      display: grid;
+      grid-template-columns: 30% 70%;
+      column-gap: 20px;
+      padding: 20px 0;
+
+      &-left {
+        text-align: right;
+        font-family: 'Ubuntu Mono';
+        font-size: 20px;
+        color: $color-white-almost;
+      }
+
+      &-right {
+        text-align: left;
+        font-family: 'Varela Round';
+        font-size: 18px;
+      }
+    }
+
+    a:hover {
+      text-decoration: none;
+    }
+
+    &-buttons {
+      display: flex;
+
+      &-button {
+        width: 75px;
+        height: 25px;
+        border-radius: 25px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid;
+        margin: 0 10px;
+
+        span {
+          padding: 0;
+          margin: 0;
+          font-style: italic;
+          font-size: 15px;
+          font-family: 'Ubuntu Mono';
+          color: $color-white-almost;
+        }
+      }
+    }
+  }
+
+  &-center {
+    height: 300px;
+    min-width: 1px;
+  }
+
+  &-right {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0 20px 30px;
+
+    &-header {
+      font-size: 36px;
+      font-family: 'Ubuntu Mono';
+      font-weight: bold;
+      color: $color-white-almost;
+    }
+
+    p {
+      font-size: 18px;
+      color: $color-gray-light;
+      text-align: left;
+      font-family: 'Varela Round';
+    }
+  }
 }

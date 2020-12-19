@@ -1,341 +1,111 @@
-import React, { useState, useEffect, useRef } from 'react';
-import { FiExternalLink } from 'react-icons/fi';
-import {
-  FaCode,
-  FaChevronLeft,
-  FaChevronRight,
-  FaPaperclip,
-  FaPlay,
-} from 'react-icons/fa';
+import React from 'react';
 import ProgressiveImage from 'react-progressive-image';
-import Slide from '@material-ui/core/Slide';
-import Hidden from '@material-ui/core/Hidden';
-import Grid from '@material-ui/core/Grid';
-import { makeStyles } from '@material-ui/core/styles';
-import { Card } from '@material-ui/core';
+import Gradient from '../Assets/gradient.png';
+import MiniGradient from '../Assets/mini-gradient.jpg';
+import { projectInfo } from '../constants';
 
 import '../Styles/Projects.scss';
-import { projectInfo, ALMOST_WHITE } from '../constants';
 
-const Arrow = (props) => {
-  const { icon: Icon, clickFunction, myRef, arrowClass } = props;
+export const DARK_PINK = '#FF7C7C';
+
+const gradient = {
+  color: DARK_PINK,
+  image: Gradient,
+  mini: MiniGradient,
+  name: 'gradient.png',
+  type: 'static web page',
+  stack: 'React',
+  description: (
+    <span>
+      gradient.png is a custom image generation web app. It is also a UI/UX
+      redesign of{' '}
+      <a
+        href='https://cssgradient.io/'
+        target='_blank'
+        rel='noopener noreferrer'
+        style={{ color: DARK_PINK }}
+      >
+        CSS Gradient
+      </a>
+      . On top of redesigning the interface, I added a feature that allows the
+      user to download the gradient as an image.
+    </span>
+  ),
+  buttons: [
+    {
+      name: 'site',
+      link: 'https://gradient-png.netlify.app/',
+    },
+    {
+      name: 'code',
+      link: 'https://github.com/karenying/gradient',
+    },
+  ],
+};
+
+const ProjectsCard = (props) => {
+  const { color, image, mini, name, type, stack, description, buttons } = props;
+
+  const renderLinks = () =>
+    buttons.map((button) => {
+      const { name, link } = button;
+
+      return (
+        <a href={link} target='_blank' rel='noopener noreferrer'>
+          <div
+            className='ProjectsCard-left-buttons-button'
+            style={{ borderColor: color }}
+          >
+            <span>{name}</span>
+          </div>
+        </a>
+      );
+    });
 
   return (
-    <div
-      className={`arrow-container ${arrowClass}`}
-      onClick={clickFunction}
-      ref={myRef}
-    >
-      <Icon color={ALMOST_WHITE} size='4rem' />
+    <div className='ProjectsCard'>
+      <div className='ProjectsCard-left'>
+        <ProgressiveImage src={image} placeholder={mini}>
+          {(src, loading) => (
+            <img
+              style={{
+                opacity: loading ? 0.7 : 1,
+              }}
+              src={src}
+              alt='project'
+            />
+          )}
+        </ProgressiveImage>
+        <div className='ProjectsCard-left-info'>
+          <span className='ProjectsCard-left-info-left'>type</span>
+          <span className='ProjectsCard-left-info-right' style={{ color }}>
+            {type}
+          </span>
+          <span className='ProjectsCard-left-info-left'>stack</span>
+          <span className='ProjectsCard-left-info-right' style={{ color }}>
+            {stack}
+          </span>
+        </div>
+        <div className='ProjectsCard-left-buttons'>{renderLinks()}</div>
+      </div>
+      <div
+        className='ProjectsCard-center'
+        style={{ backgroundColor: color }}
+      ></div>
+      <div className='ProjectsCard-right'>
+        <span className='ProjectsCard-right-header'>{name}</span>
+        <p>{description}</p>
+      </div>
     </div>
   );
 };
 
 const Projects = () => {
-  useEffect(() => {
-    const handleKeyDown = (e) => {
-      if (e.keyCode === 39) {
-        handleClick('right');
-      }
-      if (e.keyCode === 37) {
-        handleClick('left');
-      }
-    };
-
-    window.addEventListener('keydown', handleKeyDown);
-
-    return () => {
-      window.removeEventListener('keydown', handleKeyDown);
-    };
-  });
-
-  const leftArrow = useRef();
-  const rightArrow = useRef();
-
-  const [index, setIndex] = useState(0);
-
-  const currInfo = projectInfo[index];
-  const {
-    backgroundColor,
-    color,
-    image,
-    mini,
-    name,
-    type,
-    stack,
-    description,
-    site,
-    code,
-    paper,
-    game,
-  } = currInfo;
-
-  const [slideIn, setSlideIn] = useState(true);
-  const [direction, setDirection] = useState('down');
-
-  const handleClick = (direction) => {
-    const ref = direction === 'right' ? rightArrow : leftArrow;
-    const oppDirection = direction === 'right' ? 'left' : 'right';
-    const numSlides = projectInfo.length;
-
-    ref.current.firstChild.style.transform = 'scale(1.15)';
-    ref.current.firstChild.style.fill = '#cecece';
-
-    const increment = direction === 'left' ? -1 : 1;
-    const newIndex = (index + increment + numSlides) % numSlides;
-
-    setSlideIn(false);
-    setDirection(direction);
-
-    setTimeout(() => {
-      setIndex(newIndex);
-      setDirection(oppDirection);
-      setSlideIn(true);
-      ref.current.firstChild.style.transform = '';
-      ref.current.firstChild.style.fill = ALMOST_WHITE;
-    }, 500);
-  };
-
-  const siteButton = (
-    <a href={site} target='_blank' rel='noopener noreferrer'>
-      <div
-        className='projectcard-button'
-        style={{
-          backgroundColor: color,
-        }}
-      >
-        <FiExternalLink color={ALMOST_WHITE} style={{ paddingRight: 7 }} />
-        <h3 style={{ color: ALMOST_WHITE }}>site</h3>
-      </div>
-    </a>
-  );
-
-  const gameButton = (
-    <a href={game} target='_blank' rel='noopener noreferrer'>
-      <div
-        className='projectcard-button'
-        style={{
-          backgroundColor: color,
-        }}
-      >
-        <FaPlay
-          color={ALMOST_WHITE}
-          style={{ paddingRight: 7 }}
-          size='1.2rem'
-        />
-        <h3 style={{ color: ALMOST_WHITE }}>play</h3>
-      </div>
-    </a>
-  );
-
-  const codeButton = (
-    <a href={code} target='_blank' rel='noopener noreferrer'>
-      <div
-        className='projectcard-button'
-        style={{
-          backgroundColor: color,
-        }}
-      >
-        <FaCode color={ALMOST_WHITE} style={{ paddingRight: 7 }} />
-        <h3 style={{ color: ALMOST_WHITE }}>code</h3>
-      </div>
-    </a>
-  );
-
-  const paperButton = (
-    <a href={paper} target='_blank' rel='noopener noreferrer'>
-      <div
-        className='projectcard-button'
-        style={{
-          backgroundColor: color,
-        }}
-      >
-        <FaPaperclip
-          color={ALMOST_WHITE}
-          style={{ paddingRight: 7 }}
-          size='1.5rem'
-        />
-        <h3 style={{ color: ALMOST_WHITE }}>paper</h3>
-      </div>
-    </a>
-  );
-
-  const useStyles = makeStyles((theme) => ({
-    projectContainer: {
-      [theme.breakpoints.down('xs')]: {
-        minHeight: 'calc(100vh - 3.5rem)',
-      },
-    },
-    projectCard: {
-      backgroundColor,
-      boxShadow: '2rem 2rem 2rem black',
-      display: 'flex',
-      borderRadius: 5,
-      alignItems: 'center',
-      justifyContent: 'space-evenly',
-      [theme.breakpoints.up('md')]: {
-        padding: '5rem 5rem',
-        margin: '0rem 2.5rem',
-      },
-      [theme.breakpoints.up('lg')]: {
-        width: '87rem',
-      },
-      [theme.breakpoints.down('md')]: {
-        padding: '0rem 0px',
-        height: 550,
-        margin: '0rem 1rem 5rem 1rem',
-      },
-    },
-    infoCard: {
-      minHeight: '40rem',
-      maxWidth: '40rem',
-      backgroundColor: ALMOST_WHITE,
-      display: 'flex',
-      borderRadius: 5,
-      boxShadow: '2rem 2rem 2rem rgba(0,0,0,0.5)',
-      flexDirection: 'column',
-      alignItems: 'center',
-      [theme.breakpoints.up('md')]: { padding: '3rem 4rem' },
-      [theme.breakpoints.down('md')]: {
-        padding: '3rem 2rem',
-        width: '100%',
-        height: '100%',
-        boxSizing: 'border-box',
-      },
-      position: 'relative',
-    },
-    infoGrid: {
-      textAlign: 'left',
-    },
-    infoGridItem: {
-      textAlign: 'left',
-      [theme.breakpoints.up('xs')]: { marginBottom: '1.5rem' },
-    },
-    infoGridTitle: {
-      [theme.breakpoints.down('xs')]: { marginBottom: '0.4rem' },
-    },
-    arrow: {
-      [theme.breakpoints.down('md')]: { marginBottom: '5rem' },
-    },
-  }));
-
-  const classes = useStyles();
-  const {
-    projectContainer,
-    projectCard,
-    infoCard,
-    infoGrid,
-    infoGridItem,
-    infoGridTitle,
-    arrow,
-  } = classes;
-
   return (
-    <div className={`projects-container ${projectContainer}`}>
-      <div className='projects-content'>
-        <Arrow
-          icon={FaChevronLeft}
-          clickFunction={() => handleClick('left')}
-          myRef={leftArrow}
-          arrowClass={arrow}
-        />
-        <div className='projectcard-container'>
-          <Slide in={slideIn} direction={direction}>
-            <Card className={projectCard}>
-              <Hidden mdDown>
-                <div className='projectcard-image'>
-                  <ProgressiveImage src={image} placeholder={mini}>
-                    {(src, loading) => (
-                      <img
-                        style={{
-                          opacity: loading ? 0.7 : 1,
-                        }}
-                        src={src}
-                        alt='project'
-                      />
-                    )}
-                  </ProgressiveImage>
-                </div>
-              </Hidden>
-              <Card className={infoCard}>
-                <h2
-                  style={{
-                    marginBottom: 30,
-                    textShadow: '0.3rem 0.3rem 0.5rem rgba(0, 0, 0, 0.5)',
-                  }}
-                >
-                  {name}
-                </h2>
-                <Grid className={infoGrid} container>
-                  <Grid
-                    className={`${infoGridItem} ${infoGridTitle}`}
-                    item
-                    xs={12}
-                    sm={4}
-                  >
-                    <h3
-                      style={{
-                        color,
-                      }}
-                    >
-                      type:
-                    </h3>
-                  </Grid>
-                  <Grid className={infoGridItem} item xs={12} sm={8}>
-                    <p>{type}</p>
-                  </Grid>
-                  <Grid
-                    className={`${infoGridItem} ${infoGridTitle}`}
-                    item
-                    xs={12}
-                    sm={4}
-                  >
-                    <h3
-                      style={{
-                        color,
-                      }}
-                    >
-                      stack:
-                    </h3>
-                  </Grid>
-                  <Grid className={infoGridItem} item xs={12} sm={8}>
-                    <p>{stack}</p>
-                  </Grid>
-                  <Grid
-                    className={`${infoGridItem} ${infoGridTitle}`}
-                    item
-                    xs={12}
-                    sm={4}
-                  >
-                    <h3
-                      style={{
-                        color,
-                      }}
-                    >
-                      description:
-                    </h3>
-                  </Grid>
-                  <Grid className={infoGridItem} item xs={12} sm={8}>
-                    <p>{description}</p>
-                  </Grid>
-                </Grid>
-                <div className='projectcard-buttons'>
-                  {game && gameButton}
-                  {site && siteButton}
-                  {paper && paperButton}
-                  {code && codeButton}
-                </div>
-              </Card>
-            </Card>
-          </Slide>
-        </div>
-        <Arrow
-          icon={FaChevronRight}
-          clickFunction={() => handleClick('right')}
-          myRef={rightArrow}
-          arrowClass={arrow}
-        />
-      </div>
+    <div className='projects-container'>
+      {projectInfo.map((project) => (
+        <ProjectsCard {...project} />
+      ))}
     </div>
   );
 };

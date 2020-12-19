@@ -15,6 +15,7 @@
 
 .about-container p {
   color: var(--light-gray);
+  font-family: 'Varela Round';
 }
 
 .about-container h2 {
