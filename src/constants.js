@@ -27,13 +27,12 @@ export const ALMOST_WHITE = '#F5F5F5';
 
 export const projectInfo = [
   {
-    backgroundColor: DARK_PINK,
     color: DARK_PINK,
     image: Gradient,
     mini: MiniGradient,
     name: 'gradient.png',
     type: 'static web page',
-    stack: 'React',
+    stack: 'ReactJS',
     description: (
       <span>
         gradient.png is a custom image generation web app. It is also a UI/UX
@@ -50,29 +49,40 @@ export const projectInfo = [
         user to download the gradient as an image.
       </span>
     ),
-    site: 'https://gradient-png.netlify.app/',
-    code: 'https://github.com/karenying/gradient',
+    buttons: [
+      {
+        name: 'site',
+        link: 'https://gradient-png.netlify.app/',
+      },
+      {
+        name: 'code',
+        link: 'https://github.com/karenying/gradient',
+      },
+    ],
   },
   {
-    backgroundColor: LIGHT_PINK,
-    color: '#E9A5A8',
+    color: LIGHT_PINK,
     image: Dayz,
     mini: MiniDayz,
     name: 'dayz',
     type: 'full stack web app',
-    stack: 'MongoDB + Express + React',
+    stack: 'MongoDB + Express + ReactJS',
     description:
       'Dayz is a bullet journal style mood tracker. It utilizes a RESTful api to write and read data. This was my first solo full stack project. I thoroughly enjoyed implementing and deploying all the components from scratch.',
-    code: 'https://github.com/karenying/dayz',
+    buttons: [
+      {
+        name: 'code',
+        link: 'https://github.com/karenying/dayz',
+      },
+    ],
   },
   {
-    backgroundColor: BLUE,
-    color: '#72BECF',
+    color: BLUE,
     image: Expresso,
     mini: MiniExpresso,
     name: 'expresso',
     type: 'full stack web app',
-    stack: 'MySQL + Flask + React',
+    stack: 'MySQL + Flask + ReactJS',
     description: (
       <span>
         Expresso is an online-ordering app for Princeton University’s Coffee
@@ -84,12 +94,15 @@ export const projectInfo = [
         Launch postponed.
       </span>
     ),
-
-    site: 'http://coffeeclub.princeton.edu/',
+    buttons: [
+      {
+        name: 'site',
+        link: 'http://coffeeclub.princeton.edu/',
+      },
+    ],
   },
   {
-    backgroundColor: YELLOW,
-    color: '#DCC272',
+    color: YELLOW,
     image: ColorCharts,
     mini: MiniColorCharts,
     name: 'color charts',
@@ -97,13 +110,20 @@ export const projectInfo = [
     stack: 'JS',
     description:
       'Color Charts aims to increase the readability of charts, graphs, and diagrams on the web. It improves upon existing extensions by using researched color blind friendly palettes to recolor images. The recoloring algorithm uses HTML Canvas and Base64 encoding to recolor images in place.',
-    code: 'https://github.com/karenying/color-charts',
-    paper:
-      'https://github.com/karenying/color-charts/blob/master/src/assets/paper.pdf',
+    buttons: [
+      {
+        name: 'code',
+        link: 'https://github.com/karenying/color-charts',
+      },
+      {
+        name: 'paper',
+        link:
+          'https://github.com/karenying/color-charts/blob/master/src/assets/paper.pdf',
+      },
+    ],
   },
   {
-    backgroundColor: LIGHT_GRAY,
-    color: '#9A9A9A',
+    color: DARK_PINK,
     image: DriversEd,
     mini: MiniDriversEd,
     name: "driver's ed",
@@ -120,7 +140,15 @@ export const projectInfo = [
         Computer Graphics.
       </span>
     ),
-    code: 'https://github.com/karenying/drivers-ed/',
-    game: 'https://karenying.github.io/drivers-ed/',
+    buttons: [
+      {
+        name: 'code',
+        link: 'https://github.com/karenying/drivers-ed/',
+      },
+      {
+        name: 'game',
+        link: 'https://karenying.github.io/drivers-ed/',
+      },
+    ],
   },
 ];

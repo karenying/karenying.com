@@ -34,7 +34,7 @@ const Header = () => {
   const useStyles = makeStyles((theme) => ({
     headerContent: {
       [theme.breakpoints.up('sm')]: {
-        position: 'fixed',
+        position: 'absolute',
         right: 0,
         paddingRight: '5rem',
       },

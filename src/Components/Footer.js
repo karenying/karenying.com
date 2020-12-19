@@ -8,27 +8,17 @@ import Tooltip from '@material-ui/core/Tooltip';
 import { withStyles, makeStyles } from '@material-ui/core/styles';
 
 import '../Styles/Footer.css';
-import {
-  LIGHT_GRAY,
-  BLUE,
-  YELLOW,
-  LIGHT_PINK,
-  DARK_PINK,
-  ALMOST_WHITE,
-  DARK_GRAY,
-} from '../constants';
+import { LIGHT_GRAY, BLUE, YELLOW, LIGHT_PINK, DARK_PINK } from '../constants';
 
 const useStyles = makeStyles((theme) => ({
   footerContainer: {
     [theme.breakpoints.down('xs')]: {
-      position: 'static',
       padding: 0,
       paddingBottom: '1rem',
     },
   },
   footerContent: {
     [theme.breakpoints.down('xs')]: {
-      position: 'static',
       marginLeft: 'auto',
       paddingRight: '1rem',
     },
@@ -37,14 +27,10 @@ const useStyles = makeStyles((theme) => ({
 
 const LightTooltip = withStyles(() => ({
   tooltip: {
-    backgroundColor: ALMOST_WHITE,
-    color: DARK_GRAY,
     boxShadow: '0.3rem 0.3rem 1rem black',
     fontSize: 11,
     fontWeight: 700,
-  },
-  arrow: {
-    color: ALMOST_WHITE,
+    fontFamily: 'Varela Round',
   },
 }))(Tooltip);
 

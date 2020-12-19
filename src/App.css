@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700');
+
 @font-face {
   font-family: 'Varela Round';
   font-style: normal;
@@ -20,10 +22,8 @@ body {
 
 #root {
   text-align: center;
-}
-
-* {
-  font-family: 'Varela Round', sans-serif !important;
+  display: flex;
+  flex-direction: column;
 }
 
 :root {
