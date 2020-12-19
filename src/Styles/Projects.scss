@@ -11,6 +11,7 @@ $color-gray-medium: #bdbdbd;
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 20px;
 }
 
 .ProjectsCard {
@@ -27,6 +28,7 @@ $color-gray-medium: #bdbdbd;
   a {
     text-decoration: none;
   }
+
   &-left {
     display: flex;
     flex-direction: column;
@@ -122,6 +124,94 @@ $color-gray-medium: #bdbdbd;
 
     a:hover {
       text-decoration: underline;
+    }
+  }
+}
+
+.ProjectsCardMobile {
+  border: 1px solid $color-white-almost;
+  max-width: 300px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  padding: 15px 20px;
+  align-items: center;
+  border-radius: 5px;
+  margin: 25px;
+  box-shadow: 10px 10px 20px black;
+
+  a {
+    text-decoration: none;
+  }
+
+  &-center {
+    width: 200px;
+    height: 1px;
+    margin: 20px 0;
+  }
+
+  &-header {
+    font-size: 24px;
+    font-family: 'Ubuntu Mono';
+    font-weight: bold;
+    color: $color-white-almost;
+  }
+
+  p {
+    font-size: 15px;
+    color: $color-gray-light;
+    text-align: left;
+    font-family: 'Varela Round';
+    margin: 0;
+  }
+
+  &-grid {
+    display: grid;
+    grid-template-columns: 30% 70%;
+    column-gap: 20px;
+    padding: 20px 0;
+
+    &-left {
+      text-align: right;
+      font-family: 'Ubuntu Mono';
+      font-size: 14px;
+      color: $color-white-almost;
+    }
+
+    &-right {
+      text-align: left;
+      font-family: 'Varela Round';
+      font-size: 12px;
+    }
+  }
+
+  &-buttons {
+    display: flex;
+
+    &-button {
+      width: 50px;
+      height: 20px;
+      border-radius: 25px;
+      border: 1px solid;
+      margin: 0 10px;
+      transition: text-shadow 100ms;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      &:hover,
+      &:focus {
+        text-shadow: 10px 10px 10px black;
+        box-shadow: 5px 5px 10px black;
+      }
+
+      span {
+        font-style: italic;
+        font-size: 12px;
+        font-family: 'Ubuntu Mono';
+        color: $color-white-almost;
+        padding-bottom: 3px;
+      }
     }
   }
 }
