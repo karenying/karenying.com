@@ -19,8 +19,8 @@
 }
 
 .contact-content h2 {
-  color: var(--light-pink);
-  font-family: monospace !important;
+  color: var(--white-almost);
+  font-family: 'Ubuntu Mono';
   margin-bottom: 4rem;
   text-shadow: 0.5rem 0.5rem 0.5rem black;
 }

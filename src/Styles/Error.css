@@ -2,12 +2,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: calc(100vh - 8rem - 35px);
+  box-sizing: border-box;
 }
 
 .error-text h1 {
-  color: var(--light-pink);
-  font-family: monospace !important;
+  color: var(--white-almost);
+  font-family: 'Ubuntu Mono';
   padding: 0px;
   margin: 0px;
   text-shadow: 0.5rem 0.5rem 0.5rem black;
