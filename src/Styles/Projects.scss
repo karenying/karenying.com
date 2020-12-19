@@ -147,7 +147,7 @@ $color-gray-medium: #bdbdbd;
   &-center {
     width: 200px;
     height: 1px;
-    margin: 20px 0;
+    margin: 15px 0;
   }
 
   &-header {
@@ -168,8 +168,8 @@ $color-gray-medium: #bdbdbd;
   &-grid {
     display: grid;
     grid-template-columns: 30% 70%;
-    column-gap: 20px;
-    padding: 20px 0;
+    column-gap: 15px;
+    padding: 15px 0;
 
     &-left {
       text-align: right;
@@ -210,7 +210,7 @@ $color-gray-medium: #bdbdbd;
         font-size: 12px;
         font-family: 'Ubuntu Mono';
         color: $color-white-almost;
-        padding-bottom: 3px;
+        padding-bottom: 2px;
       }
     }
   }

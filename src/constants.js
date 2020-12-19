@@ -32,7 +32,7 @@ export const projectInfo = [
     mini: MiniGradient,
     name: 'gradient.png',
     type: 'static web page',
-    stack: 'React',
+    stack: 'ReactJS',
     description: (
       <span>
         gradient.png is a custom image generation web app. It is also a UI/UX
@@ -66,7 +66,7 @@ export const projectInfo = [
     mini: MiniDayz,
     name: 'dayz',
     type: 'full stack web app',
-    stack: 'MongoDB + Express + React',
+    stack: 'MongoDB + Express + ReactJS',
     description:
       'Dayz is a bullet journal style mood tracker. It utilizes a RESTful api to write and read data. This was my first solo full stack project. I thoroughly enjoyed implementing and deploying all the components from scratch.',
     buttons: [
@@ -82,7 +82,7 @@ export const projectInfo = [
     mini: MiniExpresso,
     name: 'expresso',
     type: 'full stack web app',
-    stack: 'MySQL + Flask + React',
+    stack: 'MySQL + Flask + ReactJS',
     description: (
       <span>
         Expresso is an online-ordering app for Princeton University’s Coffee
