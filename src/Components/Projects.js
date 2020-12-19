@@ -14,7 +14,7 @@ import Grid from '@material-ui/core/Grid';
 import { makeStyles } from '@material-ui/core/styles';
 import { Card } from '@material-ui/core';
 
-import '../Styles/Projects.css';
+import '../Styles/Projects.scss';
 import { projectInfo, ALMOST_WHITE } from '../constants';
 
 const Arrow = (props) => {
