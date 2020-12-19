@@ -4,7 +4,13 @@ import Hidden from '@material-ui/core/Hidden';
 import { makeStyles } from '@material-ui/core/styles';
 
 import '../Styles/Header.css';
-import { DARK_PINK, BLUE, YELLOW, LIGHT_GRAY, LIGHT_PINK } from '../constants';
+import {
+  DARK_PINK,
+  BLUE,
+  YELLOW,
+  LIGHT_PINK,
+  ALMOST_WHITE,
+} from '../constants';
 
 const HeaderLink = ({ title, color, edge, selected }) => {
   const padding = edge ? '0rem' : '0.5rem';
@@ -53,7 +59,7 @@ const Header = () => {
         <div className='header-logo'>
           <HeaderLink
             title='karenying.com'
-            color={LIGHT_GRAY}
+            color={ALMOST_WHITE}
             selected={page === 'about'}
           />
         </div>

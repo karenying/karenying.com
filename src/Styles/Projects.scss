@@ -40,6 +40,7 @@ $color-gray-medium: #bdbdbd;
       border-radius: 3px;
       max-width: 300px;
       max-height: 170px;
+      box-shadow: 0.5rem 0.5rem 0.5rem black;
     }
 
     &-info {
@@ -113,11 +114,12 @@ $color-gray-medium: #bdbdbd;
       font-family: 'Ubuntu Mono';
       font-weight: bold;
       color: $color-white-almost;
+      text-shadow: 0.5rem 0.5rem 0.5rem black;
     }
 
     p {
       font-size: 15px;
-      color: $color-gray-light;
+      color: $color-white-almost;
       text-align: left;
       font-family: 'Varela Round';
     }
@@ -155,11 +157,12 @@ $color-gray-medium: #bdbdbd;
     font-family: 'Ubuntu Mono';
     font-weight: bold;
     color: $color-white-almost;
+    text-shadow: 0.5rem 0.5rem 0.5rem black;
   }
 
   p {
     font-size: 15px;
-    color: $color-gray-light;
+    color: $color-white-almost;
     text-align: left;
     font-family: 'Varela Round';
     margin: 0;
