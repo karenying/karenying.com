@@ -1,9 +1,9 @@
 .header-container {
-  position: absolute;
-  top: 0px;
+  position: relative;
   width: 100%;
   display: flex;
   font-family: 'Varela Round';
+  height: 8rem;
 }
 
 .header-container h3 {
@@ -12,7 +12,7 @@
 }
 
 .header-logo {
-  position: fixed;
+  position: absolute;
   left: 0px;
   padding-top: 3rem;
   padding-left: 5rem;

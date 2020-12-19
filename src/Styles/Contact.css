@@ -1,10 +1,9 @@
 .contact-container {
-  padding-top: 20rem;
-  padding-bottom: 8rem;
   box-sizing: border-box;
-  overflow: hidden;
+  height: calc(100vh - 8rem - 45px);
   display: flex;
   justify-content: center;
+  align-items: center;
   width: 100%;
   font-family: 'Varela Round';
 }

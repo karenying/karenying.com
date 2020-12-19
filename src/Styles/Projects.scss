@@ -8,13 +8,9 @@ $color-gray-light: #d9d9d9;
 $color-gray-medium: #bdbdbd;
 
 .projects-container {
-  margin-top: 8rem;
-  max-height: calc(100vh - 8rem - 45px);
-  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   align-items: center;
-  overflow-y: scroll;
 }
 
 .ProjectsCard {

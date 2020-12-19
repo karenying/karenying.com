@@ -13,14 +13,12 @@ import { LIGHT_GRAY, BLUE, YELLOW, LIGHT_PINK, DARK_PINK } from '../constants';
 const useStyles = makeStyles((theme) => ({
   footerContainer: {
     [theme.breakpoints.down('xs')]: {
-      position: 'static',
       padding: 0,
       paddingBottom: '1rem',
     },
   },
   footerContent: {
     [theme.breakpoints.down('xs')]: {
-      position: 'static',
       marginLeft: 'auto',
       paddingRight: '1rem',
     },

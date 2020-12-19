@@ -1,8 +1,9 @@
 .about-container {
   box-sizing: border-box;
-  overflow: hidden;
+  min-height: calc(100vh - 8rem - 45px);
   display: flex;
   justify-content: center;
+  align-items: center;
   width: 100%;
 }
 

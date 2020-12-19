@@ -1,16 +1,15 @@
 .footer-container {
-  position: fixed;
-  bottom: 0px;
   display: flex;
   min-width: 100%;
   padding: 1rem;
   align-items: center;
   height: 2.5rem;
   font-family: 'Varela Round';
+  position: relative;
 }
 
 .footer-copyright {
-  position: fixed;
+  position: absolute;
   left: 2rem;
   display: flex;
   align-items: center;
@@ -38,7 +37,7 @@
 }
 
 .footer-links-container {
-  position: fixed;
+  position: absolute;
   right: 2rem;
   display: flex;
   align-items: center;
