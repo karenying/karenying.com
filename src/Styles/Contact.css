@@ -1,6 +1,6 @@
 .contact-container {
   box-sizing: border-box;
-  height: calc(100vh - 8rem - 45px);
+  height: calc(100vh - 8rem - 35px);
   display: flex;
   justify-content: center;
   align-items: center;

@@ -6,6 +6,8 @@
   height: 2.5rem;
   font-family: 'Varela Round';
   position: relative;
+  box-sizing: border-box;
+  margin-bottom: 10px;
 }
 
 .footer-copyright {
