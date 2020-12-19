@@ -16,4 +16,4 @@ A tutorial for the [carousel](https://karenying.com/projects) can be found [here
 
 1. Clone this repo
 2. `npm install`
-3. `npm start`
+3. `npm start` 
