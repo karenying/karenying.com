@@ -38,7 +38,7 @@ export const projectInfo = [
     image: Gradient,
     mini: MiniGradient,
     name: 'gradient.png',
-    type: 'static web page',
+    type: 'static site',
     stack: 'ReactJS',
     description: (
       <span>
