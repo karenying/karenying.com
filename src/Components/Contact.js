@@ -2,7 +2,7 @@ import React from 'react';
 import Fade from '@material-ui/core/Fade';
 
 import '../Styles/Contact.css';
-import { BLUE, YELLOW, DARK_PINK } from '../constants';
+import { BLUE, YELLOW, DARK_PINK, LIGHT_PINK } from '../constants';
 
 const Contact = () => {
   return (
@@ -10,8 +10,9 @@ const Contact = () => {
       <Fade in timeout={{ enter: 1200 }}>
         <div className='contact-content'>
           <h2>
-            got an interesting project you're working on, or just want to say
-            hi?
+            got an <span style={{ color: LIGHT_PINK }}>interesting</span>{' '}
+            project you're working on, or just want to say{' '}
+            <span style={{ color: LIGHT_PINK }}>hi</span>?
           </h2>
           <p>
             I'd love to hear from you!
@@ -37,8 +38,8 @@ const Contact = () => {
               rel='noopener noreferrer'
             >
               LinkedIn
-            </a>
-            , or DM/tweet at me on{' '}
+            </a>{' '}
+            or DM / tweet at me on{' '}
             <a
               href='https://twitter.com/karen_ying_'
               style={{ color: DARK_PINK }}
