@@ -13,3 +13,9 @@
   margin: 0px;
   text-shadow: 0.5rem 0.5rem 0.5rem black;
 }
+
+@media screen and (max-width: 480px) {
+  .error-container {
+    height: 45rem;
+  }
+}
