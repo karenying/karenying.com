@@ -8,7 +8,6 @@ import Tooltip from '@material-ui/core/Tooltip';
 import { withStyles, makeStyles } from '@material-ui/core/styles';
 
 import '../Styles/Footer.css';
-import { LIGHT_GRAY, BLUE, YELLOW, LIGHT_PINK, DARK_PINK } from '../constants';
 
 const useStyles = makeStyles((theme) => ({
   footerContainer: {
@@ -25,7 +24,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const LightTooltip = withStyles(() => ({
+const StyledTooltip = withStyles(() => ({
   tooltip: {
     boxShadow: '0.3rem 0.3rem 1rem black',
     fontSize: 11,
@@ -45,7 +44,6 @@ const Footer = () => {
           <p
             style={{
               marginRight: '1rem',
-              color: DARK_PINK,
             }}
           >
             ©
@@ -53,114 +51,87 @@ const Footer = () => {
           <p
             style={{
               marginRight: '1rem',
-              color: LIGHT_PINK,
             }}
           >
             karen ying 2020
           </p>
-          <h3 style={{ color: LIGHT_GRAY }}>•</h3>
-          <p style={{ marginLeft: '1rem', color: BLUE }}>all rights reserved</p>
+          <h3>•</h3>
+          <p style={{ marginLeft: '1rem' }}>all rights reserved</p>
         </div>
       </Hidden>
       <div className={`footer-links-container ${footerContent}`}>
-        <div className='footer-link'>
-          <h3 style={{ color: LIGHT_GRAY }}>•</h3>
-        </div>
-        <div className='footer-link'>
-          <LightTooltip title='Site source code' placement='top' arrow>
+        <div className='footer-link code'>
+          <StyledTooltip title='Site source code' placement='top' arrow>
             <a
               href='https://github.com/karenying/karenying.com'
               target='_blank'
               rel='noopener noreferrer'
             >
-              <FaCode color={YELLOW} style={{ animationDelay: '100ms' }} />
+              <FaCode size='1.7rem' />
             </a>
-          </LightTooltip>
+          </StyledTooltip>
         </div>
-        <div className='footer-link'>
-          <LightTooltip title='GitHub' placement='top' arrow>
+        <div className='footer-link github'>
+          <StyledTooltip title='GitHub' placement='top' arrow>
             <a
               href='https://github.com/karenying/karenying.com'
               target='_blank'
               rel='noopener noreferrer'
             >
-              <GoMarkGithub
-                color={DARK_PINK}
-                style={{ animationDelay: '200ms' }}
-              />
+              <GoMarkGithub style={{ animationDelay: '100ms' }} />
             </a>
-          </LightTooltip>
+          </StyledTooltip>
         </div>
-        <div className='footer-link'>
-          <LightTooltip title='Email' placement='top' arrow>
+        <div className='footer-link email'>
+          <StyledTooltip title='Email' placement='top' arrow>
             <a
               href='mailto:karenying7@gmail.com'
               target='_blank'
               rel='noopener noreferrer'
             >
-              <IoMdMail
-                color={LIGHT_PINK}
-                style={{ animationDelay: '300ms' }}
-                size='1.7rem'
-              />
+              <IoMdMail style={{ animationDelay: '200ms' }} size='1.7rem' />
             </a>
-          </LightTooltip>
+          </StyledTooltip>
         </div>
-        <div className='footer-link'>
-          <LightTooltip title='LinkedIn' placement='top' arrow>
+        <div className='footer-link linkedin'>
+          <StyledTooltip title='LinkedIn' placement='top' arrow>
             <a
               href='https://linkedin.com/in/kyying/'
               target='_blank'
               rel='noopener noreferrer'
             >
-              <FaLinkedin
-                color={BLUE}
-                style={{ animationDelay: '400ms' }}
-                size='1.7rem'
-              />
+              <FaLinkedin style={{ animationDelay: '300ms' }} size='1.7rem' />
             </a>
-          </LightTooltip>
+          </StyledTooltip>
         </div>
 
-        <div className='footer-link'>
-          <LightTooltip title='Twitter' placement='top' arrow>
+        <div className='footer-link twitter'>
+          <StyledTooltip title='Twitter' placement='top' arrow>
             <a
               href='https://twitter.com/karen_ying_'
               target='_blank'
               rel='noopener noreferrer'
             >
               <AiFillTwitterCircle
-                color={YELLOW}
                 size='1.9rem'
-                style={{ animationDelay: '500ms' }}
+                style={{ animationDelay: '400ms' }}
               />
             </a>
-          </LightTooltip>
+          </StyledTooltip>
         </div>
-        <div className='footer-link'>
-          <LightTooltip title='Medium' placement='top' arrow>
+        <div className='footer-link medium'>
+          <StyledTooltip title='Medium' placement='top' arrow>
             <a
               href='https://medium.com/@karenying'
               target='_blank'
               rel='noopener noreferrer'
             >
               <AiFillMediumCircle
-                color={DARK_PINK}
                 size='1.9rem'
-                style={{ animationDelay: '600ms' }}
+                style={{ animationDelay: '500ms' }}
               />
             </a>
-          </LightTooltip>
-        </div>
-        <div className='footer-link'>
-          <h3
-            style={{
-              color: LIGHT_GRAY,
-              animationDelay: '700ms',
-            }}
-          >
-            •
-          </h3>
+          </StyledTooltip>
         </div>
       </div>
     </div>

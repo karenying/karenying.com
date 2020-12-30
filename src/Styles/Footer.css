@@ -15,6 +15,7 @@
   left: 2rem;
   display: flex;
   align-items: center;
+  color: var(--light-gray);
 }
 
 .footer-copyright p {
@@ -48,6 +49,7 @@
 .footer-link {
   margin: 0px 0.7rem 0px;
   cursor: pointer;
+  color: var(--light-gray);
 }
 
 .footer-link svg {
@@ -56,20 +58,29 @@
   animation-duration: 0.3s;
   opacity: 0;
   animation-fill-mode: forwards;
+  fill: var(--light-gray);
 }
 
-.footer-link:hover svg {
-  transform: scale(1.3);
+.code:hover svg {
+  fill: var(--yellow);
 }
 
-.footer-link h3 {
-  padding: 0px;
-  margin: 0px;
-  transition: transform 0.15s;
-  animation-name: fadeIn;
-  animation-duration: 0.3s;
-  opacity: 0;
-  animation-fill-mode: forwards;
-  cursor: default;
-  margin-top: -0.2rem;
+.github:hover svg {
+  fill: var(--dark-pink);
+}
+
+.email:hover svg {
+  fill: var(--light-pink);
+}
+
+.linkedin:hover svg {
+  fill: var(--blue);
+}
+
+.twitter:hover svg {
+  fill: var(--yellow);
+}
+
+.medium:hover svg {
+  fill: var(--dark-pink);
 }
