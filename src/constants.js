@@ -166,8 +166,8 @@ export const projectInfo = [
     description: (
       <span>
         In the spirit of Vlogmas, I participated in Blogmas — miniposts every
-        day of December 2020 until Christmas, posting about something I coded
-        / designed / learned that day.
+        day of December 2020 until Christmas, posting about something I coded /
+        designed / learned that day.
         <br />
         <br />I created a semi-interactive calendar visualizer to encapsulate
         the experience.
@@ -197,12 +197,23 @@ export const projectInfo = [
         with a MERN stack. This was my first solo full stack project where I
         implemented and deployed all the components from scratch. It's hosted on
         Heroku.
+        <br />
+        <br />I wrote a{' '}
+        <a
+          href='https://blog.karenying.com/posts/tracked-my-mood-daily-2020'
+          target='_blank'
+          rel='noopener noreferrer'
+          style={{ color: DARK_PINK }}
+        >
+          blog post
+        </a>{' '}
+        about how I used Dayz to track my mood every day of 2020.
       </span>
     ),
     buttons: [
       {
-        name: 'code',
-        link: 'https://github.com/karenying/dayz',
+        name: 'post',
+        link: 'https://blog.karenying.com/posts/tracked-my-mood-daily-2020',
       },
     ],
   },
