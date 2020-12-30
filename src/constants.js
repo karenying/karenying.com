@@ -166,7 +166,7 @@ export const projectInfo = [
     description: (
       <span>
         In the spirit of Vlogmas, I participated in Blogmas — miniposts every
-        day of December 2020 until Christmas, posting about something I coded /
+        day of December 2020 until Christmas, writing about something I coded /
         designed / learned that day.
         <br />
         <br />I created a semi-interactive calendar visualizer to encapsulate
