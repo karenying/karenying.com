@@ -200,7 +200,7 @@ export const projectInfo = [
         <br />
         <br />I wrote a{' '}
         <a
-          href='https://blog.karenying.com/posts/tracked-my-mood-daily-2020'
+          href='https://blog.karenying.com/posts/tracking-my-mood-daily-2020'
           target='_blank'
           rel='noopener noreferrer'
           style={{ color: DARK_PINK }}
@@ -213,7 +213,7 @@ export const projectInfo = [
     buttons: [
       {
         name: 'post',
-        link: 'https://blog.karenying.com/posts/tracked-my-mood-daily-2020',
+        link: 'https://blog.karenying.com/posts/tracking-my-mood-daily-2020',
       },
     ],
   },
