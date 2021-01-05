@@ -124,9 +124,9 @@ const About = () => {
                   target='_blank'
                   rel='noopener noreferrer'
                 >
-                  blog / complain
+                  blog
                 </a>{' '}
-                about coding and design. Check out some of my{' '}
+                (complain / meme) about coding and design. Check out some of my{' '}
                 <Link
                   to={`/projects`}
                   style={{
