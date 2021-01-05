@@ -62,7 +62,7 @@ const About = () => {
                 </span>{' '}
                 I'm Karen, a senior studying Computer Science at Princeton
                 University. I'm interested in anything tech &mdash; especially
-                web development and UI/UX design.
+                web dev and UI/UX.
                 <br />
                 <br />I will be returning to{' '}
                 <a
@@ -73,12 +73,30 @@ const About = () => {
                 >
                   Wellsheet
                 </a>
-                , a fast-paced healthcare startup based in NYC, as a full-time
-                software engineer in Summer 2021. Currently I'm in Boston,
-                Zoomin' my last year at Princeton.
+                , a NYC healthcare startup, as a full-time software engineer in
+                Summer 2021. Currently I'm Zoomin' my last year at Princeton
+                while also working as a frontend intern for{' '}
+                <a
+                  href='https://gather.town/'
+                  style={{ color: DARK_PINK }}
+                  target='_blank'
+                  rel='noopener noreferrer'
+                >
+                  Gather Town
+                </a>
+                .
                 <br />
                 <br />
-                In my free time, you can find me playing frisbee, eating{' '}
+                When I'm not beep booping, you can find me{' '}
+                <a
+                  href='https://blog.karenying.com/posts/blogmas-2020#-1222-quarantine-running-recap'
+                  style={{ color: LIGHT_PINK }}
+                  target='_blank'
+                  rel='noopener noreferrer'
+                >
+                  running
+                </a>
+                , eating{' '}
                 <a
                   href='https://www.instagram.com/fry.nsta/'
                   style={{ color: YELLOW }}
@@ -87,16 +105,16 @@ const About = () => {
                 >
                   fries
                 </a>
-                , jamming out to Country and EDM (
+                , looking for EDM{' '}
                 <a
-                  href='https://www.youtube.com/watch?v=qDyCMxS8YfE'
+                  href='https://www.youtube.com/watch?v=qDyCMxS8YfE&ab_channel=DanAndShay'
                   style={{ color: DARK_PINK }}
                   target='_blank'
                   rel='noopener noreferrer'
                 >
-                  Country x EDM
+                  remixes
                 </a>{' '}
-                slaps even harder), or speaking to your manager.
+                of Country songs, or speaking to your manager.
                 <br />
                 <br />
                 Sometimes I{' '}
@@ -106,9 +124,9 @@ const About = () => {
                   target='_blank'
                   rel='noopener noreferrer'
                 >
-                  blog/complain
+                  blog / complain
                 </a>{' '}
-                about coding and visual design. Browse the{' '}
+                about coding and design. Check out some of my{' '}
                 <Link
                   to={`/projects`}
                   style={{
@@ -118,7 +136,7 @@ const About = () => {
                 >
                   projects
                 </Link>{' '}
-                tab to see some of my work or feel free to{' '}
+                and definitely feel free to{' '}
                 <Link
                   to={`/contact`}
                   style={{
@@ -126,7 +144,7 @@ const About = () => {
                   }}
                   className='internal-link'
                 >
-                  reach out
+                  connect
                 </Link>
                 !
               </p>
