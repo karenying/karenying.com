@@ -74,7 +74,7 @@ const About = () => {
                   Wellsheet
                 </a>
                 , a NYC healthcare startup, as a full-time software engineer in
-                Summer 2021. Currently I'm Zoomin' my last year at Princeton
+                Summer 2021. Currently, I'm Zoomin' my last year at Princeton
                 while also working as a frontend intern for{' '}
                 <a
                   href='https://gather.town/'
