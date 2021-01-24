@@ -64,21 +64,12 @@ const About = () => {
                 University. I'm interested in anything tech &mdash; especially
                 web dev and UI/UX.
                 <br />
-                <br />I will be returning to{' '}
-                <a
-                  href='https://www.wellsheet.com/'
-                  style={{ color: BLUE }}
-                  target='_blank'
-                  rel='noopener noreferrer'
-                >
-                  Wellsheet
-                </a>
-                , a NYC healthcare startup, as a full-time software engineer in
-                Summer 2021. Currently, I'm Zoomin' my last year at Princeton
-                while also working as a frontend intern for{' '}
+                <br />
+                Currently I'm on campus, Zoomin' my last year of Princeton while
+                also doing frontend things for{' '}
                 <a
                   href='https://gather.town/'
-                  style={{ color: DARK_PINK }}
+                  style={{ color: BLUE }}
                   target='_blank'
                   rel='noopener noreferrer'
                 >
@@ -87,7 +78,7 @@ const About = () => {
                 .
                 <br />
                 <br />
-                When I'm not beep booping, you can find me{' '}
+                If I'm not beep booping, you can find me{' '}
                 <a
                   href='https://blog.karenying.com/posts/blogmas-2020#-1222-quarantine-running-recap'
                   style={{ color: LIGHT_PINK }}
