@@ -45,21 +45,23 @@ $color-gray-medium: #bdbdbd;
 
     &-info {
       display: grid;
-      grid-template-columns: 30% 70%;
+      grid-template-columns: 35px 1fr;
       column-gap: 20px;
       padding: 20px 0;
 
       &-left {
-        text-align: right;
         font-family: 'Ubuntu Mono';
         font-size: 18px;
         color: $color-white-almost;
+        display: flex;
+        justify-content: flex-end;
       }
 
       &-right {
         text-align: left;
         font-family: 'Varela Round';
         font-size: 16px;
+        max-width: 140px;
       }
     }
 
@@ -170,21 +172,23 @@ $color-gray-medium: #bdbdbd;
 
   &-grid {
     display: grid;
-    grid-template-columns: 30% 70%;
-    column-gap: 15px;
+    grid-template-columns: 35px 1fr;
+    column-gap: 12px;
     padding: 15px 0;
 
     &-left {
-      text-align: right;
       font-family: 'Ubuntu Mono';
       font-size: 14px;
       color: $color-white-almost;
+      display: flex;
+      justify-content: flex-end;
     }
 
     &-right {
       text-align: left;
       font-family: 'Varela Round';
       font-size: 12px;
+      max-width: 140px;
     }
   }
 
