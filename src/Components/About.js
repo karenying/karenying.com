@@ -65,7 +65,7 @@ const About = () => {
                 web dev and UI/UX.
                 <br />
                 <br />
-                Currently I'm on campus, Zoomin' my last year of Princeton while
+                Currently I'm on campus, Zoomin' my last year of college while
                 also doing frontend things for{' '}
                 <a
                   href='https://gather.town/'
