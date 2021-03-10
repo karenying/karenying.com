@@ -62,11 +62,12 @@ const About = () => {
                 </span>{' '}
                 I'm Karen, a senior studying Computer Science at Princeton
                 University. I'm interested in anything tech &mdash; especially
-                web dev and UI/UX.
+                web dev and UI/UX. I love building delightful and clean
+                experiences.
                 <br />
                 <br />
                 Currently I'm on campus, Zoomin' my last year of college while
-                also doing frontend things for{' '}
+                doing frontend things for{' '}
                 <a
                   href='https://gather.town/'
                   style={{ color: BLUE }}
