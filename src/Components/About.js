@@ -60,14 +60,14 @@ const About = () => {
                 <span className='wave' role='img' aria-label='wave'>
                   👋🏼
                 </span>{' '}
-                I'm Karen, a senior studying Computer Science at Princeton
-                University. I'm interested in anything tech &mdash; especially
-                web dev and UI/UX. I love building delightful and clean
-                experiences.
+                I'm Karen, a recent Princeton University grad who majored in
+                Computer Science. I'm interested in anything tech &mdash;
+                especially web dev and UI/UX. I love building delightful and
+                clean experiences.
                 <br />
                 <br />
-                Currently I'm on campus, Zoomin' my last year of college while
-                doing frontend things for{' '}
+                Currently I work remotely as a software engineer on Core Product
+                for{' '}
                 <a
                   href='https://gather.town/'
                   style={{ color: BLUE }}
@@ -75,8 +75,17 @@ const About = () => {
                   rel='noopener noreferrer'
                 >
                   Gather Town
+                </a>{' '}
+                (we're{' '}
+                <a
+                  href='https://gather.town/jobs'
+                  style={{ color: DARK_PINK }}
+                  target='_blank'
+                  rel='noopener noreferrer'
+                >
+                  hiring
                 </a>
-                .
+                )!
                 <br />
                 <br />
                 If I'm not beep booping, you can find me{' '}
