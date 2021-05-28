@@ -60,8 +60,7 @@ const About = () => {
                 <span className='wave' role='img' aria-label='wave'>
                   👋🏼
                 </span>{' '}
-                I'm Karen, a recent Princeton University grad who majored in
-                Computer Science. I'm interested in anything tech &mdash;
+                I'm Karen, a recent Princeton University Computer Science grad. I'm interested in anything tech &mdash;
                 especially web dev and UI/UX. I love building delightful and
                 clean experiences.
                 <br />
