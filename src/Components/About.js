@@ -74,7 +74,7 @@ const About = () => {
                   rel='noopener noreferrer'
                 >
                   Gather Town
-                </a>. Come build The Metaverse with us -- we're{' '}
+                </a>. Come build The Metaverse with us &mdash; we're{' '}
                 <a
                   href='https://gather.town/jobs'
                   style={{ color: DARK_PINK }}
