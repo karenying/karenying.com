@@ -60,9 +60,9 @@ const About = () => {
                 <span className='wave' role='img' aria-label='wave'>
                   👋🏼
                 </span>{' '}
-                I'm Karen, a recent Princeton CS grad. I'm interested in anything tech &mdash;
-                especially web dev and UI/UX. I love building delightful and
-                clean experiences.
+                I'm Karen, a recent Princeton CS grad. I'm interested in
+                anything tech &mdash; especially web dev and UI/UX. I love
+                building delightful and clean experiences.
                 <br />
                 <br />
                 Currently I work remotely as a software engineer on Core Product
@@ -74,7 +74,8 @@ const About = () => {
                   rel='noopener noreferrer'
                 >
                   Gather Town
-                </a>. Come build The Metaverse with us &mdash; we're{' '}
+                </a>
+                . Come build the Metaverse with us. We're{' '}
                 <a
                   href='https://gather.town/jobs'
                   style={{ color: DARK_PINK }}
