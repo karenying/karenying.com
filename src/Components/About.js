@@ -60,9 +60,17 @@ const About = () => {
                 <span className='wave' role='img' aria-label='wave'>
                   👋🏼
                 </span>{' '}
-                I'm Karen, a recent Princeton CS grad. I'm interested in
-                anything tech &mdash; especially web dev and UI/UX. I love
-                building delightful and clean experiences.
+                I'm Karen, a recent Princeton CS grad and self-proclaimed{' '}
+                <a
+                  href='https://blog.karenying.com/posts/vscode-girl'
+                  style={{ color: LIGHT_PINK }}
+                  target='_blank'
+                  rel='noopener noreferrer'
+                >
+                  VSCode Girl
+                </a>
+                . I'm interested in anything tech &mdash; especially web dev and
+                UI/UX. I love building delightful and clean experiences.
                 <br />
                 <br />
                 Currently I work remotely as a software engineer on Core Product
