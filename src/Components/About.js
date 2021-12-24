@@ -1,36 +1,36 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import ProgressiveImage from 'react-progressive-image';
-import { makeStyles } from '@material-ui/core/styles';
-import Grid from '@material-ui/core/Grid';
-import Fade from '@material-ui/core/Fade';
+import React from "react";
+import { Link } from "react-router-dom";
+import ProgressiveImage from "react-progressive-image";
+import { makeStyles } from "@material-ui/core/styles";
+import Grid from "@material-ui/core/Grid";
+import Fade from "@material-ui/core/Fade";
 
-import '../Styles/About.css';
-import { BLUE, YELLOW, LIGHT_PINK, DARK_PINK } from '../constants';
-import Karen from '../Assets/karen.png';
-import MiniKaren from '../Assets/mini-karen.png';
+import "../Styles/About.css";
+import { BLUE, YELLOW, LIGHT_PINK, DARK_PINK } from "../constants";
+import Karen from "../Assets/karen.png";
+import MiniKaren from "../Assets/mini-karen.png";
 
 const About = () => {
   const useStyles = makeStyles((theme) => ({
     aboutGrid: {
-      textAlign: 'left',
-      maxWidth: '80rem',
-      [theme.breakpoints.up('sm')]: { marginBottom: '3rem' },
-      [theme.breakpoints.down('sm')]: {
-        padding: '0 4.5rem 3rem',
-        minHeight: 'calc(100vh - 3.5rem)',
+      textAlign: "left",
+      maxWidth: "80rem",
+      [theme.breakpoints.up("sm")]: { marginBottom: "3rem" },
+      [theme.breakpoints.down("sm")]: {
+        padding: "0 4.5rem 3rem",
+        minHeight: "calc(100vh - 3.5rem)",
       },
     },
     image: {
-      display: 'flex',
-      alignItems: 'center',
-      width: '100%',
-      [theme.breakpoints.up('sm')]: {
-        justifyContent: 'left',
+      display: "flex",
+      alignItems: "center",
+      width: "100%",
+      [theme.breakpoints.up("sm")]: {
+        justifyContent: "left",
       },
-      [theme.breakpoints.down('sm')]: {
-        padding: '2rem 0px 3rem 0px',
-        justifyContent: 'center',
+      [theme.breakpoints.down("sm")]: {
+        padding: "2rem 0px 3rem 0px",
+        justifyContent: "center",
       },
     },
   }));
@@ -39,7 +39,7 @@ const About = () => {
   const { aboutGrid, image } = classes;
 
   return (
-    <div className='about-container'>
+    <div className="about-container">
       <Grid className={aboutGrid} container>
         <Grid item sm={12} md={4} className={image}>
           <ProgressiveImage src={Karen} placeholder={MiniKaren}>
@@ -47,7 +47,7 @@ const About = () => {
               <img
                 style={{ opacity: loading ? 0.8 : 1 }}
                 src={src}
-                alt='karen'
+                alt="karen"
               />
             )}
           </ProgressiveImage>
@@ -56,16 +56,16 @@ const About = () => {
           <Fade in timeout={{ enter: 1200 }}>
             <div>
               <p>
-                Hi{' '}
-                <span className='wave' role='img' aria-label='wave'>
+                Hi{" "}
+                <span className="wave" role="img" aria-label="wave">
                   👋🏼
-                </span>{' '}
-                I'm Karen, a recent Princeton CS grad and self-proclaimed{' '}
+                </span>{" "}
+                I'm Karen, a recent Princeton CS grad and self-proclaimed{" "}
                 <a
-                  href='https://blog.karenying.com/posts/vscode-girl'
+                  href="https://blog.karenying.com/posts/vscode-girl"
                   style={{ color: LIGHT_PINK }}
-                  target='_blank'
-                  rel='noopener noreferrer'
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
                   VSCode Girl
                 </a>
@@ -73,84 +73,60 @@ const About = () => {
                 UI/UX. I love building delightful and clean experiences.
                 <br />
                 <br />
-                Currently I work remotely as a software engineer on Core Product
-                for{' '}
+                Currently I work remotely as a product engineer for{" "}
                 <a
-                  href='https://gather.town/'
+                  href="https://gather.town/"
                   style={{ color: BLUE }}
-                  target='_blank'
-                  rel='noopener noreferrer'
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
                   Gather Town
                 </a>
-                . Come build the Metaverse with us. We're{' '}
+                . Come build the Metaverse with us. We're{" "}
                 <a
-                  href='https://gather.town/jobs'
+                  href="https://gather.town/jobs"
                   style={{ color: DARK_PINK }}
-                  target='_blank'
-                  rel='noopener noreferrer'
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
                   hiring
                 </a>
                 !
                 <br />
                 <br />
-                If I'm not beep booping, you can find me{' '}
-                <a
-                  href='https://blog.karenying.com/posts/blogmas-2020#-1222-quarantine-running-recap'
-                  style={{ color: LIGHT_PINK }}
-                  target='_blank'
-                  rel='noopener noreferrer'
-                >
-                  running
-                </a>
-                , eating{' '}
-                <a
-                  href='https://www.instagram.com/fry.nsta/'
-                  style={{ color: YELLOW }}
-                  target='_blank'
-                  rel='noopener noreferrer'
-                >
-                  fries
-                </a>
-                , looking for EDM{' '}
-                <a
-                  href='https://www.youtube.com/watch?v=qDyCMxS8YfE&ab_channel=DanAndShay'
-                  style={{ color: DARK_PINK }}
-                  target='_blank'
-                  rel='noopener noreferrer'
-                >
-                  remixes
-                </a>{' '}
-                of Country songs, or speaking to your manager.
+                I'm a Boston native but I just moved to the SF Bay Area. If I'm
+                not beep booping, you can find me playing frisbee, visiting
+                friendos, Yelping restaurants to try, or speaking to your
+                manager.
                 <br />
                 <br />
-                Sometimes I{' '}
+                Sometimes I{" "}
                 <a
-                  href='https://blog.karenying.com'
+                  href="https://blog.karenying.com"
                   style={{ color: LIGHT_PINK }}
-                  target='_blank'
-                  rel='noopener noreferrer'
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
                   blog
-                </a>{' '}
-                (complain / meme) about coding and design. Check out some of my{' '}
+                </a>{" "}
+                (read: complain/meme) about coding and design. Check out some of
+                my past{" "}
                 <Link
                   to={`/projects`}
                   style={{
                     color: BLUE,
                   }}
-                  className='internal-link'
+                  className="internal-link"
                 >
                   projects
-                </Link>{' '}
-                and definitely feel free to{' '}
+                </Link>{" "}
+                and feel free to{" "}
                 <Link
                   to={`/contact`}
                   style={{
                     color: YELLOW,
                   }}
-                  className='internal-link'
+                  className="internal-link"
                 >
                   connect
                 </Link>
